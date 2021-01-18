@@ -1,0 +1,29 @@
+# YetAnotherTracker settings for extracting walking tracks from videos shot in the lab
+# Used for small sample with uneven lighting.
+
+# Scale can be measured from the board which has size 600mmx900mm
+view-scale=?
+view-rotation=90
+# Use a mask file if there is one
+mask=true
+fps=240
+csv=true
+csv-comment-prefix=#
+
+blur-size=0
+motion-detector=differences
+foreground-segmenter=KNN:500:400:false
+background-method=none
+
+dilation-erosion=6,-2
+min-contour=40
+max-contour=800
+display-contours=true
+
+kalman=veryfast
+max-jump=20
+min-gap=10
+first-tracking-frame=60
+termination-border=20
+display-tracks=true
+

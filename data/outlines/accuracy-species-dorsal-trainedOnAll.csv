@@ -1,0 +1,132 @@
+"angle","species","mimicType","accuracy"
+"Dorsal","Aetius nocturnus","mimetic spider",0.00801091589072569
+"Dorsal","Alydid2 sp1","non-mimic",3.41719242832129e-05
+"Dorsal","Alydid3 sp1","mimetic insect",0.0451909376439791
+"Dorsal","Amyciaea albomaculata","mimetic spider",1.99921507874805e-05
+"Dorsal","Amyciaea sp1","mimetic spider",0.000444365020552987
+"Dorsal","Apricia jovialis","mimetic spider",5.40916943447541e-15
+"Dorsal","Araneae10 sp1","non-mimic",6.21989914338562e-11
+"Dorsal","Araneae11 sp1","non-mimic",3.71052828642301e-14
+"Dorsal","Astia hariola","non-mimic",1.02515374727605e-32
+"Dorsal","Battalus byrneae","mimetic spider",6.21420809886976e-55
+"Dorsal","Camponotus nigriceps","model",0.999999999979127
+"Dorsal","Camponotus sp1","model",0.997609031011394
+"Dorsal","Castianeira cingulata","mimetic spider",5.40286258120119e-05
+"Dorsal","Castianeira longipalpa","mimetic spider",2.56161824490288e-18
+"Dorsal","Castianeira trilineata","mimetic spider",5.07068752741026e-10
+"Dorsal","Cicadellid1 sp1","non-mimic",1.82908633141817e-103
+"Dorsal","Cicadellid2 sp1","non-mimic",3.83018024127945e-106
+"Dorsal","Coleoptera2 sp1","mimetic insect",7.71855423355381e-09
+"Dorsal","Coleoptera3 sp1","mimetic insect",4.71604278994789e-12
+"Dorsal","Colobathristid1 sp1","mimetic insect",1.8266978741356e-07
+"Dorsal","Copa kabana","mimetic spider",1.45131805332045e-13
+"Dorsal","Corinnid1 sp1","mimetic spider",3.34869617135888e-06
+"Dorsal","Corinnomma sp.","mimetic spider",0.938189060608967
+"Dorsal","Cosmophasis baehrae","non-mimic",1.37196961256965e-15
+"Dorsal","Cosmophasis bitaeniata","mimetic spider",7.50870486562761e-13
+"Dorsal","Cosmophasis micarioides","mimetic spider",2.2375913579711e-22
+"Dorsal","Cosmophasis thalassina","non-mimic",9.54640283997462e-16
+"Dorsal","Crematogaster sp1","model",0.998549212309391
+"Dorsal","Creugas gulosus","mimetic spider",6.87384032178522e-13
+"Dorsal","Daerlac apicalis","mimetic insect",5.57122392929421e-09
+"Dorsal","Daerlac nigricans","mimetic insect",1.89183979105601e-06
+"Dorsal","Damoetas nitidus","mimetic spider",0.0014545174370122
+"Dorsal","Damoetas sp (?)","mimetic spider",3.3091220039287e-06
+"Dorsal","Damoetas sp1","non-mimic",7.77701768990353e-09
+"Dorsal","Damoetas sp3","mimetic spider",1.46727499078952e-10
+"Dorsal","Diptera1 sp1","mimetic insect",5.04271278752726e-08
+"Dorsal","Disnyssus helenmirrenae","mimetic spider",3.95975409256982e-15
+"Dorsal","Dolichoderus clarki","model",0.692337232082746
+"Dorsal","Eilica sp1","mimetic spider",5.73590568230677e-30
+"Dorsal","Eurybrachyid1 sp1","non-mimic",1.31870241046898e-47
+"Dorsal","Eurymela rubrolimbata","mimetic insect",3.23646336179744e-83
+"Dorsal","Formicid1 sp1","model",0.998917339735725
+"Dorsal","Formicid10 sp1","model",0.999999999999992
+"Dorsal","Formicid13 sp1","model",0.903736108077186
+"Dorsal","Formicid19 sp1","model",0.999998989043747
+"Dorsal","Formicid20 sp1","model",1
+"Dorsal","Formicid7 sp1","model",0.973429172250796
+"Dorsal","Froggattella sp1","model",0.999999981886493
+"Dorsal","Helpis minitabunda","non-mimic",1.66799131555034e-16
+"Dorsal","Hemiptera1 sp1","mimetic insect",0.00616728079588344
+"Dorsal","Heteroptera2 sp1","mimetic insect",1.40749766204358e-20
+"Dorsal","Holoplatys sp2","non-mimic",6.69786025997646e-12
+"Dorsal","Holoplatys sp4","mimetic spider",0.000292275693204928
+"Dorsal","Iridonyssus formicans","mimetic spider",7.50750159047557e-10
+"Dorsal","Iridonyssus kohouti","mimetic spider",5.18574867496989e-10
+"Dorsal","Judalana lutea","mimetic spider",4.90088250770437e-05
+"Dorsal","Lamponid2 sp1","non-mimic",2.12522369382605e-05
+"Dorsal","Leichhardteus albofasciatus","mimetic spider",4.20638746766599e-47
+"Dorsal","Leptomyrmex sp1","model",0.999601657342905
+"Dorsal","Leptopicia bimaculata","mimetic spider",0.00315975090262233
+"Dorsal","Ligonipes lacertosus","mimetic spider",2.08875946378318e-09
+"Dorsal","Ligonipes semitectus","mimetic spider",0.000423639676475873
+"Dorsal","Ligonipes sp1","mimetic spider",6.98844422080879e-14
+"Dorsal","Ligonipes sp2","mimetic spider",1.43161152946801e-05
+"Dorsal","Lycosid3 sp1","non-mimic",1.47519876087966e-14
+"Dorsal","Lycosid4 sp1","non-mimic",7.21273912109734e-11
+"Dorsal","Mantid1 sp1","non-mimic",1.06028680132373e-18
+"Dorsal","Mantid2 sp1","non-mimic",2.55593641510151e-06
+"Dorsal","Mazax pax","mimetic spider",0.0390909984856765
+"Dorsal","Mazax spinosa","mimetic spider",1.09096399809943e-16
+"Dorsal","Myandra bicincta","mimetic spider",1.30764426678491e-08
+"Dorsal","Myrmapana centralis","mimetic spider",0.00864599022561591
+"Dorsal","Myrmapana parallela","mimetic spider",0.0112285409681697
+"Dorsal","Myrmapeni chickeringi","mimetic spider",0.000444819899202725
+"Dorsal","Myrmaplata plataleoides","mimetic spider",0.641701395427098
+"Dorsal","Myrmarachne bicolor","mimetic spider",4.62224274231308e-06
+"Dorsal","Myrmarachne erythrocephala","mimetic spider",0.00644376638573206
+"Dorsal","Myrmarachne formicaria","mimetic spider",2.76667748977989e-10
+"Dorsal","Myrmarachne helensmithae","mimetic spider",1.79824319169797e-07
+"Dorsal","Myrmarachne juvenile","mimetic spider",0.0151320746692039
+"Dorsal","Myrmarachne luctuosa","mimetic spider",0.00378066383724739
+"Dorsal","Myrmarachne macaulayi","mimetic spider",0.000566460130006426
+"Dorsal","Myrmarachne macleayana","mimetic spider",0.00655020672908772
+"Dorsal","Myrmarachne smaragdina","mimetic spider",0.507582742279297
+"Dorsal","Myrmecia mandibularis","model",0.999959263368369
+"Dorsal","Myrmecotypus rettenmeyeri","mimetic spider",0.00538991194360815
+"Dorsal","Neon nellii*","mimetic spider",1.91689688862409e-29
+"Dorsal","Nucastia supunnoides","mimetic spider",7.92544191683646e-06
+"Dorsal","Nyssus albopunctatus","mimetic spider",6.00798484038915e-61
+"Dorsal","Nyssus avidus","mimetic spider",3.88112943829059e-26
+"Dorsal","Nyssus coloripes","non-mimic",3.83227971109648e-13
+"Dorsal","Nyssus luteofinis","mimetic spider",2.05592199154586e-07
+"Dorsal","Nyssus paradoxus","mimetic spider",5.37064884892058e-09
+"Dorsal","Odontomachus sp1","model",0.996477574586645
+"Dorsal","Oecophylla smaragdina","model",0.999999825427542
+"Dorsal","Opisthopsis sp1","model",0.999985990427829
+"Dorsal","Oxyopes elegans","non-mimic",2.07574192576229e-12
+"Dorsal","Poecilipta contorqua","mimetic spider",0.0528316373754555
+"Dorsal","Poecilipta kohouti","mimetic spider",2.15005814950828e-05
+"Dorsal","Polyrhachis ammon","model",1
+"Dorsal","Polyrhachis monteithi","model",1
+"Dorsal","Polyrhachis sp1","model",0.999991768964926
+"Dorsal","Polyrhachis sp2","model",0.999999999999999
+"Dorsal","Reduviid1 sp1","non-mimic",6.72174281680983e-07
+"Dorsal","Rhombonotus gracilis","mimetic spider",0.00420221636330547
+"Dorsal","Rhombonotus sp1","non-mimic",2.57229284236038e-13
+"Dorsal","Rhombonotus sp2","mimetic spider",0.00145276694047349
+"Dorsal","Rhombonotus sp3","mimetic spider",0.00218156580717377
+"Dorsal","Rhytidoponera metallica","model",0.999988255171058
+"Dorsal","Riptortus abdominalis","mimetic insect",0.00092316058175397
+"Dorsal","Salticid17 sp1","mimetic spider",6.29683374410992e-08
+"Dorsal","Salticid18 sp1","non-mimic",5.02982282909809e-24
+"Dorsal","Salticid5 sp1","non-mimic",4.50868054592056e-12
+"Dorsal","Salticid7 sp1","non-mimic",7.38223294780035e-43
+"Dorsal","Serendib suthepica","mimetic spider",0.0852736237514159
+"Dorsal","Serendib volans","mimetic spider",3.77802100123789e-12
+"Dorsal","Servaea incana","non-mimic",7.65524551298276e-32
+"Dorsal","Sphecotypus niger","mimetic spider",0.013321940594912
+"Dorsal","Sphinctomyrmex sp1","model",0.979548541194308
+"Dorsal","Storena mainae","non-mimic",4.4863853609869e-12
+"Dorsal","Tamopsis fickerti","non-mimic",1.17506665640994e-59
+"Dorsal","Thomisid1 sp1","non-mimic",1.03798697370037e-63
+"Dorsal","Tinytrema bondi","mimetic spider",1.56882195761022e-10
+"Dorsal","Vespoidea2 sp1","mimetic insect",7.23119373262582e-07
+"Dorsal","Vespoidea3 sp1","mimetic insect",3.31245849809795e-05
+"Dorsal","Vespoidea3 sp3","mimetic insect",3.39496201670233e-17
+"Dorsal","Vespoidea4 sp1","non-mimic",8.98646335812201e-07
+"Dorsal","Vespoidea5 sp1","mimetic insect",1.05961955856908e-05
+"Dorsal","Vespoidea6 sp1","mimetic insect",1.00042434775721e-10
+"Dorsal","Zillimata scintillans","non-mimic",0.000577597070669531
+"Dorsal","Zodarid4 sp1","mimetic spider",2.98828359164214e-14

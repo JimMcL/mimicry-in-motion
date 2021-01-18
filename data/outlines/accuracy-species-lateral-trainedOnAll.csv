@@ -1,0 +1,98 @@
+"angle","species","mimicType","accuracy"
+"Lateral","Aetius nocturnus","mimetic spider",4.45434344976863e-19
+"Lateral","Alydid2 sp1","non-mimic",1.58442470711668e-06
+"Lateral","Alydid3 sp1","mimetic insect",0.127432055888248
+"Lateral","Amyciaea albomaculata","mimetic spider",1.98584709598199e-17
+"Lateral","Apricia jovialis","mimetic spider",1.84452202870415e-30
+"Lateral","Astia hariola","non-mimic",1.80325505429389e-44
+"Lateral","Camponotus nigriceps","model",0.999999999990491
+"Lateral","Camponotus sp2","model",0.999999999999826
+"Lateral","Castianeira gertschi","mimetic spider",4.75601949776475e-20
+"Lateral","Castianeira longipalpa","mimetic spider",2.18396618235433e-71
+"Lateral","Castianeira trilineata","mimetic spider",4.23608715620409e-44
+"Lateral","Cicadellid2 sp1","non-mimic",1.13845802870396e-39
+"Lateral","Coleoptera2 sp1","mimetic insect",7.83940429637964e-11
+"Lateral","Coleoptera3 sp1","mimetic insect",6.59899365731106e-06
+"Lateral","Colobathristid1 sp1","mimetic insect",2.00913174236636e-13
+"Lateral","Corinnid1 sp1","mimetic spider",7.19997198423676e-24
+"Lateral","Corinnomma sp.","mimetic spider",9.65937012691552e-06
+"Lateral","Cosmophasis baehrae","non-mimic",3.19130954612301e-28
+"Lateral","Cosmophasis bitaeniata","mimetic spider",2.22474653077298e-19
+"Lateral","Cosmophasis micarioides","mimetic spider",1.36398532239886e-20
+"Lateral","Cosmophasis thalassina","non-mimic",3.49501046806977e-32
+"Lateral","Crematogaster sp1","model",0.999999999050028
+"Lateral","Daerlac apicalis","mimetic insect",3.33376701043829e-08
+"Lateral","Daerlac nigricans","mimetic insect",5.40451205875093e-08
+"Lateral","Damoetas nitidus","mimetic spider",1.17589581732193e-22
+"Lateral","Damoetas sp (?)","mimetic spider",1.0540562779579e-14
+"Lateral","Diptera3 sp1","non-mimic",1.00625044148214e-46
+"Lateral","Dolichoderus clarki","model",1
+"Lateral","Eilica sp1","mimetic spider",3.16505719970658e-22
+"Lateral","Eurymela rubrolimbata","mimetic insect",4.14545754434772e-20
+"Lateral","Formicid1 sp1","model",0.99885976092545
+"Lateral","Formicid10 sp1","model",1
+"Lateral","Formicid13 sp1","model",0.999999999839553
+"Lateral","Formicid19 sp1","model",0.99999999705042
+"Lateral","Froggattella sp1","model",1
+"Lateral","Gryllid1 sp1","non-mimic",2.8884717622091e-18
+"Lateral","Hemiptera1 sp1","mimetic insect",2.27413757517066e-18
+"Lateral","Heteroptera2 sp1","mimetic insect",1.19586881340631e-06
+"Lateral","Holoplatys sp2","non-mimic",4.4582772635379e-21
+"Lateral","Holoplatys sp4","mimetic spider",1.84212624806285e-12
+"Lateral","Insecta1 sp1","non-mimic",4.04082560640271e-05
+"Lateral","Iridonyssus kohouti","mimetic spider",2.71151647161208e-34
+"Lateral","Isopoda1 sp1","non-mimic",5.51483718014305e-15
+"Lateral","Judalana lutea","mimetic spider",2.13418017581969e-19
+"Lateral","Lamponid2 sp1","non-mimic",3.30884525297239e-20
+"Lateral","Leptomyrmex sp1","model",0.998207409344187
+"Lateral","Ligonipes sp1","mimetic spider",8.71906918476993e-25
+"Lateral","Mantid1 sp1","non-mimic",0.772318755828561
+"Lateral","Mantid2 sp1","non-mimic",0.0054994102378222
+"Lateral","Mazax pax","mimetic spider",6.34229680276145e-24
+"Lateral","Mazax spinosa","mimetic spider",4.93429466284363e-39
+"Lateral","Myandra bicincta","mimetic spider",1.91844248536871e-23
+"Lateral","Myrmapana centralis","mimetic spider",5.77637500031064e-19
+"Lateral","Myrmapana parallela","mimetic spider",7.69946890683954e-20
+"Lateral","Myrmapeni chickeringi","mimetic spider",3.93387375915783e-18
+"Lateral","Myrmaplata plataleoides","mimetic spider",3.46999443432968e-08
+"Lateral","Myrmarachne bicolor","mimetic spider",3.73044417119062e-20
+"Lateral","Myrmarachne erythrocephala","mimetic spider",5.66677887979231e-18
+"Lateral","Myrmarachne formicaria","mimetic spider",4.19239606702114e-30
+"Lateral","Myrmarachne helensmithae","mimetic spider",2.49807655057738e-12
+"Lateral","Myrmarachne juvenile","mimetic spider",6.21705614059294e-17
+"Lateral","Myrmarachne luctuosa","mimetic spider",8.52236652771038e-15
+"Lateral","Myrmarachne macaulayi","mimetic spider",7.81670665404957e-21
+"Lateral","Myrmarachne macleayana","mimetic spider",1.89072590556188e-20
+"Lateral","Myrmarachne smaragdina","mimetic spider",1.40340342311227e-05
+"Lateral","Myrmecotypus rettenmeyeri","mimetic spider",1.10130999097744e-17
+"Lateral","Neon nellii*","mimetic spider",2.90889604334795e-57
+"Lateral","Notoncus sp1","model",0.999999948823195
+"Lateral","Nyssus coloripes","non-mimic",7.90209942707625e-49
+"Lateral","Oecophylla smaragdina","model",0.998829171513335
+"Lateral","Opisthopsis sp1","model",1
+"Lateral","Oxyopes elegans","non-mimic",3.22995041412513e-34
+"Lateral","Poecilipta contorqua","mimetic spider",2.77455554160856e-17
+"Lateral","Poecilipta kohouti","mimetic spider",2.49308679669123e-25
+"Lateral","Polyrhachis ammon","model",1
+"Lateral","Polyrhachis monteithi","model",0.999445339088062
+"Lateral","Polyrhachis sp1","model",1
+"Lateral","Polyrhachis sp2","model",1
+"Lateral","Polyrhachis sp4","model",1
+"Lateral","Reduviid1 sp1","non-mimic",0.0537116605573092
+"Lateral","Rhombonotus gracilis","mimetic spider",1.00795033994215e-18
+"Lateral","Rhombonotus sp2","mimetic spider",6.55413562126929e-16
+"Lateral","Rhombonotus sp3","mimetic spider",3.63995164408036e-17
+"Lateral","Rhytidoponera metallica","model",0.999998089743253
+"Lateral","Riptortus abdominalis","mimetic insect",5.49182264908328e-17
+"Lateral","Salticid17 sp1","mimetic spider",7.37113359410158e-23
+"Lateral","Salticid18 sp1","non-mimic",2.5479855413203e-39
+"Lateral","Serendib suthepica","mimetic spider",1.34152841488152e-30
+"Lateral","Serendib volans","mimetic spider",1.21924567451423e-30
+"Lateral","Sphecotypus niger","mimetic spider",5.55584869659262e-10
+"Lateral","Stigmacros sp1","model",0.999999994878483
+"Lateral","Tapinoma sp1","model",0.999999999665021
+"Lateral","Vespoidea3 sp1","mimetic insect",4.64548741997016e-08
+"Lateral","Vespoidea4 sp1","non-mimic",6.66986160932291e-11
+"Lateral","Vespoidea5 sp1","mimetic insect",7.83391481634675e-05
+"Lateral","Vespoidea6 sp1","mimetic insect",1.69405865584598e-06
+"Lateral","Zodarid4 sp1","mimetic spider",4.86759245395336e-30

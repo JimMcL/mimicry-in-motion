@@ -1,0 +1,26 @@
+# YetAnotherTracker settings for extracting walking tracks from videos shot in the lab
+
+# Width of board - assumes video was shot so that board fills frame width
+#view-width=.6m
+view-rotation=90
+
+blur-size=0
+motion-detector=differences
+foreground-segmenter=KNN:400:500:true
+background-method=none
+threshold-invert=true
+
+dilation-erosion=8,-4
+min-contour=400
+max-contour=1200
+display-contours=true
+
+csv=true
+
+kalman=fast
+max-jump=20
+min-gap=10
+first-tracking-frame=20
+termination-border=20
+display-tracks=true
+

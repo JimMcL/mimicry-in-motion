@@ -1,0 +1,28 @@
+# YetAnotherTracker settings for extracting walking tracks from videos shot in the lab
+
+# Scale can be measured from the board which has size 600mmx900mm
+view-scale=?
+view-rotation=90
+fps=50
+
+blur-size=0
+motion-detector=differences
+foreground-segmenter=background-subtraction
+background-method=none
+threshold-method=adaptive
+threshold-C=10
+
+dilation-erosion=6,-2
+min-contour=30
+max-contour=600
+display-contours=true
+
+csv=true
+
+kalman=veryfast
+max-jump=10
+min-gap=10
+first-tracking-frame=20
+termination-border=20
+display-tracks=true
+

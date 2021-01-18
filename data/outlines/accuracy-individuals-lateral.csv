@@ -1,0 +1,177 @@
+"angle","file","species","specimenId","mimicType","accuracy"
+"Lateral","../data/outlines/sampleIt\outline1cb03a04780f.jpg","Diptera3 sp1","18","non-mimic",3.49585300501603e-19
+"Lateral","../data/outlines/sampleIt\outline1cb0418b1887.jpg","Insecta1 sp1","19","non-mimic",1.00436849385912e-06
+"Lateral","../data/outlines/sampleIt\outline1cb025df6547.jpg","Rhytidoponera metallica","204","model",0.999995572891459
+"Lateral","../data/outlines/sampleIt\outline1cb0237d2ec4.jpg","Crematogaster sp1","23","model",1
+"Lateral","../data/outlines/sampleIt\outline1cb020a37594.jpg","Isopoda1 sp1","242","non-mimic",1.0154687729724e-15
+"Lateral","../data/outlines/sampleIt\outline1cb09b2ec2.jpg","Gryllid1 sp1","243","non-mimic",3.89560052312783e-24
+"Lateral","../data/outlines/sampleIt\outline1cb076b4f68.jpg","Tapinoma sp1","244","model",0.999999600286629
+"Lateral","../data/outlines/sampleIt\outline1cb051337de0.jpg","Froggattella sp1","248","model",1
+"Lateral","../data/outlines/sampleIt\outline1cb014d1bed.jpg","Polyrhachis ammon","256","model",1
+"Lateral","../data/outlines/sampleIt\outline1cb06c603552.jpg","Oxyopes elegans","260","non-mimic",3.20862559256211e-38
+"Lateral","../data/outlines/sampleIt\outline1cb04cdd3090.jpg","Camponotus nigriceps","267","model",0.999999999867175
+"Lateral","../data/outlines/sampleIt\outline1cb04e2b3aa0.jpg","Camponotus nigriceps","289","model",1
+"Lateral","../data/outlines/sampleIt\outline1cb05d367bb5.jpg","Stigmacros sp1","3","model",0.999999999289643
+"Lateral","../data/outlines/sampleIt\outline1cb04f333d85.jpg","Polyrhachis sp1","309","model",1
+"Lateral","../data/outlines/sampleIt\outline1cb05dd821e3.jpg","Camponotus sp2","310","model",0.999999999999989
+"Lateral","../data/outlines/sampleIt\outline1cb01e5b6c5c.jpg","Tapinoma sp1","319","model",0.999999999999962
+"Lateral","../data/outlines/sampleIt\outline1cb02b0e5f80.jpg","Myrmarachne erythrocephala","346","mimetic spider",1.72079401999553e-11
+"Lateral","../data/outlines/sampleIt\outline1cb040531d71.jpg","Notoncus sp1","370","model",0.999999896408434
+"Lateral","../data/outlines/sampleIt\outline1cb049a75944.jpg","Myrmarachne luctuosa","380","mimetic spider",1.48558000875433e-15
+"Lateral","../data/outlines/sampleIt\outline1cb061df49e0.jpg","Coleoptera2 sp1","381","mimetic insect",6.29063490546462e-14
+"Lateral","../data/outlines/sampleIt\outline1cb031592d51.jpg","Myrmarachne luctuosa","383","mimetic spider",1.6509456859777e-15
+"Lateral","../data/outlines/sampleIt\outline1cb05cbd1961.jpg","Polyrhachis sp2","384","model",0.999999999999703
+"Lateral","../data/outlines/sampleIt\outline1cb053171d8c.jpg","Myrmarachne erythrocephala","385","mimetic spider",2.86081257311829e-10
+"Lateral","../data/outlines/sampleIt\outline1cb0207a6bf0.JPG","Myrmarachne luctuosa","386","mimetic spider",1.69847592558811e-08
+"Lateral","../data/outlines/sampleIt\outline1cb067426fe8.JPG","Myrmarachne luctuosa","387","mimetic spider",1.76765179672951e-07
+"Lateral","../data/outlines/sampleIt\outline1cb0332e6383.jpg","Myrmarachne luctuosa","388","mimetic spider",4.21624271560594e-10
+"Lateral","../data/outlines/sampleIt\outline1cb07d47232b.JPG","Dolichoderus clarki","390","model",1
+"Lateral","../data/outlines/sampleIt\outline1cb024f17c0c.JPG","Eurymela rubrolimbata","393","mimetic insect",7.25865549975196e-25
+"Lateral","../data/outlines/sampleIt\outline1cb07bb83bf2.JPG","Eurymela rubrolimbata","394","non-mimic",4.58924304957863e-14
+"Lateral","../data/outlines/sampleIt\outline1cb07ce32c22.JPG","Cosmophasis bitaeniata","397","mimetic spider",4.82696684355516e-15
+"Lateral","../data/outlines/sampleIt\outline1cb026f77dc1.JPG","Amyciaea albomaculata","398","mimetic spider",1.60315287799873e-19
+"Lateral","../data/outlines/sampleIt\outline1cb056766dbd.JPG","Amyciaea albomaculata","399","mimetic spider",2.59928803438315e-28
+"Lateral","../data/outlines/sampleIt\outline1cb01e13a16.JPG","Cosmophasis bitaeniata","400","mimetic spider",4.44172800674222e-22
+"Lateral","../data/outlines/sampleIt\outline1cb07a5977de.JPG","Cosmophasis bitaeniata","401","mimetic spider",3.17407345021653e-20
+"Lateral","../data/outlines/sampleIt\outline1cb0517332e0.JPG","Coleoptera3 sp1","404","mimetic insect",8.22800645910303e-11
+"Lateral","../data/outlines/sampleIt\outline1cb04af92c22.JPG","Daerlac apicalis","405","mimetic insect",2.02051369244513e-12
+"Lateral","../data/outlines/sampleIt\outline1cb0612e1b42.JPG","Poecilipta contorqua","410","mimetic spider",5.30391491173288e-11
+"Lateral","../data/outlines/sampleIt\outline1cb05e0a6cbf.JPG","Dolichoderus clarki","412","model",1
+"Lateral","../data/outlines/sampleIt\outline1cb07d123a84.JPG","Vespoidea3 sp1","416","mimetic insect",0.00162197302350736
+"Lateral","../data/outlines/sampleIt\outline1cb063e019e8.JPG","Leptomyrmex sp1","419","model",0.999336687674459
+"Lateral","../data/outlines/sampleIt\outline1cb022da26f1.jpg","Eurymela rubrolimbata","423","mimetic insect",2.40123478815129e-22
+"Lateral","../data/outlines/sampleIt\outline1cb04f0372f8.jpg","Myrmarachne erythrocephala","424","mimetic spider",2.39860526809375e-08
+"Lateral","../data/outlines/sampleIt\outline1cb0189d3481.JPG","Apricia jovialis","426","mimetic spider",1.02780941945431e-28
+"Lateral","../data/outlines/sampleIt\outline1cb032f59b1.JPG","Vespoidea4 sp1","430","non-mimic",5.6573945029926e-14
+"Lateral","../data/outlines/sampleIt\outline1cb01ad95271.JPG","Polyrhachis sp4","431","model",1
+"Lateral","../data/outlines/sampleIt\outline1cb06b6c9d8.JPG","Mantid1 sp1","437","non-mimic",0.895620341957618
+"Lateral","../data/outlines/sampleIt\outline1cb03e805283.JPG","Formicid19 sp1","438","model",0.999999990056267
+"Lateral","../data/outlines/sampleIt\outline1cb03fe49a9.JPG","Alydid3 sp1","444","mimetic insect",0.0585643187581729
+"Lateral","../data/outlines/sampleIt\outline1cb064961976.JPG","Alydid2 sp1","446","non-mimic",5.22501369307131e-05
+"Lateral","../data/outlines/sampleIt\outline1cb06d24407e.JPG","Mantid2 sp1","454","non-mimic",0.000694196767763262
+"Lateral","../data/outlines/sampleIt\outline1cb010246d12.JPG","Cosmophasis thalassina","457","non-mimic",1.35490233886667e-25
+"Lateral","../data/outlines/sampleIt\outline1cb058b51a1f.JPG","Ligonipes sp1","458","mimetic spider",2.88689981794994e-16
+"Lateral","../data/outlines/sampleIt\outline1cb038eb6d3a.JPG","Riptortus abdominalis","462","mimetic insect",3.8460281425372e-21
+"Lateral","../data/outlines/sampleIt\outline1cb01e163015.JPG","Corinnid1 sp1","469","mimetic spider",9.80178130394155e-20
+"Lateral","../data/outlines/sampleIt\outline1cb026a573a1.JPG","Cosmophasis bitaeniata","473","mimetic spider",1.5973328440552e-12
+"Lateral","../data/outlines/sampleIt\outline1cb01b4f6626.JPG","Myrmarachne macleayana","479","mimetic spider",2.73117753433341e-34
+"Lateral","../data/outlines/sampleIt\outline1cb039c64f95.JPG","Reduviid1 sp1","488","non-mimic",0.123340577240642
+"Lateral","../data/outlines/sampleIt\outline1cb046f748dc.JPG","Corinnid1 sp1","489","mimetic spider",2.01552036323199e-17
+"Lateral","../data/outlines/sampleIt\outline1cb02ac81e13.JPG","Reduviid1 sp1","490","mimetic insect",0.303306037108122
+"Lateral","../data/outlines/sampleIt\outline1cb05840785f.JPG","Cosmophasis bitaeniata","492","mimetic spider",1.28922814675176e-21
+"Lateral","../data/outlines/sampleIt\outline1cb06522b03.JPG","Riptortus abdominalis","494","non-mimic",1.36769525433655e-15
+"Lateral","../data/outlines/sampleIt\outline1cb035956cfe.JPG","Amyciaea albomaculata","499","mimetic spider",0.000308615854128704
+"Lateral","../data/outlines/sampleIt\outline1cb04ab037b6.JPG","Oecophylla smaragdina","500","model",0.986790245697533
+"Lateral","../data/outlines/sampleIt\outline1cb01ce644fb.JPG","Amyciaea albomaculata","503","mimetic spider",3.3548570696024e-09
+"Lateral","../data/outlines/sampleIt\outline1cb042c16d9e.JPG","Cicadellid2 sp1","506","non-mimic",2.93482488535469e-40
+"Lateral","../data/outlines/sampleIt\outline1cb050291445.jpg","Opisthopsis sp1","509","model",1
+"Lateral","../data/outlines/sampleIt\outline1cb041fe6cea.jpg","Myandra bicincta","512","mimetic spider",3.01522484059033e-19
+"Lateral","../data/outlines/sampleIt\outline1cb06b6b424d.JPG","Myandra bicincta","514","mimetic spider",2.57276263840828e-18
+"Lateral","../data/outlines/sampleIt\outline1cb04a636d61.JPG","Zodarid4 sp1","515","mimetic spider",2.37120185934125e-23
+"Lateral","../data/outlines/sampleIt\outline1cb0614d64bd.JPG","Holoplatys sp4","518","mimetic spider",1.49110322797596e-07
+"Lateral","../data/outlines/sampleIt\outline1cb020e32d00.JPG","Myrmarachne juvenile","523","mimetic spider",1.61209743400136e-29
+"Lateral","../data/outlines/sampleIt\outline1cb064b73dc8.JPG","Myrmarachne juvenile","524","mimetic spider",9.52651170470688e-16
+"Lateral","../data/outlines/sampleIt\outline1cb032ef32c0.JPG","Hemiptera1 sp1","531","mimetic insect",4.90906738144593e-16
+"Lateral","../data/outlines/sampleIt\outline1cb049dc6a03.JPG","Myrmarachne erythrocephala","535","mimetic spider",6.15250173714254e-12
+"Lateral","../data/outlines/sampleIt\outline1cb0179b6d90.JPG","Vespoidea5 sp1","536","mimetic insect",0.813654682456597
+"Lateral","../data/outlines/sampleIt\outline1cb033623fee.JPG","Formicid1 sp1","537","model",0.998501386959507
+"Lateral","../data/outlines/sampleIt\outline1cb07e9977d3.JPG","Vespoidea6 sp1","579","mimetic insect",1.36646394248336e-10
+"Lateral","../data/outlines/sampleIt\outline1cb012126335.JPG","Myrmarachne luctuosa","589","mimetic spider",9.0659907956787e-13
+"Lateral","../data/outlines/sampleIt\outline1cb02543cfa.JPG","Damoetas nitidus","591","mimetic spider",2.79887792651487e-17
+"Lateral","../data/outlines/sampleIt\outline1cb0484a41d1.JPG","Eilica sp1","593","mimetic spider",2.52917229814701e-14
+"Lateral","../data/outlines/sampleIt\outline1cb05883166a.JPG","Apricia jovialis","605","non-mimic",5.59947083307069e-20
+"Lateral","../data/outlines/sampleIt\outline1cb02161723.JPG","Rhombonotus gracilis","609","mimetic spider",3.3939222090176e-11
+"Lateral","../data/outlines/sampleIt\outline1cb07fa25b60.JPG","Eilica sp1","621","mimetic spider",7.87316037710335e-25
+"Lateral","../data/outlines/sampleIt\outline1cb02c5d2640.JPG","Eilica sp1","626","mimetic spider",7.87715761100882e-24
+"Lateral","../data/outlines/sampleIt\outline1cb0a117a15.JPG","Daerlac nigricans","642","mimetic insect",5.20707574384986e-07
+"Lateral","../data/outlines/sampleIt\outline1cb0bbfdc0.JPG","Vespoidea5 sp1","654","mimetic insect",0.652977405991233
+"Lateral","../data/outlines/sampleIt\outline1cb023c33c3d.JPG","Vespoidea4 sp1","657","non-mimic",1.38098900779523e-08
+"Lateral","../data/outlines/sampleIt\outline1cb038d1bf4.JPG","Myrmarachne erythrocephala","661","mimetic spider",1.07931382015534e-15
+"Lateral","../data/outlines/sampleIt\outline1cb058e479b9.JPG","Daerlac nigricans","662","mimetic insect",3.0508521026385e-07
+"Lateral","../data/outlines/sampleIt\outline1cb06c3a7efa.JPG","Coleoptera2 sp1","663","mimetic insect",8.90206628447977e-16
+"Lateral","../data/outlines/sampleIt\outline1cb043d66235.JPG","Vespoidea4 sp1","664","non-mimic",8.04236753475562e-08
+"Lateral","../data/outlines/sampleIt\outline1cb071427e26.JPG","Daerlac nigricans","665","mimetic insect",4.88270514976057e-08
+"Lateral","../data/outlines/sampleIt\outline1cb056bf70f8.JPG","Holoplatys sp2","666","non-mimic",1.0159893139914e-19
+"Lateral","../data/outlines/sampleIt\outline1cb022655f64.JPG","Formicid10 sp1","667","model",1
+"Lateral","../data/outlines/sampleIt\outline1cb076ae594b.JPG","Lamponid2 sp1","682","non-mimic",1.43657227139587e-13
+"Lateral","../data/outlines/sampleIt\outline1cb042dc7ad2.JPG","Nyssus coloripes","687","non-mimic",1.86077630857867e-38
+"Lateral","../data/outlines/sampleIt\outline1cb054e64e5e.JPG","Eilica sp1","696","mimetic spider",7.27252853142619e-39
+"Lateral","../data/outlines/sampleIt\outline1cb022b2505e.JPG","Astia hariola","704","non-mimic",2.08119249776541e-31
+"Lateral","../data/outlines/sampleIt\outline1cb07de41220.JPG","Coleoptera2 sp1","717","mimetic insect",1.95859909916502e-14
+"Lateral","../data/outlines/sampleIt\outline1cb01d735b57.JPG","Coleoptera2 sp1","722","mimetic insect",1.43854844564175e-09
+"Lateral","../data/outlines/sampleIt\outline1cb06a045a0f.JPG","Daerlac nigricans","728","mimetic insect",8.16561634616072e-11
+"Lateral","../data/outlines/sampleIt\outline1cb023f521d7.JPG","Myrmarachne erythrocephala","732","mimetic spider",8.36334446721705e-10
+"Lateral","../data/outlines/sampleIt\outline1cb07a9a4a90.JPG","Myrmarachne luctuosa","733","mimetic spider",3.66457591205035e-14
+"Lateral","../data/outlines/sampleIt\outline1cb0214e214d.jpg","Notoncus sp1","75","model",1
+"Lateral","../data/outlines/sampleIt\outline1cb01abc2b3.JPG","Daerlac apicalis","766","mimetic insect",7.66433830393956e-10
+"Lateral","../data/outlines/sampleIt\outline1cb02ff41cb6.JPG","Daerlac apicalis","769","mimetic insect",3.10254135408403e-08
+"Lateral","../data/outlines/sampleIt\outline1cb0588e4fff.JPG","Daerlac apicalis","770","mimetic insect",1.57468818868664e-09
+"Lateral","../data/outlines/sampleIt\outline1cb0f187a89.JPG","Vespoidea5 sp1","783","mimetic insect",0.314351369202093
+"Lateral","../data/outlines/sampleIt\outline1cb078e43163.JPG","Daerlac apicalis","804","mimetic insect",7.37657712241217e-06
+"Lateral","../data/outlines/sampleIt\outline1cb044892132.JPG","Myrmarachne bicolor","810","mimetic spider",4.44836570462499e-17
+"Lateral","../data/outlines/sampleIt\outline1cb018623eab.JPG","Rhombonotus sp2","813","mimetic spider",2.05552380653158e-12
+"Lateral","../data/outlines/sampleIt\outline1cb0110e471a.JPG","Rhombonotus sp2","815","mimetic spider",5.01236137616672e-09
+"Lateral","../data/outlines/sampleIt\outline1cb04fee10de.JPG","Judalana lutea","817","mimetic spider",8.77704397389077e-10
+"Lateral","../data/outlines/sampleIt\outline1cb014fc2194.JPG","Myrmarachne juvenile","818","mimetic spider",6.92684200999669e-10
+"Lateral","../data/outlines/sampleIt\outline1cb0363164d0.JPG","Myrmarachne juvenile","822","mimetic spider",9.29488342393059e-19
+"Lateral","../data/outlines/sampleIt\outline1cb037a4288a.JPG","Myrmarachne erythrocephala","824","mimetic spider",8.66489385646753e-21
+"Lateral","../data/outlines/sampleIt\outline1cb079be4e1f.JPG","Myrmarachne macleayana","826","mimetic spider",1.48479021723146e-18
+"Lateral","../data/outlines/sampleIt\outline1cb04ef5726f.JPG","Myrmarachne macleayana","827","mimetic spider",1.41618219894403e-21
+"Lateral","../data/outlines/sampleIt\outline1cb038a14d11.JPG","Polyrhachis monteithi","829","model",0.999785837513312
+"Lateral","../data/outlines/sampleIt\outline1cb0b5560aa.JPG","Rhombonotus gracilis","832","mimetic spider",2.25451944388698e-10
+"Lateral","../data/outlines/sampleIt\outline1cb05a636deb.JPG","Rhombonotus sp2","833","mimetic spider",1.99981294625643e-07
+"Lateral","../data/outlines/sampleIt\outline1cb0574c7ccf.jpg","Rhombonotus gracilis","841","mimetic spider",3.36899441268191e-12
+"Lateral","../data/outlines/sampleIt\outline1cb0fe15a4b.JPG","Crematogaster sp1","842","model",0.608504747624533
+"Lateral","../data/outlines/sampleIt\outline1cb01bec60c7.JPG","Formicid13 sp1","843","model",0.999999534378363
+"Lateral","../data/outlines/sampleIt\outline1cb023536f2b.JPG","Rhombonotus sp2","844","mimetic spider",4.20215192239512e-10
+"Lateral","../data/outlines/sampleIt\outline1cb066760cf.JPG","Rhombonotus sp2","845","mimetic spider",2.36417198499643e-10
+"Lateral","../data/outlines/sampleIt\outline1cb065875ccf.JPG","Rhombonotus sp2","846","mimetic spider",5.05763777843247e-14
+"Lateral","../data/outlines/sampleIt\outline1cb04073e6c.JPG","Rhombonotus sp2","847","mimetic spider",5.99547398639163e-14
+"Lateral","../data/outlines/sampleIt\outline1cb02abc28eb.JPG","Cosmophasis thalassina","849","non-mimic",7.00219980365885e-30
+"Lateral","../data/outlines/sampleIt\outline1cb044122c48.JPG","Heteroptera2 sp1","851","mimetic insect",2.82298477652173e-05
+"Lateral","../data/outlines/sampleIt\outline1cb066cd6ebe.JPG","Rhombonotus sp3","857","mimetic spider",1.37800506637382e-10
+"Lateral","../data/outlines/sampleIt\outline1cb0799af97.JPG","Colobathristid1 sp1","884","mimetic insect",2.95545120490739e-09
+"Lateral","../data/outlines/sampleIt\outline1cb05b6520ab.JPG","Heteroptera2 sp1","892","mimetic insect",7.26383764940453e-08
+"Lateral","../data/outlines/sampleIt\outline1cb0795833ec.JPG","Cosmophasis thalassina","897","mimetic spider",5.56709750914699e-26
+"Lateral","../data/outlines/sampleIt\outline1cb04ba65ee4.JPG","Cosmophasis thalassina","900","mimetic spider",1.93295810211745e-43
+"Lateral","../data/outlines/sampleIt\outline1cb076d214c1.JPG","Cosmophasis thalassina","901","non-mimic",3.63511651618571e-27
+"Lateral","../data/outlines/sampleIt\outline1cb061e66c1f.jpg","Myrmarachne macleayana","902","mimetic spider",1.6435466318159e-11
+"Lateral","../data/outlines/sampleIt\outline1cb0407632b3.JPG","Heteroptera2 sp1","910","mimetic insect",0.0186499583283571
+"Lateral","../data/outlines/sampleIt\outline1cb02ffa1d28.JPG","Myrmarachne juvenile","911","mimetic spider",2.51693676456694e-11
+"Lateral","../data/outlines/sampleIt\outline1cb05b5556e1.JPG","Cosmophasis micarioides","913","mimetic spider",2.0474729927084e-21
+"Lateral","../data/outlines/sampleIt\outline1cb025c22a41.JPG","Myrmarachne macleayana","914","mimetic spider",9.81830735068614e-14
+"Lateral","../data/outlines/sampleIt\outline1cb019ea7b49.JPG","Heteroptera2 sp1","915","mimetic insect",1.90976118307328e-18
+"Lateral","../data/outlines/sampleIt\outline1cb046d3533d.JPG","Cosmophasis baehrae","919","non-mimic",6.73169194823316e-37
+"Lateral","../data/outlines/sampleIt\outline1cb080f2313.JPG","Judalana lutea","920","mimetic spider",2.48874703955334e-21
+"Lateral","../data/outlines/sampleIt\outline1cb046492a05.JPG","Judalana lutea","921","mimetic spider",5.23508173997971e-14
+"Lateral","../data/outlines/sampleIt\outline1cb010314604.JPG","Salticid17 sp1","925","mimetic spider",3.19270615906204e-15
+"Lateral","../data/outlines/sampleIt\outline1cb0408315.JPG","Salticid18 sp1","926","non-mimic",8.01540547762066e-27
+"Lateral","../data/outlines/sampleIt\outline1cb06af14444.JPG","Cosmophasis thalassina","927","mimetic spider",1.55875554627378e-29
+"Lateral","../data/outlines/sampleIt\outline1cb0147f3c38.JPG","Judalana lutea","931","mimetic spider",5.09307288613499e-14
+"Lateral","../data/outlines/sampleIt\outline1cb012ee73b2.JPG","Cosmophasis baehrae","939","non-mimic",2.52615433287969e-23
+"Lateral","../data/outlines/sampleIt\outline1cb02dff7c48.JPG","Cosmophasis thalassina","940","mimetic spider",1.26874574904662e-34
+"Lateral","../data/outlines/sampleIt\outline1cb0397628e2.JPG","Myrmarachne macleayana","942","mimetic spider",2.17709810020595e-17
+"Lateral","../data/outlines/sampleIt\outline1cb07b9c163e.JPG","Iridonyssus kohouti","951","mimetic spider",3.43166103493594e-25
+"Lateral","../data/outlines/sampleIt\outline1cb047ed29e4.jpg","Poecilipta kohouti","977","mimetic spider",7.71750563149883e-18
+"Lateral","../data/outlines/Morphometrics B-W/CRS101_lateral_interpolated_angle_adjust.jpg","Myrmarachne formicaria","CRS101","mimetic spider",8.86351452011575e-27
+"Lateral","../data/outlines/Morphometrics B-W/JMS116_e_lateral_interpolated.jpg","Myrmarachne erythrocephala","JMS116","mimetic spider",2.24759706460992e-13
+"Lateral","../data/outlines/Morphometrics B-W/JMS117_g_lateral.jpg","Myrmarachne erythrocephala","JMS117","mimetic spider",8.3323394458959e-14
+"Lateral","../data/outlines/Morphometrics B-W/JMS120_f_lateral_interpolated.jpg","Myrmarachne macleayana","JMS120","mimetic spider",1.72395205685966e-16
+"Lateral","../data/outlines/Morphometrics B-W/MCZ108610_lateral_interpolated.jpg","Myrmapana parallela","MCZ108610","mimetic spider",2.91730861161787e-08
+"Lateral","../data/outlines/Morphometrics B-W/MCZ125078_lateral_interpolated.jpg","Myrmapeni chickeringi","MCZ125078","mimetic spider",1.82475361576297e-17
+"Lateral","../data/outlines/Morphometrics B-W/MCZ126957_lateral_interpolated.jpg","Castianeira longipalpa","MCZ126957","mimetic spider",6.92127632910301e-52
+"Lateral","../data/outlines/Morphometrics B-W/MCZ128934_lateral_angle_adjust.jpg","Myrmaplata plataleoides","MCZ128934","mimetic spider",0.00483710790700463
+"Lateral","../data/outlines/Morphometrics B-W/MCZ137106_lateral.jpg","Castianeira gertschi","MCZ137106","mimetic spider",1.27558682509509e-13
+"Lateral","../data/outlines/Morphometrics B-W/MCZ142573_lateral_interpolated.jpg","Castianeira trilineata","MCZ142573","mimetic spider",4.6531839927994e-30
+"Lateral","../data/outlines/Morphometrics B-W/MCZ16734_lateral_angle_adjust.jpg","Aetius nocturnus","MCZ16734","mimetic spider",9.50182636468659e-11
+"Lateral","../data/outlines/Morphometrics B-W/MCZ28119_lateral_angle_adjust.jpg","Sphecotypus niger","MCZ28119","mimetic spider",1.3585554816896e-05
+"Lateral","../data/outlines/Morphometrics B-W/MCZ28153_lateral.jpg","Mazax spinosa","MCZ28153","mimetic spider",8.65344474367374e-30
+"Lateral","../data/outlines/Morphometrics B-W/MCZ44162_lateral_angle_adjust_deformed.jpg","Serendib volans","MCZ44162","mimetic spider",1.41386233060022e-20
+"Lateral","../data/outlines/Morphometrics B-W/MCZ67875_lateral.jpg","Myrmecotypus rettenmeyeri","MCZ67875","mimetic spider",1.12792713850882e-09
+"Lateral","../data/outlines/Morphometrics B-W/MCZ79128_lateral_interpolated.jpg","Mazax pax","MCZ79128","mimetic spider",2.35851948562954e-17
+"Lateral","../data/outlines/Morphometrics B-W/MCZ93522_lateral_angle_adjust_deformed.jpg","Myrmapana centralis","MCZ93522","mimetic spider",2.44107360889845e-10
+"Lateral","../data/outlines/Morphometrics B-W/MCZ95991_lateral_angle_adjust.jpg","Corinnomma sp.","MCZ95991","mimetic spider",0.00092046600206413
+"Lateral","../data/outlines/Morphometrics B-W/MCZ96085_lateral_interpolated_angle_adjust.jpg","Serendib suthepica","MCZ96085","mimetic spider",1.32098247598839e-22
+"Lateral","../data/outlines/Morphometrics B-W/MUS401_b_lateral_interpolated.jpg","Myrmarachne luctuosa","MUS401","mimetic spider",9.43213661591626e-17
+"Lateral","../data/outlines/Morphometrics B-W/TPS103_b_lateral_interpolated.jpg","Myrmarachne helensmithae","TPS103","mimetic spider",9.45206446020784e-08
+"Lateral","../data/outlines/Morphometrics B-W/TPS104_b_lateral_angle_adjust.jpg","Myrmarachne macaulayi","TPS104","mimetic spider",7.56435708872962e-11

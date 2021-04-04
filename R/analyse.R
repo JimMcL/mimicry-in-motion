@@ -108,8 +108,8 @@ cat("\n==== Learning simulation figure ========================================\
 # WARNING this takes ~20 minutes to run! To test quickly, set quickDbg to TRUE
 cat("Skipping because it's toooo slow\n")
 set.seed(1)
-#CreateSimulationFigure(labTrjs, quickDbg = FALSE)
-CreateSimulationFigure(labTrjs, quickDbg = TRUE)
+#CreateLearningSimulationFigure(labTrjs, quickDbg = FALSE)
+CreateLearningSimulationFigure(labTrjs, quickDbg = TRUE)
 
 
 # Generate plots for talk

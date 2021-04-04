@@ -12,5 +12,5 @@ Data and code for the paper:
 | Directory | Description |
 | ------ | ----------- |
 | [`data`](data) | All raw data used for the analysis, plus some intermediate results used to store the results of slow analysis stages. See [`data/README.txt`](data/README.txt) for more details. |
-| [`R`](R) | Contains R scripts used in the analysis. See [`R/README.txt`](R/README.txt) for details, including R version and installed packages. Running the scripts will create a new directory, output, which contains output files such as images. |
-| [`output`](output) | Running the scrtipts generates files in this directory. | 
+| [`R`](R) | Contains R scripts used in the analysis. See [`R/README.txt`](R/README.txt) for details, including R version and installed packages. Script output (CSV files, images and text files) is written to the [`output`](output) directory. |
+| [`output`](output) | Running the scripts generates files in this directory. | 

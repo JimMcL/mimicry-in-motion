@@ -237,12 +237,36 @@ LearningLegend <- function(...) {
          inset = c(.01, .015))
 }
 
+PlotLearningSimulation <- function(trjList, totalPrey, repetitions, analysisType) {
+  # The 2 scenarios. Non-mimics and models are equally abundant
+  percentMimicsAbundant <- 33.3
+  percentMimicsRare <- 5
+  
+  .simulateProportions <- function(percentMimics, ...) {
+    numMimics <- round(percentMimics / 100 * totalPrey)
+    numModels <- numNonMimics <- round((totalPrey - numMimics) / 2)
+    SimulatePredatorLearning(trjList, numMimics, numModels, numNonMimics, report = "numAttacked", repetitions = repetitions, analysisType = analysisType, ...)
+  }
+  
+  par(mfrow = c(1, 2))
+  # Common mimics scenario
+  s <- .simulateProportions(percentMimicsAbundant)
+  cat(sprintf("Mimics common, %s\n", s))
+  mtext("A)", line = -1.5, adj = .05)
+  LearningLegend("bottomleft")
+  # Rare mimics scenario
+  s <- .simulateProportions(percentMimicsRare)
+  cat(sprintf("Mimics rare, %s\n", s))
+  mtext("B)", line = -1.5, adj = .05)
+}
+
 #################################################################################
 
 # Creates a figure showing 2 simulation scenarios, rare mimics and abundant mimics.
 # The simulation is plotted and textual results are written to a file.
-CreateSimulationFigure <- function(trjList, quickDbg = FALSE, 
+CreateLearningSimulationFigure <- function(trjList, quickDbg = FALSE, 
                                    pngFile = ifelse(quickDbg, "../output/learning-quick-and-dirty.png", "../output/learning.png"),
+                                   pdfFile = ifelse(quickDbg, NULL, "../output/learning.pdf"),
                                    txtFile = ifelse(quickDbg, "../output/learning-quick-and-dirty.txt", "../output/learning.txt"),
                                    analysisType = "quadratic") {
   # Define simulation parameters
@@ -258,33 +282,21 @@ CreateSimulationFigure <- function(trjList, quickDbg = FALSE,
     reps <- 1000
   }
   
-  # The 2 scenarios. Non-mimics and models are equally abundant
-  percentMimicsAbundant <- 33.3
-  percentMimicsRare <- 5
+  # PNG file
+  JPlotToPNG(pngFile, {
+    par(mar = c(4.5, 4, 0, 0) + .1)
+    JReportToFile(txtFile, PlotLearningSimulation(trjList, totalPrey, reps, analysisType))
+  },
+  units = "px", width = 1200, height = 500, res = 120)
   
-  .simulateProportions <- function(percentMimics, ...) {
-    numMimics <- round(percentMimics / 100 * totalPrey)
-    numModels <- numNonMimics <- round((totalPrey - numMimics) / 2)
-    SimulatePredatorLearning(trjList, numMimics, numModels, numNonMimics, report = "numAttacked", repetitions = reps, analysisType = analysisType, ...)
+  # Same plot as a PDF file  
+  if (!is.null(pdfFile)) {
+    JPlotToPDF(pdfFile, {
+      par(mar = c(4.5, 4, 0, 0) + .1)
+      PlotLearningSimulation(trjList, totalPrey, reps, analysisType)
+    },
+    pointsize = 10, aspectRatio = 1200 / 500)
   }
-  
-  JPlotToPNG(pngFile,
-             JReportToFile(txtFile, 
-                           {
-                             par(mar = c(4.5, 4, 0, 0) + .1, mfrow = c(1, 2))
-                             # Common mimics scenario
-                             s <- .simulateProportions(percentMimicsAbundant)
-                             cat(sprintf("Mimics common, %s\n", s))
-                             mtext("A)", line = -1.5, adj = .05)
-                             LearningLegend("bottomleft")
-                             # Rare mimics scenario
-                             s <- .simulateProportions(percentMimicsRare)
-                             cat(sprintf("Mimics rare, %s\n", s))
-                             mtext("B)", line = -1.5, adj = .05)
-                           }),
-             units = "px", width = 1200, height = 500, res = 120)
-  
-  #SimulatePredatorLearning(trjList, 4, 100, 100, report = "numAttacked", reps = 100)
   
   ShowTime("Learning simulation:", startTime)
 }
@@ -297,5 +309,5 @@ runFile <- basename(sub("^--file=", "", grep("^--file=", commandArgs(), value = 
 if (Sys.getenv("RSTUDIO") != "1" && runFile == "simulate-learning.R") {
   trjInfo <- LoadCachedTrajectories()
   set.seed(1)
-  CreateSimulationFigure(trjInfo, quickDbg = FALSE)
+  CreateLearningSimulationFigure(trjInfo, quickDbg = FALSE)
 }

@@ -197,12 +197,13 @@ SummariseBodyLength <- function(trjList) {
 
 SummariseTrajectories <- function(trjList, typeLabel) {
   tt <- table(trjList$metaInfo$mimicType)
-  cat(sprintf("=====\n%s trajectories\nN = %d (%s, = %d mimics)\nfrom %d videos, approximately %d individuals and %d species\n", 
+  cat(sprintf("=====\n%s trajectories\nN = %d (%s, = %d mimics)\nfrom %d videos, %d individuals, %d genera and %d species\n", 
               typeLabel, nrow(trjList$metaInfo), 
               JToSentence(paste(tt, paste0(names(tt), "s"))),
               tt[MTP_INSECT] + tt[MTP_SPIDER],
               length(unique(trjList$metaInfo$id)), 
               length(unique(trjList$metaInfo$imageableid)),
+              length(unique(trjList$metaInfo$genus)),
               length(unique(trjList$metaInfo$scientificName))))
   cat("Body lengths:\n")
   print(SummariseBodyLength(trjList))
@@ -248,3 +249,56 @@ SummariseTrajectories <- function(trjList, typeLabel) {
   PlotLocations(trjList, typeLabel)
 }
 
+# Tidies up column names from my sampleIt database. Changes names to make them
+# more understandable, and removes columns with no meaning in this context
+TidySIData <- function(df) {
+
+  # Delete or rename some uninteresting/empty/confusing columns
+  df$source <- NULL # Empty
+  df$url <- NULL # Meaningless
+  df$taxonRank <- NULL # Always Species
+  df$kingdom <- NULL
+  df$phylum <- NULL 
+  df$rating <- NULL 
+  df$ftype <- NULL
+  df$ptype <- NULL
+  df$specimenId <- df$imageableid
+  df$imageableid <- NULL
+  df$imageabletype <- NULL
+  
+  df$individualCount[is.na(df$individualCount)] <- 1
+
+  # Rename some columns to make their meanings more obvious
+  .rename <- function(oldName, newName) names(df)[names(df) == oldName] <<- newName
+  .rename("id", "videoID")
+  .rename("description.y", "specimenDescription")
+  .rename("description.x", "videoDescription")
+  
+  # Try to put interesting columns first
+  interestingCols <- c("mimicType", "class", "order", "family", 
+                       "genus", "species", "scientificNameAuthorship", 
+                       "vernacularName", "idconfidence", "decimalLatitude", "decimalLongitude", "coordinateUncertaintyInMeters", 
+                       "elevation", "locationRemarks", "specimenDescription", "specimenId", "bodylength")
+  interestingCols <- interestingCols[interestingCols %in% names(df)]
+  boringCols <- setdiff(names(df), interestingCols)
+  df <- cbind(df[, interestingCols], df[, boringCols])
+
+  df 
+}
+
+# Returns details of all specimens with trajectories. The returned data frame
+# has column names which are a bit more sensible than used internally, +
+# accuracy under full and limited information
+TrjSpecimenInfo <- function(trjList, analysisType, unskew = TRUE) {
+  accuracy <- CalcMotionAccuracy(trjList, analysisType, trainOnAll = TRUE, transformParams = unskew, crossValidate = TRUE)$accuracy
+
+  # Delete some uninteresting/empty/confusing columns
+  df <- TidySIData(trjList$metaInfo)
+  df$state <- NULL # Should always be alive since they are walking!
+  
+  # Add accuracy columns
+  df <- cbind(accuracy, df)
+  
+  # Sort on taxonomic identity
+  df[order(df$class, df$order, df$family, df$genus, df$species), ]
+}

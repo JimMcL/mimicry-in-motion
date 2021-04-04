@@ -48,6 +48,7 @@ suppressNamedWarnings <- function(warningToIgnore, .expr) {
 #   rather than predicted probabilities.
 # @param warningsToSuppress As I understand it, the specified warnings don't
 #   indicate a problem, so ignore them
+# 
 CalcLogitAccuracy <- function(data, mimicType, trainOnAll, crossValidate,
                               responseType = c("link", "response", "terms"),
                               warningsToSuppress = "algorithm did not converge|fitted probabilities numerically 0 or 1 occurred") {
@@ -108,8 +109,10 @@ CalcLogitAccuracy <- function(data, mimicType, trainOnAll, crossValidate,
   predictedClass <- ifelse(p >= 0, 'ant', 'non-ant')
   tab <- table(factor(mimicType), predictedClass)
   names(dimnames(tab)) <- c('Actual', 'Predicted')
+  # Proportion correct. Taking means works because TRUE is 1 and FALSE is 0.
+  score <- mean(data$model == predictedClass, na.rm = TRUE)
   
-  list(performance = tab, accuracy = p, predicted = data.frame(class = predictedClass), model = result$m)
+  list(performance = tab, accuracy = p, predicted = data.frame(class = predictedClass), model = result$m, score = score)
 }
 
 # -------------------------------------------------------- #
@@ -138,8 +141,6 @@ CalcMotionAccuracy <- function(trjList,
   analysisType <- match.arg(analysisType)
   if (analysisType == "logistic") {
     CalcMotionLogit(trjList, transformParams, trainOnAll = trainOnAll, crossValidate = crossValidate)
-  # } else if (analysisType = "mahal") {
-  #   # TODO
   } else {
     CalcMotionDA(trjList, analysisType = analysisType, trainOnAll = trainOnAll, 
                  inTrainingSet = inTrainingSet, priorWeights = priorWeights, 

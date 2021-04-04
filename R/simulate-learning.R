@@ -17,13 +17,21 @@ library(trajr)
 library(foreach, quietly = TRUE)
 suppressWarnings(library(doParallel, quietly = TRUE, verbose = FALSE))
 library(JUtils)
+source("constants.R")
+source("load-trajectories.R")
+source("mimic-types.R")
+source("LDA.R")
+source("characterise.R")
+source("plotting.R")
+source("morpho_fns.R")
+source("logit.R")
 
 
 # Calculates bootstrapped 95% confidence interval of the mean.
 # @return vector containing mean, 95% CI lower limit and upper limit
 CI95ofMean <- function(v) {
   if (length(v) == 1) {
-    return (as.numeric(v, NA, NA))
+    return(as.numeric(v, NA, NA))
   }
   
   if (length(v) > 0) {
@@ -33,15 +41,15 @@ CI95ofMean <- function(v) {
       return(c(mean = ci$t0, ci$normal[2:3]))
     }
   }    
-  return (as.numeric(c(NA, NA, NA)))
+  return(as.numeric(c(NA, NA, NA)))
 }
 
 CalcMeanAndVar <- function(v) {
   if (length(v) == 0) {
-    return (as.numeric(NA, NA, NA))
+    return(as.numeric(NA, NA, NA))
   }
   if (length(v) == 1) {
-    return (as.numeric(v, NA, NA))
+    return(as.numeric(v, NA, NA))
   }
   
   m <- mean(v)
@@ -59,7 +67,7 @@ PlotMeanAndRegion <- function(m, col, ...) {
 # Runs a single repetition of the learning simulation
 # 
 # Returns matrix, rows are results after each encounter, columns are number of mimics, models and non-mimics attacked
-.runRep <- function(trjList, mimics, numMimics, models, numModels, nonMimics, numNonMimics, replace, reportNumAttacked) {
+.runRep <- function(trjList, mimics, numMimics, models, numModels, nonMimics, numNonMimics, replace, reportNumAttacked, analysisType = "quadratic") {
   
   # Create a matrix to hold the result. Each row is the result after
   # encountering another model, values are counts of correctly identified
@@ -110,7 +118,8 @@ PlotMeanAndRegion <- function(m, col, ...) {
     
     tryCatch( {
       # Reclassify everything using this set of encounters
-      acc <- CalcMotionDA(trjList, analysisType = "quadratic", trainOnAll = FALSE, inTrainingSet = encounterIds)
+      acc <- CalcMotionAccuracy(trjList, analysisType = analysisType, trainOnAll = FALSE, inTrainingSet = encounterIds)
+      #acc <- CalcMotionDA(trjList, analysisType = "quadratic", trainOnAll = FALSE, inTrainingSet = encounterIds)
       
       # Update predicted classes based on our current knowledge. Entries in
       # acc$predicted$class corresponds to trjList, so we need to map back to
@@ -159,7 +168,8 @@ SimulatePredatorLearning <- function(trjList, numMimics = 2, numModels = 49, num
                                      repetitions = 100, replace = TRUE,
                                      report = c("numCorrect", "numAttacked"),
                                      drawMimicCI = TRUE, drawModelCI = TRUE, drawNonMimicCI = TRUE,
-                                     numCores = 8) {
+                                     numCores = 8,
+                                     analysisType = "quadratic") {
   
   report <- match.arg(report)
   reportNumAttacked <- report == "numAttacked"
@@ -173,12 +183,12 @@ SimulatePredatorLearning <- function(trjList, numMimics = 2, numModels = 49, num
   registerDoParallel(cl)
   
   # For each repetition...
-  fns <- c(".runRep", "CalcMotionDA", "GetAnalysableStats", "PARAMS_INFO", "RemoveNAsFromStats", "TransformParams", "trjListToLDAClass", "typeToLDAClass", "MTP_MODEL")
-  results <- foreach (rep = seq_len(repetitions), 
+  fns <- c(".runRep", "CalcMotionAccuracy", "CalcMotionDA", "GetAnalysableStats", "PARAMS_INFO", "RemoveNAsFromStats", "TransformParams", "trjListToLDAClass", "typeToLDAClass", "MTP_MODEL")
+  results <- foreach(rep = seq_len(repetitions), 
                       .export = fns,
                       .packages = c("trajr", "MASS"),
                       .inorder = FALSE) %dopar% {
-      .runRep(trjList, mimics, numMimics, models, numModels, nonMimics, numNonMimics, replace, reportNumAttacked)
+      .runRep(trjList, mimics, numMimics, models, numModels, nonMimics, numNonMimics, replace, reportNumAttacked, analysisType = analysisType)
   }
   
   stopCluster(cl)
@@ -192,7 +202,7 @@ SimulatePredatorLearning <- function(trjList, numMimics = 2, numModels = 49, num
   mimicsCorrect <- apply(mimicResults, 1, mean, na.rm = TRUE) / length(mimics)
   modelsCorrect <- apply(modelResults, 1, mean, na.rm = TRUE) / length(models)
   nonMimicsCorrect <- apply(nonMimicResults, 1, mean, na.rm = TRUE) / length(nonMimics)
-
+  
   .maybeDrawCI <- function(doIt, results, total, mimicType) {
     # To draw 95% CI
     if (doIt) {
@@ -229,8 +239,12 @@ LearningLegend <- function(...) {
 
 #################################################################################
 
-# Creates a figure showing 2 simulation scenarios, rare mimics and abundant mimics
-CreateSimulationFigure <- function(trjList, quickDbg = FALSE, pngFile = ifelse(quickDbg, "../output/learning-quick-and-dirty.png", "../output/learning.png")) {
+# Creates a figure showing 2 simulation scenarios, rare mimics and abundant mimics.
+# The simulation is plotted and textual results are written to a file.
+CreateSimulationFigure <- function(trjList, quickDbg = FALSE, 
+                                   pngFile = ifelse(quickDbg, "../output/learning-quick-and-dirty.png", "../output/learning.png"),
+                                   txtFile = ifelse(quickDbg, "../output/learning-quick-and-dirty.txt", "../output/learning.txt"),
+                                   analysisType = "quadratic") {
   # Define simulation parameters
   startTime <- proc.time()
   
@@ -245,31 +259,43 @@ CreateSimulationFigure <- function(trjList, quickDbg = FALSE, pngFile = ifelse(q
   }
   
   # The 2 scenarios. Non-mimics and models are equally abundant
-  percentMimicsRare <- 5
   percentMimicsAbundant <- 33.3
-
+  percentMimicsRare <- 5
+  
   .simulateProportions <- function(percentMimics, ...) {
-    nMimics <- round(percentMimics / 100 * totalPrey)
-    nModels <- nNonMimics <- round((totalPrey - nMimics) / 2)
-    SimulatePredatorLearning(trjList, nMimics, nModels, nNonMimics, report = "numAttacked", repetitions = reps, ...)
+    numMimics <- round(percentMimics / 100 * totalPrey)
+    numModels <- numNonMimics <- round((totalPrey - numMimics) / 2)
+    SimulatePredatorLearning(trjList, numMimics, numModels, numNonMimics, report = "numAttacked", repetitions = reps, analysisType = analysisType, ...)
   }
   
   JPlotToPNG(pngFile,
-             {
-               par(mar = c(4.5, 4, 0, 0) + .1, mfrow = c(1, 2))
-               # Common mimics scenario
-               s <- .simulateProportions(percentMimicsAbundant)
-               cat(sprintf("Mimics common, %s\n", s))
-               mtext("A)", line = -1.5, adj = .05)
-               LearningLegend("bottomleft")
-               # Rare mimics scenario
-               s <- .simulateProportions(percentMimicsRare)
-               cat(sprintf("Mimics rare, %s\n", s))
-               mtext("B)", line = -1.5, adj = .05)
-             },
+             JReportToFile(txtFile, 
+                           {
+                             par(mar = c(4.5, 4, 0, 0) + .1, mfrow = c(1, 2))
+                             # Common mimics scenario
+                             s <- .simulateProportions(percentMimicsAbundant)
+                             cat(sprintf("Mimics common, %s\n", s))
+                             mtext("A)", line = -1.5, adj = .05)
+                             LearningLegend("bottomleft")
+                             # Rare mimics scenario
+                             s <- .simulateProportions(percentMimicsRare)
+                             cat(sprintf("Mimics rare, %s\n", s))
+                             mtext("B)", line = -1.5, adj = .05)
+                           }),
              units = "px", width = 1200, height = 500, res = 120)
   
   #SimulatePredatorLearning(trjList, 4, 100, 100, report = "numAttacked", reps = 100)
   
   ShowTime("Learning simulation:", startTime)
+}
+
+
+#########################################################################
+
+# To run from the command line, and this file was run explicitly...
+runFile <- basename(sub("^--file=", "", grep("^--file=", commandArgs(), value = TRUE)))
+if (Sys.getenv("RSTUDIO") != "1" && runFile == "simulate-learning.R") {
+  trjInfo <- LoadCachedTrajectories()
+  set.seed(1)
+  CreateSimulationFigure(trjInfo, quickDbg = FALSE)
 }

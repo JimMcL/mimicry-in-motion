@@ -18,9 +18,13 @@ JTransparentColour <- function(colour, alpha) {
 # which have been translated to start at (0, 0).
 # 
 # Returns the recentred trajectories
-PrepareRecentredTrjsPlot <- function(trjList, xlim, ylim, ...) {
+PrepareRecentredTrjsPlot <- function(trjList, xlim, ylim, translate = TRUE, ...) {
   # Translate all to start at the origin
-  tt <- lapply(trjList$trjs, function(trj) TrajTranslate(trj, -trj[1,"x"], -trj[1,"y"]))
+  if (translate) {
+    tt <- lapply(trjList$trjs, function(trj) TrajTranslate(trj, -trj[1,"x"], -trj[1,"y"], -trj[1,"time"]))
+  } else {
+    tt <- trjList$trjs
+  }
   
   if (missing(xlim))
     xlim <- range(sapply(tt, function(t) range(t$x)))
@@ -28,6 +32,23 @@ PrepareRecentredTrjsPlot <- function(trjList, xlim, ylim, ...) {
     ylim <- range(sapply(tt, function(t) range(t$y)))
   plot(NULL, xlim = xlim, ylim = ylim, asp = 1, xlab = "x (m)", ylab = "y (m)", ...)
   tt
+}
+
+
+# Plots multiple trajectories in a single plot, intended for debugging. By
+# default, all trajectories will be translated to start at (0, 0). To prevent
+# this behaviour, specify <code>translate = FALSE</code>.
+PlotTrjList <- function(trjList, labelTracks = TRUE, ...) {
+  tt <- PrepareRecentredTrjsPlot(trjList, ...)
+  for (idx in seq_along(tt)) {
+    plot(tt[[idx]], add = TRUE, col = typeToCol(trjList$metaInfo$mimicType[idx]))
+    #label <- trjList$metaInfo$id[idx] # Video id
+    #label <- attr(trjList$trjs[[idx]], "trackID") # Track id
+    if (labelTracks) {
+      label <- sprintf("%d (track %d)", trjList$metaInfo$id[idx], attr(trjList$trjs[[idx]], "trackID"))
+      text(tt[[idx]]$x[1], tt[[idx]]$y[1], label, pos = 4)
+    }
+  }
 }
 
 # Use JUtils version instead
@@ -257,8 +278,9 @@ ConfidenceEllipse <- function(pts, col = "black", conf = .95, ...) {
   if (nrow(pts) > 2) {
     # From https://www.researchgate.net/post/How_to_draw_a_95_confidence_ellipse_to_an_XY_scatter_plot2
     centroid <- colMeans(pts)
-    car::ellipse(center = centroid, shape = cov(pts), radius = sqrt(qchisq(.95, df=2)), col = col, ...)
-    points(centroid[1], centroid[2], pch = 3, cex = 0.3, col = col)
+    car::ellipse(center = centroid, shape = cov(pts), radius = sqrt(qchisq(conf, df = 2)), col = col, ...)
+    #points(centroid[1], centroid[2], pch = 3, cex = 0.3, col = col)
+    invisible(centroid)
   }
 }
 
@@ -342,3 +364,5 @@ ReportCorrelation <- function(xCol, yCol, data, report95CI = FALSE, alpha = .05,
       text(l$model[,2], l$model[,1], labels = labels, xpd = TRUE, pos = 1)
   }
 }
+
+

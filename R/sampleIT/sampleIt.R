@@ -12,8 +12,8 @@ library(openssl)
 
 # This code can work in 3 modes 
 SI_SHIM_MODES <- c(
+  use.cache = 0,   # Uses pre-built locally cached files; doesn't require database access
   live = 1,        # Live database mode, requires access to the running database
-  use.cache = 2,   # Uses pre-built locally cached files; doesn't require database access
   build.cache = 3  # Queries the live database, but also caches query results into local files; requires dbs access
 )
 
@@ -30,16 +30,18 @@ SI_CACHE_DIR <- "../data/sampleITcache"
 
 # Returns data from the database or the local cache, based on the value of SI_MODE
 SIQuery <- function(...) {
+  strtrunc <- function(s, n) ifelse(nchar(s) > n, paste0(strtrim(s, n), ' ...'), s)
+  
   tryCatch({
     url <- SIUrl(...)
     cachedFile <- .siCacheFile(url)
     # Shim mode
-    if (bitwAnd(SI_MODE, 1))
-      r <- read.csv(url, stringsAsFactors = F, strip.white=TRUE)
-    else {
+    if (bitwAnd(SI_MODE, 1)) {
+      r <- read.csv(url, stringsAsFactors = F, strip.white = TRUE)
+    } else {
       if (!file.exists(cachedFile))
         stop(sprintf("Locally cached file doesn't exist for URL %s", url))
-      r <- read.csv(cachedFile, stringsAsFactors = F, strip.white=TRUE)
+      r <- read.csv(cachedFile, stringsAsFactors = F, strip.white = TRUE)
     }
     # Does the result now need to be cached?
     if (bitwAnd(SI_MODE, 2)) {
@@ -50,10 +52,14 @@ SIQuery <- function(...) {
       if (file.exists(cachedFile))
         stop(sprintf("Error - cache file already exists for URL %s", url))
       write.csv(r, cachedFile, row.names = FALSE)
+      # Write a README file
+      cat(sprintf("The file %s is a CSV cache of the results of the query URL:\n%s\n", 
+                  basename(cachedFile), url),
+          file = file.path(dirname(cachedFile), paste0("README-", basename(cachedFile))))
     }
     r
-    },
-    error = function(e) stop(sprintf("SIQuery failed with arguments (%s): %s", paste(..., sep = ", "), e))
+  },
+  error = function(e) stop(sprintf("SIQuery failed with arguments (%s): %s", strtrunc(paste(..., sep = ", "), 100), e))
   )
 }
 

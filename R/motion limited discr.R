@@ -4,7 +4,7 @@ TestMotionLimDiscrHypo <- function(trjList, analysisType = "quadratic", speedMea
   # Get morpho accuracy (only have values per species for now)
   trjList <- FillInTrjMorphoAccuracy(trjList, analysisType = analysisType, trainOnAll = trainOnAll, retain = retain)
   # Get human accuracy scores. Since this doesn't use DA, there's no equivalent to analysisType and trainOnAll
-  # I'm not reporting human results as it adds complexity to the paper without any different results
+  # I'm not reporting human results as it adds substantial complexity to the paper without any different results
   #trjList <- FillInTrjHumanAccuracy(trjList)
 
   # withAcc <- SubsetTrjInfo(trjList, !is.na(trjList$stats$accuracyHuman) | !is.na(trjList$stats$accuracyMorphoDorsal) | !is.na(trjList$stats$accuracyMorphoLateral))

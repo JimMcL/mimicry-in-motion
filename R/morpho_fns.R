@@ -8,6 +8,75 @@ suppressMessages(library(Momocs))
 source("constants.R", local = TRUE)
 source("mimic-types.R", local = TRUE)
 
+# Reads in specimen meta info for outlines from my sampleIt database
+getSampleItOutlinesList <- function() {
+  o <- read.csv(file.path(OUTLINE_DIR, "sampleIt", "outline-info.csv"), stringsAsFactors = FALSE)
+  
+  # Add required column names
+  o$specimenId <- o$imageableid
+  # Fill in mimic type
+  o$mimicType <- mimicTypeFromMetaInfo(o)
+  
+  o
+}
+
+# Reads in specimen meta info for outlines from the measuring mimicry project
+getOtherOutlinesList <- function() {
+  dir <- file.path(OUTLINE_DIR, "Morphometrics B-W")
+  o <- read.csv(file.path(dir, "List - current.csv"), stringsAsFactors = FALSE)
+  o <- o[o$Unique.ID != "", ]
+  
+  # Ignore rows not marked as done
+  o <- o[o$Done. == "Yes", ]
+  
+  # Add required column names
+  o$file <- file.path(dir, o$File)
+  o$outlineId <- paste(o$Unique.ID, o$Unique.qualifier, sep = '-') # generate a unique outline id
+  o$specimenId <- o$Unique.ID
+  o$species <- o$Species
+  o$angle <- o$Aspect
+  # Fill in mimic type. All mimics in this dataset are spiders
+  o$mimicType <- ifelse(o$Ant.mimic. == "Yes", MTP_SPIDER, MTP_NON_MIMIC)
+  o$notes <- o$Notes.1
+  o$other <- sub("; $", "", paste(o$Notes, o$Adjustments..angle.adjustments..interpolation., sep = "; "))
+  o$sex <- o$Sex
+  
+  o
+}
+
+MorphoSpecimenInfo <- function(analysisType, retain) {
+
+  # Get specimen info and accuracy for dorsal shapes, full info and limited info
+  dms <- GetMorphoForPhotos(NULL, "Dorsal")[["individual"]]$Coe
+  lDFull <- CalcMorphoAccuracy(dms, analysisType = analysisType, retain = retain, trainOnAll = TRUE)
+  dorsal <- cbind(accuracyDorsal = lDFull$accuracy, dms$fac)
+  dorsal$angle <- NULL
+  dorsal$sampleSize <- NULL
+
+  
+  # Same for lateral shapes
+  dms <- GetMorphoForPhotos(NULL, "Lateral")[["individual"]]$Coe
+  lDFull <- CalcMorphoAccuracy(dms, analysisType = analysisType, retain = retain, trainOnAll = TRUE)
+  lateral <- cbind(accuracyLateral = lDFull$accuracy, dms$fac)
+  lateral$angle <- NULL
+  lateral$sampleSize <- NULL
+
+  # Combine lateral and dorsal. Some column values (notes, other and possibly
+  # even sex) can vary within a specimen
+  df <- merge(dorsal, lateral, by = c("species", "specimenId", "mimicType"), all = TRUE)
+  
+  # Tidy up columns - try to pick "best" value 
+  .best <- function(x, y) ifelse(is.na(x) | is.null(x) | x == "", y, x)
+  df$sex <- .best(df$sex.x, df$sex.y)
+  df$sex.x <- df$sex.y <- NULL
+  df$notes <- .best(df$notes.x, df$notes.y)
+  df$notes.x <- df$notes.y <- NULL
+  df$other <- .best(df$other.x, df$other.y)
+  df$other.x <- df$other.y <- NULL
+  
+  df
+}
+
 # Loads a set of photos, converts them to outlines, subsamples and smooths them.
 #
 # photos - data frame which specifies the set of photos to be loaded. 
@@ -34,21 +103,21 @@ source("mimic-types.R", local = TRUE)
   coo_close(o) %>% coo_smooth(5)
 }
 
-# Performs a morphometric analysis on a set of photos
+# Performs a morphometric analysis on a set of photos. This involves converting
+# to outlines, aligning the shapes, running fourier analysis, then averaging
+# into specimens then species.
 #
 # @param photos - data frame with a row for each photo to be processed. Columns:
-#   file - location of jpg file
-#   specimenId - unique ID of specimen
-#   species - scientific name of species
-#   mimicType - one of MTP_NAMES
-#   bodyLength - optional
+#   file - location of jpg file specimenId - unique ID of specimen species -
+#   scientific name of species mimicType - one of MTP_NAMES bodyLength -
+#   optional
 #
-# @returns list with elements "photo", "individual", "species", "type". photo
-#   is a Momocs Coe object, remaining elements are lists with members "Coe" and
-#   "shp". 
+# @return list with elements "photo", "individual", "species", "type". photo is
+#   a Momocs Coe object, remaining elements are lists with members "Coe" and
+#   "shp".
 MorphoAnalysisForPhotos <- function(photos, startTime = NULL) {
   
-  # specimenId and speciedId must be a factors with no unused levels
+  # specimenId and species must be a factors with no unused levels
   photos$specimenId <- droplevels(as.factor(photos$specimenId))
   photos$species <- droplevels(as.factor(photos$species))
   photos$mimicType <- droplevels(as.factor(photos$mimicType))
@@ -68,38 +137,43 @@ MorphoAnalysisForPhotos <- function(photos, startTime = NULL) {
   .st(sprintf("Procrustes alignment (%g secs/shape):", round((proc.time() - pt)[3] / length(aligned$coo), 1)))
   
   minCoords <- min(sapply(outlines$coo, length)) / 2
-  # Run the elliptical fourier analysis
+  # Run the elliptical Fourier analysis
   fr <- efourier(aligned, norm = T, nb.h = minCoords %/% 2)
   .st("Fourier analysis")
   # Average multiple photo outlines to individual outlines.
-  # Note that specimen id is called imageableid
-  individual <- mshapes(fr, 'specimenId')
-  # Remove outlineId since there may be multiple outlines contributing to an individual shape
+  individual <- MSHAPES(fr, 'specimenId')
+  # Remove outlineId and file since there may be multiple outlines contributing to an individual shape
   individual$Coe$fac$outlineId <- NULL
+  individual$Coe$fac$file <- NULL
   # Average individuals to species
-  species <- mshapes(individual$Coe, 'species')
+  species <- MSHAPES(individual$Coe, 'species')
   # Remove columns that don't make sense for a species
   species$Coe$fac$specimenId <- NULL
-  species$Coe$fac$file <- NULL
   # Average species to mimic types
-  types <- mshapes(species$Coe, 'mimicType')
+  types <- MSHAPES(species$Coe, 'mimicType')
   # Remove columns that don't make sense for a species
   types$Coe$fac$species <- NULL
   .st("Shape averaging")
   
   # Fix up mean values in averaged groups, i.e. take mean instead of first
-  # value. mshapes just takes the value from the first row of a group
-  .agg <- function(specific, group, idCol, valueCol = 'bodylength', fun = mean, na.rm = TRUE) {
-    r <- c()
-    for(i in 1:nrow(group)) {
-      r[i] <- fun(specific[specific[,idCol] == group[i,idCol], valueCol], na.rm = na.rm)
+  # value. MSHAPES just takes the value from the first row of a group
+  .agg <- function(specific, group, idCol, valueCol = 'bodylength', fun = mean, ...) {
+    r <- numeric(nrow(group))
+    for (i in 1:nrow(group)) {
+      # I have to jump through hoops because Coe$fac is a tibble, not a data frame
+      groupVal <- as.character(as.data.frame(group)[i, idCol])
+      r[i] <- fun(specific[[valueCol]][specific[[idCol]] == groupVal], ...)
     }
     r
   }
   if ("bodylength" %in% names(individual$Coe$fac)) {
-    species$Coe$fac$bodylength <- .agg(individual$Coe$fac, species$Coe$fac, 'species', 'bodylength')
-    types$Coe$fac$bodylength <- .agg(species$Coe$fac, types$Coe$fac, 'mimicType', 'bodylength')
+    species$Coe$fac$bodylength <- .agg(individual$Coe$fac, species$Coe$fac, 'species', 'bodylength', na.rm = TRUE)
+    types$Coe$fac$bodylength <- .agg(species$Coe$fac, types$Coe$fac, 'mimicType', 'bodylength', na.rm = TRUE)
   }
+  # Add sample sizes
+  individual$Coe$fac$sampleSize <- .agg(fr$fac, individual$Coe$fac, 'specimenId', 'species', length)
+  species$Coe$fac$sampleSize <- .agg(individual$Coe$fac, species$Coe$fac, 'species', 'species', length)
+  types$Coe$fac$sampleSize <- .agg(species$Coe$fac, types$Coe$fac, 'mimicType', 'species', length)
   
   list(photo = fr, individual = individual, species = species, type = types)
 }
@@ -146,7 +220,9 @@ ShowTime <- function(msg, startTime) {
 #   columns required by MorphoAnalysisForPhotos, plus an outlineId column. If NULL,
 #   the cached analysis is returned (angle must be specified in this case).
 # @param angle Viewing angle of photos to be analysed.
-# @see MorphoAnalysisForPhotos for return value
+# 
+# @see MorphoAnalysisForPhotos for return value, UncacheMorpho 
+
 GetMorphoForPhotos <- function(photos, angle = photos[1,]$angle, verbose = TRUE, force = FALSE) {
   
   # Try to read in the result of the last analysis
@@ -166,7 +242,7 @@ GetMorphoForPhotos <- function(photos, angle = photos[1,]$angle, verbose = TRUE,
       cat(sprintf("Recalculating morphometrics for %s photos, %s\n", angle, reason))
     }
     # Something has changed. Perform morphometric analysis on all the photos
-    startTime <- if(verbose) proc.time() else NULL
+    startTime <- if (verbose) proc.time() else NULL
     
     result <- MorphoAnalysisForPhotos(photos, startTime)
     saveRDS(result, analFile)
@@ -184,47 +260,6 @@ UncacheMorpho <- function() {
   fn <- .getMorphoCacheFileName("Dorsal")
   if (file.exists(fn))
       file.remove(fn)
-}
-
-MpPlotAccuracyDensities <- function(type, accuracy, subset = NULL, showSpeciesCount = TRUE, legendPos = 'topright', legendInsetFn = JInset, extrasFn = NULL, xlabFn = MLabelAccuracyAxis, mar = c(3, 2, 0.2, 0.2), ...) {
-  
-  if (!is.null(subset)) {
-    type <- type[subset]
-    accuracy <- accuracy[subset]
-  }
-  
-  types <- unique(type)
-  densities <- lapply(types, function(tp) density(accuracy[type == tp], na.rm = TRUE))
-  names(densities) <- types
-  
-  .plotDensityVert <- function(density, x, ...) {
-    .yForX <- function(x) { density$y[which.min(abs(density$x - x))] }
-    segments(x, 0, x, .yForX(x), ...)
-  }
-  .plotTypeLines <- function(tp) {
-    a <- accuracy[type == tp]
-    d <- densities[[tp]]
-    col = typeToCol(tp)
-    m <- mean(a, na.rm = TRUE)
-    sda <- sd(a, na.rm = TRUE)
-    .plotDensityVert(d, m, col = col)
-    .plotDensityVert(d, m + sda, lty = 3, col = col)
-    .plotDensityVert(d, m - sda, lty = 3, col = col)
-  }
-  
-  #JSetParsTemporarily(mar = mar)
-  JPlotDensities(densities, col = typeToCol(types), lty = typeToLty(types), xaxt = 'n', yaxt = 'n', xlab = '', ylab = '', ...)
-  title(ylab = 'Probability Density', line = .5)
-  xlabFn(axis = 'x')
-  
-  sapply(names(densities), .plotTypeLines)
-  if (!is.null(extrasFn))
-    extrasFn(densities)
-  
-  ltypes <- sort(AsPlottableMimicTypeFactor(types))
-  fmt <- ifelse(showSpeciesCount, '%s (n = %d)', '%s')
-  labels <- sapply(ltypes, function(tp) sprintf(fmt, typeToLabel(tp), sum(as.character(type) == as.character(tp))))
-  legend(legendPos, legend = labels, inset = legendInsetFn(), col = typeToCol(ltypes), lty = typeToLty(ltypes), lwd = 2)
 }
 
 ##############################################################################
@@ -277,6 +312,7 @@ FillInTrjMorphoAccuracy <- function(trjList, level = c("species", "individuals")
   # Put accuracy back into trjList
   morphoIdx <- match(trjList$metaInfo[[leftCol]], dms$fac[[rightCol]])
   trjList$stats$accuracyMorphoDorsal <- l$accuracy[morphoIdx]
+  trjList$stats$morphoDorsalSampleSize <- dms$fac$sampleSize[morphoIdx]
   
   # Same for lateral
   dms <- GetMorphoForPhotos(NULL, "Lateral")[[mtype]]$Coe
@@ -285,6 +321,7 @@ FillInTrjMorphoAccuracy <- function(trjList, level = c("species", "individuals")
   # Put accuracy back into trjList
   morphoIdx <- match(trjList$metaInfo[[leftCol]], dms$fac[[rightCol]])
   trjList$stats$accuracyMorphoLateral <- l$accuracy[morphoIdx]
+  trjList$stats$morphoLateralSampleSize <- dms$fac$sampleSize[morphoIdx]
   
   trjList
 }
@@ -308,6 +345,7 @@ SummariseMorphometrics <- function(trjList, label, analysisType = "quadratic", r
     types[is.na(types)] <- as.character(fac2[[typeCol]])[match(ids, fac2[[col]])][is.na(types)]
     types
   }
+  
   # Merge info for specimens
   indIds <- unique(c(dm$individual$Coe$fac$specimenId, lm$individual$Coe$fac$specimenId))
   specimens <- data.frame(id = indIds, 
@@ -325,8 +363,9 @@ SummariseMorphometrics <- function(trjList, label, analysisType = "quadratic", r
   msd <- SubsetTrjInfo(ms, !is.na(ms$stats$accuracyMorphoDorsal))
   msl <- SubsetTrjInfo(ms, !is.na(ms$stats$accuracyMorphoLateral))
   
-  cat(sprintf("Morphometrics for specimens with both outlines and %s trajectories\n", label))
-  cat("___________________________________________________________________\n")
+  cat(sprintf("Morphometrics for specimens with outlines\n"))
+  cat("_________________________________________________\n")
+  
   cat(sprintf("All outlines: %d specimens, %d mimics (%d species), %d ants, %d non-mimics\n",
               length(indIds), 
               sum(mimicSpecimens), length(unique(specimens[mimicSpecimens, "species"])),

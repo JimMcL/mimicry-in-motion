@@ -4,7 +4,7 @@ Files
 -----
 *.jpg - files used as icons in plots.
 camera configs.csv - describes the different cameras used to record trajectories.
-TrajectoryData.rds - cached trajectory data.
+TrajectoryData.rds - cached trajectory data (see comment near the top of ../R/analyse.R).
 
 Directories
 -----------

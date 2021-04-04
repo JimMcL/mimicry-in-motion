@@ -2,7 +2,7 @@ Data and code for the paper:
 McLean, D. J., & Herberstein, M. E. Mimicry in motion and morphology: do information limitation, tradeoffs or compensation relax selection for mimetic accuracy? 
 
 
-This project uses behaviour/locomotor mimicry and morphometric to test various hypotheses for imperfect mimicry.
+This project uses behaviour/locomotor mimicry and morphometric analysis to test various hypotheses for imperfect mimicry.
 
 
 Directory structure
@@ -17,3 +17,4 @@ R/ - Contains R scripts used in the analysis. See R/README.txt for
      scripts will create a new directory, output, which contains
      output files such as images.
 
+output/ - 

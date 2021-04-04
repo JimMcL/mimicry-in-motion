@@ -1,132 +1,170 @@
-"angle","species","mimicType","accuracy"
-"Dorsal","Aetius nocturnus","mimetic spider",0.220013728743514
-"Dorsal","Alydid2 sp1","non-mimic",7.04554031699123e-05
-"Dorsal","Alydid3 sp1","mimetic insect",0.703074544592591
-"Dorsal","Amyciaea albomaculata","mimetic spider",8.30202927874706e-05
-"Dorsal","Amyciaea sp1","mimetic spider",0.0106257304099371
-"Dorsal","Apricia jovialis","mimetic spider",2.88955406204353e-15
-"Dorsal","Araneae10 sp1","non-mimic",1.1301315930936e-12
-"Dorsal","Araneae11 sp1","non-mimic",1.60768032887228e-15
-"Dorsal","Astia hariola","non-mimic",1.74843740781133e-33
-"Dorsal","Battalus byrneae","mimetic spider",7.94238190085751e-47
-"Dorsal","Camponotus nigriceps","model",1
-"Dorsal","Camponotus sp1","model",0.999529457477984
-"Dorsal","Castianeira cingulata","mimetic spider",0.000240643011388524
-"Dorsal","Castianeira longipalpa","mimetic spider",5.48238652152519e-18
-"Dorsal","Castianeira trilineata","mimetic spider",8.90627637940753e-10
-"Dorsal","Cicadellid1 sp1","non-mimic",3.27295743385735e-104
-"Dorsal","Cicadellid2 sp1","non-mimic",1.42964431946903e-108
-"Dorsal","Coleoptera2 sp1","mimetic insect",2.31792850073119e-06
-"Dorsal","Coleoptera3 sp1","mimetic insect",0.00461281084231967
-"Dorsal","Colobathristid1 sp1","mimetic insect",3.50056731419751e-06
-"Dorsal","Copa kabana","mimetic spider",2.21205631436633e-13
-"Dorsal","Corinnid1 sp1","mimetic spider",0.000109065243640136
-"Dorsal","Corinnomma sp.","mimetic spider",0.992628798703235
-"Dorsal","Cosmophasis baehrae","non-mimic",1.08726871844977e-15
-"Dorsal","Cosmophasis bitaeniata","mimetic spider",1.06557664278241e-12
-"Dorsal","Cosmophasis micarioides","mimetic spider",8.61962376159402e-23
-"Dorsal","Cosmophasis thalassina","non-mimic",7.83717456932224e-16
-"Dorsal","Crematogaster sp1","model",0.999991482929771
-"Dorsal","Creugas gulosus","mimetic spider",1.8615320440313e-11
-"Dorsal","Daerlac apicalis","mimetic insect",6.13322921537691e-07
-"Dorsal","Daerlac nigricans","mimetic insect",4.53691746804224e-05
-"Dorsal","Damoetas nitidus","mimetic spider",0.00196909643267905
-"Dorsal","Damoetas sp (?)","mimetic spider",3.5467367472799e-05
-"Dorsal","Damoetas sp1","non-mimic",1.08699427529236e-08
-"Dorsal","Damoetas sp3","mimetic spider",2.21455403454207e-09
-"Dorsal","Diptera1 sp1","mimetic insect",3.03968765664093e-07
-"Dorsal","Disnyssus helenmirrenae","mimetic spider",2.22234270529378e-14
-"Dorsal","Dolichoderus clarki","model",0.981130648284087
-"Dorsal","Eilica sp1","mimetic spider",7.91535107845929e-29
-"Dorsal","Eurybrachyid1 sp1","non-mimic",5.47696671952403e-50
-"Dorsal","Eurymela rubrolimbata","mimetic insect",2.28860295532848e-84
-"Dorsal","Formicid1 sp1","model",0.999999732665888
-"Dorsal","Formicid10 sp1","model",1
-"Dorsal","Formicid13 sp1","model",0.997585030995502
-"Dorsal","Formicid19 sp1","model",1
-"Dorsal","Formicid20 sp1","model",1
-"Dorsal","Formicid7 sp1","model",0.997364064872027
-"Dorsal","Froggattella sp1","model",1
-"Dorsal","Helpis minitabunda","non-mimic",1.91847427376726e-18
-"Dorsal","Hemiptera1 sp1","mimetic insect",0.150042160248312
-"Dorsal","Heteroptera2 sp1","mimetic insect",2.30508181022788e-20
-"Dorsal","Holoplatys sp2","non-mimic",6.79498007678055e-12
-"Dorsal","Holoplatys sp4","mimetic spider",0.000577515248632185
-"Dorsal","Iridonyssus formicans","mimetic spider",3.86922608846676e-09
-"Dorsal","Iridonyssus kohouti","mimetic spider",6.25078378114407e-08
-"Dorsal","Judalana lutea","mimetic spider",7.8918007453151e-05
-"Dorsal","Lamponid2 sp1","non-mimic",1.64976545372164e-05
-"Dorsal","Leichhardteus albofasciatus","mimetic spider",3.67614141386884e-42
-"Dorsal","Leptomyrmex sp1","model",0.99999995438955
-"Dorsal","Leptopicia bimaculata","mimetic spider",0.00875975433188833
-"Dorsal","Ligonipes lacertosus","mimetic spider",8.14853362100896e-09
-"Dorsal","Ligonipes semitectus","mimetic spider",0.709267211587592
-"Dorsal","Ligonipes sp1","mimetic spider",1.49343034518245e-12
-"Dorsal","Ligonipes sp2","mimetic spider",0.000197773019778099
-"Dorsal","Lycosid3 sp1","non-mimic",1.01518172160999e-14
-"Dorsal","Lycosid4 sp1","non-mimic",1.14563175580645e-10
-"Dorsal","Mantid1 sp1","non-mimic",3.18844790399752e-22
-"Dorsal","Mantid2 sp1","non-mimic",1.1260042442778e-07
-"Dorsal","Mazax pax","mimetic spider",0.124833135987223
-"Dorsal","Mazax spinosa","mimetic spider",2.66721773869364e-13
-"Dorsal","Myandra bicincta","mimetic spider",2.67212140314193e-08
-"Dorsal","Myrmapana centralis","mimetic spider",0.080663712466439
-"Dorsal","Myrmapana parallela","mimetic spider",0.0291899685758518
-"Dorsal","Myrmapeni chickeringi","mimetic spider",0.0008177967561626
-"Dorsal","Myrmaplata plataleoides","mimetic spider",0.997824547120178
-"Dorsal","Myrmarachne bicolor","mimetic spider",0.00723066097414641
-"Dorsal","Myrmarachne erythrocephala","mimetic spider",0.131410288866098
-"Dorsal","Myrmarachne formicaria","mimetic spider",2.20817567859743e-07
-"Dorsal","Myrmarachne helensmithae","mimetic spider",6.79916894347732e-07
-"Dorsal","Myrmarachne juvenile","mimetic spider",0.0732899629031097
-"Dorsal","Myrmarachne luctuosa","mimetic spider",0.0271244479459385
-"Dorsal","Myrmarachne macaulayi","mimetic spider",0.00304557716298495
-"Dorsal","Myrmarachne macleayana","mimetic spider",0.0421972924169252
-"Dorsal","Myrmarachne smaragdina","mimetic spider",0.985841644926099
-"Dorsal","Myrmecia mandibularis","model",0.999999999224428
-"Dorsal","Myrmecotypus rettenmeyeri","mimetic spider",0.00160487648317592
-"Dorsal","Neon nellii*","mimetic spider",1.66496639635466e-25
-"Dorsal","Nucastia supunnoides","mimetic spider",4.49795490632816e-05
-"Dorsal","Nyssus albopunctatus","mimetic spider",1.80313996059736e-57
-"Dorsal","Nyssus avidus","mimetic spider",5.62580228755077e-26
-"Dorsal","Nyssus coloripes","non-mimic",2.14214904418309e-12
-"Dorsal","Nyssus luteofinis","mimetic spider",6.55327921677751e-07
-"Dorsal","Nyssus paradoxus","mimetic spider",4.02569412213298e-08
-"Dorsal","Odontomachus sp1","model",0.999999999876392
-"Dorsal","Oecophylla smaragdina","model",0.999999999361472
-"Dorsal","Opisthopsis sp1","model",0.999998592075707
-"Dorsal","Oxyopes elegans","non-mimic",9.02259119050411e-13
-"Dorsal","Poecilipta contorqua","mimetic spider",0.347124284708612
-"Dorsal","Poecilipta kohouti","mimetic spider",0.000109932180640599
-"Dorsal","Polyrhachis ammon","model",1
-"Dorsal","Polyrhachis monteithi","model",1
-"Dorsal","Polyrhachis sp1","model",0.99999963374694
-"Dorsal","Polyrhachis sp2","model",1
-"Dorsal","Reduviid1 sp1","non-mimic",3.97286737947118e-05
-"Dorsal","Rhombonotus gracilis","mimetic spider",0.0181596192146086
-"Dorsal","Rhombonotus sp1","non-mimic",6.73857410832306e-13
-"Dorsal","Rhombonotus sp2","mimetic spider",0.00874568404771364
-"Dorsal","Rhombonotus sp3","mimetic spider",0.0149123273294273
-"Dorsal","Rhytidoponera metallica","model",1
-"Dorsal","Riptortus abdominalis","mimetic insect",0.00944451789040935
-"Dorsal","Salticid17 sp1","mimetic spider",1.32161659313683e-07
-"Dorsal","Salticid18 sp1","non-mimic",2.29035134513225e-24
-"Dorsal","Salticid5 sp1","non-mimic",3.28968774292497e-13
-"Dorsal","Salticid7 sp1","non-mimic",3.56872300480889e-43
-"Dorsal","Serendib suthepica","mimetic spider",0.371425304875094
-"Dorsal","Serendib volans","mimetic spider",8.99328354341439e-07
-"Dorsal","Servaea incana","non-mimic",6.02806078774396e-32
-"Dorsal","Sphecotypus niger","mimetic spider",0.85356382953787
-"Dorsal","Sphinctomyrmex sp1","model",0.999990039859368
-"Dorsal","Storena mainae","non-mimic",2.72311961216965e-12
-"Dorsal","Tamopsis fickerti","non-mimic",1.13667834540549e-62
-"Dorsal","Thomisid1 sp1","non-mimic",7.9155822146506e-65
-"Dorsal","Tinytrema bondi","mimetic spider",9.87776769205627e-07
-"Dorsal","Vespoidea2 sp1","mimetic insect",0.000239183154163817
-"Dorsal","Vespoidea3 sp1","mimetic insect",0.24421709474795
-"Dorsal","Vespoidea3 sp3","mimetic insect",1.75416915221166e-12
-"Dorsal","Vespoidea4 sp1","non-mimic",5.05878523321725e-09
-"Dorsal","Vespoidea5 sp1","mimetic insect",2.90962687575375e-06
-"Dorsal","Vespoidea6 sp1","mimetic insect",0.547201503642287
-"Dorsal","Zillimata scintillans","non-mimic",0.00129237739314667
-"Dorsal","Zodarid4 sp1","mimetic spider",5.24611149109946e-14
+"angle","species","sex","notes","other","mimicType","sampleSize","accuracy"
+"Dorsal","Aetius nocturnus","Male","Specimen stored in ethanol; some deformation of opisthosoma","Photo","mimetic spider",1,0.732031812419878
+"Dorsal","Alydid2 sp1","","","","non-mimic",1,1.85048937437923e-13
+"Dorsal","Alydid3 sp1","","","Ant mimic bug","mimetic insect",1,0.000164976985108825
+"Dorsal","Amyciaea albomaculata","","Purchased spider","Ant-mimic spider","mimetic spider",5,1.07809827419992e-11
+"Dorsal","Amyciaea sp1","","","Ant-mimic spider","mimetic spider",6,5.46019119708017e-10
+"Dorsal","Apricia jovialis","","Colouration is similar to Dolichoderus scabridus.
+14 Feb 2017 knocked out with CO2, pickled in 96% ethanol.","","non-mimic",2,1.56108729339491e-31
+"Dorsal","Araneae10 sp1","","","","non-mimic",1,3.70358770855025e-34
+"Dorsal","Araneae11 sp1","","","","non-mimic",1,2.48235642610367e-30
+"Dorsal","Astia hariola","Male","Found under loose bark. Is the golden bum very crude mimicry?
+Pickled in 70% ethanol, 20-Jul-2017.","","non-mimic",2,4.46174692915937e-40
+"Dorsal","Battalus byrneae","Male","","Only partial images; Interpolated","mimetic spider",1,3.37594343060149e-28
+"Dorsal","Camponotus nigriceps","","","","model",1,1
+"Dorsal","Camponotus sp1","","On ground.
+Pickled on 31-Jan-2017 in 96% ethanol","","model",1,0.999999999999969
+"Dorsal","Castianeira cingulata","Male","","Photo","mimetic spider",1,6.55951928681206e-08
+"Dorsal","Castianeira longipalpa","Female","","Photo","mimetic spider",1,2.68469110427999e-27
+"Dorsal","Castianeira trilineata","Female","","Photo","mimetic spider",1,9.03640196240399e-23
+"Dorsal","Cicadellid1 sp1","","","","non-mimic",1,8.49793216625629e-113
+"Dorsal","Cicadellid2 sp1","","I assumed it was an ant when I collected it.Same colour as attendant ants.
+Pickled in 96% ethanol 29-Mar-2017.","","non-mimic",1,2.46701233291433e-141
+"Dorsal","Coleoptera2 sp1","","On trunk of tree","Ant mimic","mimetic insect",4,8.4616784986624e-06
+"Dorsal","Coleoptera3 sp1","","Found by Alex.
+Frozen 19-Feb-2017
+Pickled in 96% ethanol 1-Mar-2017","Ant-mimic beetle","mimetic insect",1,0.999999999998179
+"Dorsal","Colobathristid1 sp1","","Colour has faded a bit. Pickled in 70% ethanol, 03-June-2017.
+Presumably a mimic of Oecophylla smaragdina.","Ant mimic bug","mimetic insect",1,7.18830051424471e-20
+"Dorsal","Copa kabana","Male","","Photo; Interpolated","mimetic spider",1,5.48002898455827e-24
+"Dorsal","Corinnid1 sp1","","Looks like a strobe ant (Opisthopsis sp).
+Found by sweeping.","Possible ant-mimic spider","mimetic spider",2,1.29710426121315e-13
+"Dorsal","Corinnomma sp.","Male","Specimen deformed","Photo","mimetic spider",1,0.99999619067781
+"Dorsal","Cosmophasis baehrae","","Euthanised CO2, pickled in 100% ethanol, 28-Aug-2017.
+Juveniles look like small black ants","","non-mimic",2,2.05943480247397e-32
+"Dorsal","Cosmophasis bitaeniata","","Purchased spider","Ant-mimic spider","mimetic spider",5,1.42820389048549e-31
+"Dorsal","Cosmophasis micarioides","","First photos are juvenile, later adult. Juvenile body length was 4.8.","Ant-mimic spider","mimetic spider",1,9.17961555894523e-42
+"Dorsal","Cosmophasis thalassina","","Pickled in 96% ethanol 29-Mar-2017.","","non-mimic",7,6.04669989069692e-36
+"Dorsal","Crematogaster sp1","","","","model",3,1
+"Dorsal","Creugas gulosus","Female","","Photo","mimetic spider",1,2.19528093218108e-20
+"Dorsal","Daerlac apicalis","","It was walking around on the ground. Never attempted to fly.","Ant mimic bug","mimetic insect",5,4.02319113864706e-08
+"Dorsal","Daerlac nigricans","","Pickled in 96% ethanol, 22-May-2017.","Ant mimic bug","mimetic insect",6,5.71122744191726e-07
+"Dorsal","Damoetas nitidus","","Pickled in 96% ethanol, 17-May-2017.","Ant-mimic spider","mimetic spider",2,1.15027448133165e-20
+"Dorsal","Damoetas sp (?)","Male","","Photo","mimetic spider",1,1.21248272511761e-05
+"Dorsal","Damoetas sp1","","Undescribed species. Damoetas are considered to be ant mimics, but this doesn't look like one, except perhaps for the antennal illusion. Speedy runner. ","","non-mimic",1,5.2714422308483e-20
+"Dorsal","Damoetas sp3","Male","","Ant-mimic spider","mimetic spider",1,1.17871404098751e-12
+"Dorsal","Diptera1 sp1","","","Ant mimic","mimetic insect",1,3.03104286173096e-15
+"Dorsal","Disnyssus helenmirrenae","/","","Drawing","mimetic spider",1,3.88706320810825e-19
+"Dorsal","Dolichoderus clarki","","","","model",1,0.999999996271115
+"Dorsal","Eilica sp1","Male","Identified as unnamed Eilica by Aus Mus.
+Pickled in 96% ethanol, 24-May-2017.","Ant-mimic spider","mimetic spider",5,5.50068876010217e-44
+"Dorsal","Eurybrachyid1 sp1","","Length is excluding weird growths","","non-mimic",1,1.41094449513899e-90
+"Dorsal","Eurymela rubrolimbata","","Frozen 19-Feb-2017
+Pickled in 96% ethanol 1-Mar-2017","","non-mimic",2,2.41978325485123e-110
+"Dorsal","Eurymela rubrolimbata (juvenile)","","23-1-17 10:30am Died under spectroscope. Asphyxiated by glad-wrap? Squashed?
+Pickled on 31-Jan-2017 in 96% ethanol","Ant mimic bug","mimetic insect",3,3.90559869220325e-96
+"Dorsal","Formicid1 sp1","","Pickled, 21-Apr-2017.","","model",2,1
+"Dorsal","Formicid10 sp1","","Pickled in 96% ethanol, 22-May-2017.","","model",1,1
+"Dorsal","Formicid13 sp1","","Pickled in 70% ethanol, 12-Jul-2017.","","model",1,0.999994463861036
+"Dorsal","Formicid19 sp1","","Pickled in 96% ethanol 29-Mar-2017.
+Probably in Ectaheteromorph group (Ectatomma,Heteroponera,Rhytidoponera, Gnaptogenys,etc.)","","model",1,1
+"Dorsal","Formicid20 sp1","","","","model",1,1
+"Dorsal","Formicid7 sp1","","Pickled in 96% ethanol, 29-May-2017.","","model",1,0.982153593398389
+"Dorsal","Froggattella sp1","","Abundant all around tree and on trunk","","model",1,1
+"Dorsal","Helpis minitabunda","","Possible predator?","","non-mimic",1,3.204378599814e-45
+"Dorsal","Hemiptera1 sp1","","Pickled, 21-Apr-2017.","Ant mimic bug","mimetic insect",1,0.999248710146888
+"Dorsal","Heteroptera2 sp1","","Its wings aren't sitting in place correctly.
+Pickled in 70% ethanol, 12-Jul-2017.","Ant mimic bug","mimetic insect",4,2.77290660012482e-37
+"Dorsal","Holoplatys sp2","","Pickled in 96% ethanol, 29-May-2017.","","non-mimic",1,1.35457166622734e-30
+"Dorsal","Holoplatys sp4","","Juvenile? Pickled in 96% ethanol, 9-May-2017.","Ant-mimic spider","mimetic spider",1,7.78482982416123e-15
+"Dorsal","Iridonyssus formicans","","Collection code #COLL004/05","Ant-mimic spider","mimetic spider",8,6.37933968839958e-17
+"Dorsal","Iridonyssus kohouti","","Probable mimic. Found sheltering with ants (specimen 950). Observed by Chris to behave like the ants it was with, including antennal illusion. 
+Pickled in 100% ethanol, 28-Aug-2017.","Ant mimic spider","mimetic spider",2,5.45766549127889e-18
+"Dorsal","Judalana lutea","Female","","Ant-mimic spider","mimetic spider",6,1.23941915658388e-12
+"Dorsal","Lamponid2 sp1","","Pickled in 70% ethanol, 12-Jul-2017.","Predator","non-mimic",2,4.91728516067193e-20
+"Dorsal","Leichhardteus albofasciatus","Female","","Photo; Interpolated","mimetic spider",1,4.85268919035453e-36
+"Dorsal","Leptomyrmex sp1","","Frozen 19-Feb-2017
+Pickled in 96% ethanol 1-Mar-2017","","model",1,1
+"Dorsal","Leptopicia bimaculata","Female","","Drawing","mimetic spider",1,1.27422392251831e-09
+"Dorsal","Ligonipes lacertosus","Female","","Drawing","mimetic spider",1,1.75556498221012e-14
+"Dorsal","Ligonipes semitectus","Female","","Drawing","mimetic spider",1,1.07123970599272e-43
+"Dorsal","Ligonipes sp1","","Collected by Barbara Baehr.
+Pickled in 96% ethanol 29-Mar-2017.","Ant-mimic spider","mimetic spider",1,3.32439791406851e-11
+"Dorsal","Ligonipes sp2","Male","","Ant-mimic spider","mimetic spider",3,6.13759265077804e-06
+"Dorsal","Lycosid3 sp1","","","","non-mimic",1,3.71240946389973e-38
+"Dorsal","Lycosid4 sp1","","Decomposed","","non-mimic",2,3.20906531674438e-26
+"Dorsal","Mantid1 sp1","","Pickled in 96% ethanol 29-Mar-2017.","","non-mimic",1,4.61556930399889e-47
+"Dorsal","Mantid2 sp1","","Mimic of large red Rhytidoponera (according to Chris Burnell, ant taxonomist)","","non-mimic",1,1.29501113041363e-10
+"Dorsal","Mazax pax","Female","","Photo","mimetic spider",1,0.000194039575190898
+"Dorsal","Mazax spinosa","Female","","Photo","mimetic spider",1,2.48494727386696e-08
+"Dorsal","Myandra bicincta","","Collected by Jonas under bark. Died because I froze it for too long.
+Specimen broke apart.
+Pickled in 96% ethanol 29-Mar-2017.","Ant-mimic spider","mimetic spider",2,3.27911300784671e-25
+"Dorsal","Myrmapana centralis","Female","","Photo","mimetic spider",1,9.01763533947212e-09
+"Dorsal","Myrmapana parallela","Male","Specimen deformed","Photo; Angle adjusted, interpolated","mimetic spider",1,2.81661307414492e-14
+"Dorsal","Myrmapeni chickeringi","Male","","Photo","mimetic spider",1,5.53005381431589e-12
+"Dorsal","Myrmaplata plataleoides","Male","","Photo","mimetic spider",1,0.999999587338291
+"Dorsal","Myrmarachne bicolor","","Pickled in 70% ethanol, 12-Jul-2017.","Ant-mimic spider","mimetic spider",1,0.993895481546822
+"Dorsal","Myrmarachne erythrocephala","","Found on sheet while sampling leaf litter, escaped from care","Ant mimic","mimetic spider",13,0.027967208206589
+"Dorsal","Myrmarachne formicaria","Male","","Photo","mimetic spider",1,0.976287799428574
+"Dorsal","Myrmarachne helensmithae","Male","","Photo; Angle adjusted","mimetic spider",1,2.85597995485162e-08
+"Dorsal","Myrmarachne juvenile","","Squashed while being captured.
+Pickled in 96% ethanol, 9-May-2017.","Ant-mimic spider","mimetic spider",5,2.344898260908e-10
+"Dorsal","Myrmarachne luctuosa","","About 2m up tree, no ants visible nearby, died in care, opisthosoma dessicated","Ant mimic","mimetic spider",20,6.37631001851703e-06
+"Dorsal","Myrmarachne macaulayi","Male","","Photo","mimetic spider",1,7.66890454709733e-06
+"Dorsal","Myrmarachne macleayana","","Id uncertain, golden bum + no abdominal constriction.","Ant-mimic spider","mimetic spider",8,1.10994860470733e-07
+"Dorsal","Myrmarachne smaragdina","Male","","Photo","mimetic spider",5,0.999951757151417
+"Dorsal","Myrmecia mandibularis","","Pickled, 21-Apr-2017.","","model",2,1
+"Dorsal","Myrmecotypus rettenmeyeri","Female","","Photo; Interpolated","mimetic spider",1,0.0319446244832153
+"Dorsal","Neon nellii*","Female","","Photo; Angle adjusted","mimetic spider",1,2.99451573101047e-55
+"Dorsal","Nucastia supunnoides","Male","","Photo","mimetic spider",1,1.42003648197662e-08
+"Dorsal","Nyssus albopunctatus","Female","","Photo","mimetic spider",1,2.04091593850897e-55
+"Dorsal","Nyssus avidus","Female","","Photo","mimetic spider",1,4.40567461988936e-37
+"Dorsal","Nyssus coloripes","","White-spotted form.
+Pickled in 96% ethanol, 29-May-2017.","","non-mimic",2,6.44425158116332e-28
+"Dorsal","Nyssus luteofinis","Female","","Drawing","mimetic spider",1,5.11895354049504e-31
+"Dorsal","Nyssus paradoxus","Female","","Drawing","mimetic spider",1,6.61457608354009e-17
+"Dorsal","Odontomachus sp1","","Spectra recorded
+Pickled in 96% ethanol 29-Mar-2017.","","model",1,1
+"Dorsal","Oecophylla smaragdina","","Legs removed from 1 specimen.
+Pickled in 96% ethanol 29-Mar-2017.","","model",1,1
+"Dorsal","Opisthopsis sp1","","Pickled in 96% ethanol 29-Mar-2017.","","model",1,0.99999999999999
+"Dorsal","Oxyopes elegans","","","","non-mimic",1,5.9647828286546e-38
+"Dorsal","Poecilipta contorqua","Male","Stano Pekar says it may be Nyssus. sp
+Poecilipta lugubris or similar.
+Id'ed by Aus Mus (Helen Smith or Graham Milledge) as Poecilipta contorqua.
+Noticed running around _fast_ on the ground. Dolichoderus scabridus a possible model - similar body and legs colours,
+14 Feb 2017 - knocked out with CO2, then pickled in 96% ethanol.","Ant mimic spider","mimetic spider",1,5.78983069709003e-08
+"Dorsal","Poecilipta kohouti","","","Ant-mimic spider","mimetic spider",6,9.79775147977352e-10
+"Dorsal","Polyrhachis ammon","","Pickled, 21-Apr-2017.","","model",1,1
+"Dorsal","Polyrhachis monteithi","","Pickled in 70% ethanol, date unknown.","","model",1,1
+"Dorsal","Polyrhachis sp1","","","","model",1,1
+"Dorsal","Polyrhachis sp2","","","","model",2,1
+"Dorsal","Reduviid1 sp1","","Pickled in 96% ethanol 29-Mar-2017.","Ant mimic bug","mimetic insect",2,0.999999999739537
+"Dorsal","Rhombonotus gracilis","","Pickled in 96% ethanol, 15-May-2017.","Ant-mimic spider","mimetic spider",3,9.20162944159337e-15
+"Dorsal","Rhombonotus sp1","Male","","","non-mimic",1,2.17696305829524e-16
+"Dorsal","Rhombonotus sp2","","Possible model is sympatric specimen 814.
+Pickled in 70% ethanol, 12-Jul-2017.","Ant-mimic spider","mimetic spider",7,2.07280218184951e-15
+"Dorsal","Rhombonotus sp3","","Aus Mus ID notes: Ravi's ID, HS says too young to identify 
+
+Pickled in 70% ethanol, 12-Jul-2017.","Ant-mimic spider","mimetic spider",1,1.5324925236971e-11
+"Dorsal","Rhytidoponera metallica","","Pickled, 21-Apr-2017.","","model",2,1
+"Dorsal","Riptortus abdominalis","","Pickled in 96% ethanol 29-Mar-2017.","","non-mimic",1,5.04981697711242e-12
+"Dorsal","Riptortus abdominalis (juvenile)","","Mimic of Oecophylla","Ant mimic bug","mimetic insect",4,1.79780407647153e-09
+"Dorsal","Salticid17 sp1","","Aus mus notes: Fissident juvenile, cannot go further.
+Constantly on the move, like an ant. Possibly a juvenile Ligonipes?
+Pickled in 70% ethanol, 11-Jul-2017.","Ant-mimic spider","mimetic spider",1,4.70573189089417e-15
+"Dorsal","Salticid18 sp1","","Pickled in 70% ethanol, 12-Jul-2017.","","non-mimic",1,1.43415818766823e-34
+"Dorsal","Salticid5 sp1","","","","non-mimic",1,1.34939882838586e-35
+"Dorsal","Salticid7 sp1","","","","non-mimic",1,1.06257265328506e-45
+"Dorsal","Serendib suthepica","Male","","Photo","mimetic spider",1,0.114505305600981
+"Dorsal","Serendib volans","Female","","Photo","mimetic spider",1,0.0256729358039048
+"Dorsal","Servaea incana","","","","non-mimic",2,2.92214969161376e-60
+"Dorsal","Sphecotypus niger","Female","","Photo; Angle adjusted","mimetic spider",1,0.999999999862139
+"Dorsal","Sphinctomyrmex sp1","","","","model",1,1
+"Dorsal","Storena mainae","male","","","non-mimic",2,9.31094446349117e-19
+"Dorsal","Tamopsis fickerti","","","","non-mimic",1,3.00929732433547e-147
+"Dorsal","Thomisid1 sp1","","","","non-mimic",1,3.26493081704156e-100
+"Dorsal","Tinytrema bondi","","","Ant-mimic spider","mimetic spider",1,0.999769841176042
+"Dorsal","Vespoidea2 sp1","","","Ant mimic","mimetic insect",1,0.999999985607702
+"Dorsal","Vespoidea3 sp1","","Collected thinking it was an ant
+Pickled in 96% ethanol 1-Mar-2017","Ant-mimic wasp","mimetic insect",1,0.999998916676211
+"Dorsal","Vespoidea3 sp3","","","Ant mimic","mimetic insect",1,0.999999721138497
+"Dorsal","Vespoidea4 sp1","","Walking on tree trunk, looked like an ant except it moved slightly differently
+Pickled in 96% ethanol 1-Mar-2017","","non-mimic",3,2.78730296900013e-17
+"Dorsal","Vespoidea5 sp1","","Pickled, 21-Apr-2017.
+Looks very similar to Polyrhachis hookeri.","Posssible wasp ant-mimic","mimetic insect",4,3.89285393474691e-10
+"Dorsal","Vespoidea6 sp1","","Pickled, 21-Apr-2017.","Ant-mimic wasp","mimetic insect",1,1
+"Dorsal","Zillimata scintillans","Male","Behavioural ant mimic","","non-mimic",1,4.42264721598982e-10
+"Dorsal","Zodarid4 sp1","","Collected by Jonas under bark. Died.
+Pickled in 96% ethanol, 27-Apr-2017","Ant-mimic spider","mimetic spider",1,1.02403893363898e-27

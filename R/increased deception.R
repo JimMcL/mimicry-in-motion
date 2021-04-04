@@ -3,18 +3,18 @@ source("resampling methods.R")
 ###################################################################################
 # Increased deception
 
-  DrawLMTex <- function(l, side = 1, adj = .99, firstLine = 0, lineInc = 1, ...) {
-    sl <- summary(l)
-    t <- bquote(F[.(sl$fstatistic[2])][","][.(sl$fstatistic[3])] ~ "=" ~ .(signif(sl$fstatistic, 2)))
-    # White background behind text
-    #rect(par("usr")[2] - 1.2 * strwidth(t), par("usr")[3] + .01, par("usr")[2] - .01, par("usr")[3] + 4 * strheight(t), col = "white", border = NA)
-    line <- firstLine
-    mtext(bquote(R^2 ~ "=" ~ .(round(sl$r.squared, 2))), side, line, adj = adj, ...)
-    line <- line + lineInc
-    mtext(t, side, line, adj = adj, padj = 0.2, ...)
-    line <- line + lineInc
-    mtext(bquote(p ~ "=" ~ .(signif(sl$coefficients[2,4], 2))), side, line, adj = adj, ...)
-  }
+DrawLMTex <- function(l, side = 1, adj = .99, firstLine = 0, lineInc = 1, ...) {
+  sl <- summary(l)
+  t <- bquote(F[.(sl$fstatistic[2])][","][.(sl$fstatistic[3])] ~ "=" ~ .(signif(sl$fstatistic, 2)))
+  # White background behind text
+  #rect(par("usr")[2] - 1.2 * strwidth(t), par("usr")[3] + .01, par("usr")[2] - .01, par("usr")[3] + 4 * strheight(t), col = "white", border = NA)
+  line <- firstLine
+  mtext(bquote(R^2 ~ "=" ~ .(round(sl$r.squared, 2))), side, line, adj = adj, ...)
+  line <- line + lineInc
+  mtext(t, side, line, adj = adj, padj = 0.2, ...)
+  line <- line + lineInc
+  mtext(bquote(p ~ "=" ~ .(signif(sl$coefficients[2,4], 2))), side, line, adj = adj, ...)
+}
 
 # For increased deception, need to compare trajectories with morphometrics.
 # If lots of specimens have both, we could run a model with species as a random effect,
@@ -91,7 +91,7 @@ PlotIncreasedDeceptionForTalk <- function(trjList, analysisType = "quadratic", t
 }
 
 # Performs tests of multi-component hypotheses
-TestMultiComponentHypos <- function(trjList, analysisType = "logistic", retain = 0.99, crossValidate = TRUE, trainOnAll = TRUE, alpha = .05, debuggingPlots = FALSE) {
+TestMultiComponentHypos <- function(trjList, analysisType = "logistic", retain = 0.99, crossValidate = TRUE, trainOnAll = TRUE, alpha = .05, debuggingPlots = FALSE, summaryFileName = NULL) {
   # Get trajectory accuracy
   trjList$stats$accuracyMotion <- CalcMotionAccuracy(trjList, analysisType, trainOnAll = trainOnAll, crossValidate = crossValidate)$accuracy
 
@@ -99,7 +99,7 @@ TestMultiComponentHypos <- function(trjList, analysisType = "logistic", retain =
   trjList <- FillInTrjMorphoAccuracy(trjList, analysisType = analysisType, retain = retain, trainOnAll = trainOnAll, crossValidate = crossValidate)
   
   doHumanComparisons <- FALSE
-  if(doHumanComparisons) {
+  if (doHumanComparisons) {
     # Get human accuracy scores. Since this doesn't use DA, there's no equivalent to analysisType and trainOnAll
     trjList <- FillInTrjHumanAccuracy(trjList)
     withAcc <- SubsetTrjInfo(trjList, !is.na(trjList$stats$accuracyHuman) | !is.na(trjList$stats$accuracyMorphoDorsal) | !is.na(trjList$stats$accuracyMorphoLateral))
@@ -111,6 +111,8 @@ TestMultiComponentHypos <- function(trjList, analysisType = "logistic", retain =
   speciesStats <- aggregate(withAcc$stats, list(species = withAcc$metaInfo$species), mean, na.rm = TRUE)
   # Fill in mimic types - assumes constant mimic type per species which is not strictly accurate (i.e. ignores transformational mimicry)
   speciesStats$mimicType <- withAcc$metaInfo$mimicType[match(speciesStats$species, withAcc$metaInfo$species)]
+  # Fill in sample sizes
+  speciesStats$motionSampleSize <- aggregate(withAcc$stats$speed_mean, list(species = withAcc$metaInfo$species), length)$x
   
   mimics <- speciesStats$mimicType %in% MTP_MIMICS
   mimicStats <- speciesStats[mimics, ]
@@ -136,7 +138,7 @@ TestMultiComponentHypos <- function(trjList, analysisType = "logistic", retain =
       if (residuals)
         plot(density(l$residuals))
       else {
-        plot(summary(l)$terms, data = mimicStats)
+        plot(summary(l)$terms, data = mimicStats, pch = 16, col = as.numeric(factor(mimicStats$mimicType)))
         abline(l, lwd =  ifelse(p < alpha, 2, 1), lty =  ifelse(p < alpha, 1, 2), col =  ifelse(p < alpha, "black", "grey"))
       }
     }
@@ -152,4 +154,14 @@ TestMultiComponentHypos <- function(trjList, analysisType = "logistic", retain =
   }
   #.reportCorrelation("accuracyMorphoDorsal", "accuracyMorphoLateral")
   par(oldPar)
+  
+  # Output CSV file reporting data used for this analysis
+  if (!is.null(summaryFileName)) {
+    cols <- c("species", "accuracyMotion", "motionSampleSize",
+              "accuracyMorphoDorsal", "morphoDorsalSampleSize", 
+              "accuracyMorphoLateral", "morphoLateralSampleSize", 
+              "mimicType")
+    write.csv(mimicStats[, cols], summaryFileName, row.names = FALSE)
+  }
+  invisible(mimicStats)
 }

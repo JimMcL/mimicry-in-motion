@@ -152,14 +152,15 @@ buildTrajectories <- function(videoListFile) {
                trackIds = vid$Track.ID,
                overrideSpecimen = vid$Override.specimen,
                #smoothN = vid$Smoothing,
-               smoothN = NA, # TODO EXP DEBUG try consistent smoothing. characteriseTrajectory now performs smoothing
+               smoothN = NA, # characteriseTrajectory performs smoothing
                smoothP = NA,
                timeUnits = "s",
                spatialUnits = "m")
   })
   
   # Flatten list of lists
-  trjs <- do.call(c, trjs)
+  #trjs <- do.call(c, trjs)
+  trjs <- unlist(trjs, recursive = FALSE)
   
   # Give each trajectory a unique ID
   for (id in seq_along(trjs)) {
@@ -168,7 +169,7 @@ buildTrajectories <- function(videoListFile) {
   
   # Build meta data
   # Get info about photos from database
-  photoInfo <- SIQueryPhotos(sprintf("id=[%s]", paste(unique(videoList$Video), collapse=',')))
+  photoInfo <- SIQueryPhotos(sprintf("id=[%s]", paste(unique(videoList$Video), collapse = ',')))
   ### NOTE complication is that some videos contain trajectories for multiple specimens.
   # Create "fake" video information for these videos with imageableid set to the override specimen id
   overrides <- videoList[!is.na(videoList$Override.specimen), c("Video", "Override.specimen")]
@@ -203,3 +204,13 @@ SubsetTrjInfo <- function(trjInfo, idxs) {
   list(trjs = trjInfo$trjs[idxs], metaInfo = trjInfo$metaInfo[idxs, ], stats = trjInfo$stats[idxs, ])
 }
 
+
+# Reads and returns previously cached trajectories and stats.
+LoadCachedTrajectories <- function() {
+
+  if (!file.exists(CACHED_TRJS))
+    return(NULL)
+  
+  # Read cached trajectories
+  readRDS(CACHED_TRJS)
+}

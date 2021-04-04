@@ -29,7 +29,7 @@ CalcMotionDA <- function(trjList,
                          classFn = trjListToLDAClass, 
                          transformParams = TRUE,
                          crossValidate = FALSE) {
-  
+
   analysisType <- match.arg(analysisType)
   if (crossValidate && !trainOnAll)
     stop("If crossValidate == TRUE, trainOnAll must be TRUE")
@@ -59,7 +59,7 @@ CalcMotionDA <- function(trjList,
       nAntVals <- length(unique(trainingSet[trainingSet$class == "ant", stat]))
       nNonAntVals <- length(unique(trainingSet[trainingSet$class == "non-ant", stat]))
       if ((nAntVals == 1 || nNonAntVals == 1) && stat != "class") {
-        warning(sprintf("Discarding %s, only a single value for %s\n", stat, if(nAntVals == 1) "ants" else "non-ants"))
+        #warning(sprintf("Discarding %s, only a single value for %s\n", stat, if(nAntVals == 1) "ants" else "non-ants"))
         trainingSet[, stat] <- NULL
       }
     }
@@ -133,7 +133,7 @@ MorphoPCA <- function(coe, retain = .99) {
 #   increasing the first value), or a non-ant (increase the 2nd value), or
 #   alternatively it could represent the likelihood of encounter of each class
 #   of animals.
-CalcMorphoDA <- function(coe, retain = .99, analysisType = c("quadratic", "linear"), trainOnAll = TRUE, crossValidate = trainOnAll, priorWeights = NULL, randomiseData = FALSE) {
+CalcMorphoDA <- function(coe, retain = .96, analysisType = c("quadratic", "linear"), trainOnAll = TRUE, crossValidate = trainOnAll, priorWeights = NULL, randomiseData = FALSE) {
   
   analysisType <- match.arg(analysisType)
   

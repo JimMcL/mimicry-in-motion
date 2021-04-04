@@ -51,7 +51,7 @@ BLINDING <- FALSE
   toPCH <- function(type) .typeToVal(type, pchs)
   toLTY <- function(type) .typeToVal(type, ltys)
   toLabel <- function(type, plural = TRUE) {
-    .typeToVal(type, c(if(plural) pluralLabels else singLabels, type))
+    .typeToVal(type, c(if (plural) pluralLabels else singLabels, type))
   }
   list(names = names, classify = classify, toCol = toCol, toPCH = toPCH, toLTY = toLTY, toLabel = toLabel, toTypeFactor = .plottableTypeFactor)
 }
@@ -209,6 +209,7 @@ ThreeWayTypes <- .buildTypeSymbology(TWT_NAMES,
                                      cols = c("#662c91", "#ee2e2f", "#185aa9", 'black'),
                                      #pchs = c(0, 2, 5, 8),
                                      pchs = c(22, 24, 23, 8),
+                                     #pchs = c(15, 17, 19, 8),
                                      ltys = c(1, 3, 2, 4),
                                      pluralLabels = c("Ants", "Mimics", "Non-mimics"),
                                      singLabels = c("Ant", "Mimic", "Non-mimic"))

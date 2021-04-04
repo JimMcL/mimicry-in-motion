@@ -10,26 +10,26 @@ lab,3500,3500,,,7,0.1,21,Jumper walking,
 lab,3501,3501,,,,0.1,21,Lamponid walking,
 lab,3502,3502 (A4 paper),,,,0.2,21,Ants walking,
 lab,3503,3503 (A4 paper),,,,0.2,21,Jumper walking,
-lab,3504,3504,,,,0.2,21,Mimic walking,
+lab,3504,3504,,No,,0.2,21,"Duplicate, poor light. Mimic walking",
 lab,3505,3505,,,,0.2,21,Mimic walking,
 lab,3506,3506,,,,0.2,21,Jumper walking,
 lab,3507,3507,,,,0.2,21,Jumper walking,
 lab,3508,3508,,,,0.2,21,Mimic walking,
 lab,3509,3509,,,,0.2,21,Mimic walking,
 lab,3510,3510,,,,0.2,21,Mimic walking,
-lab,3511,3511,,,,0.2,21,Mimic walking,
+lab,3511,3511,,No,,0.2,21,"Duplicate, poor light. Mimic walking",
 lab,3512,3512,,,,0.2,21,Mimic walking,
 lab,3513,3513,,,,0.2,21,Mimic walking,
 lab,3514,3514,,,,0.2,21,Mimic walking,
 lab,3515,3515,,,,0.2,21,Mimic walking,
 lab,3516,3516,,,,0.2,21,Jumper walking,
-lab,3517,3517,,,,0.2,21,Jumper walking,
+lab,3517,3517,,No,,0.2,21,"Duplicate, poor light. Jumper walking",
 lab,3518,3518,,,,0.2,21,Mimic walking,
 lab,3519,3519,,,,0.2,21,Jumper walking,
 lab,3520,3520 (assumed vial had width 16mm),,,,0.2,21,Mimic walking,
 lab,3521,3521,,,,0.2,21,Mimic walking,
 lab,3522,3522,,,,0.2,21,Mimic walking,
-lab,3523,3523,,,,0.5,21,Mimic walking,
+lab,3523,3523,,No,,0.5,21,"Duplicate, poor light. Mimic walking",
 lab,3524,3524,,,,0.2,21,Lamponid walking,
 lab,3525,3525,,,,0.2,21,Mimic walking,
 lab,3526,3526,,,,0.5,21,Ant walking,
@@ -82,7 +82,7 @@ lab,3621,3621,,,,0.5,21,Ant,
 lab,3625,3625,,,,0.5,21,Ant,
 lab,3627,3627,,,,0.5,21,Ant,
 lab,3630,3630,,,,0.5,21,Ant,
-lab,3633,3633,,,,0.5,21,"Ant, multiple tracks",
+lab,3633,3633,,,2,0.5,21,"Ant, multiple tracks",
 lab,3637,3637,,,,0.5,21,Ant,
 lab,3639,3639,,,,0.5,21,Ant,
 lab,3642,3642,,No,,0.1,11,Too short (64 frames). Ant,
@@ -90,7 +90,7 @@ lab,3645,3645,,,,0.5,21,Ant,
 lab,3648,3648,,,,0.5,21,Ant,
 lab,3651,3651,,,,0.8,21,Mimic,
 lab,3652,3652,,,,0.8,21,Ant,
-lab,3654,3654,,,,0.1,21,Mimic,
+lab,3654,3654,,No,,0.1,21,Duplicate. Mimic,
 lab,4325,4325,,,,0.5,21,Mimic,
 lab,4326,4326,,,,0.5,21,Mimic,
 lab,4327,4327,,,,0.4,21,Mimic,
@@ -100,34 +100,33 @@ lab,4330,4330,,,,0.4,21,Mimic,
 lab,4331,4331,,,,0.2,21,Ant,
 lab,4332,4332,,,,0.2,21,Ant,
 lab,4333,4333,,,,0.5,21,Strobe ant,
-lab,4338,4338,,,,0.5,21,Mimic,
 lab,4394,4394,,,,0.5,21,Mimic,
 lab,4395,4395,,,,0.2,81,Mimic,
-lab,4396,4396,,,,0.2,11,Mimic,
-lab,4397,4397,,,,0.2,21,Mimic,
-lab,4398,4398,,,,0.2,11,Mimic,
-lab,4399,4399,,,,0.2,11,Mimic,
-lab,4400,4400,,,,0.2,11,Mimic,
-lab,4401,4401,,,,0.2,21,Mimic,
+lab,4396,4396,,No,,0.2,11,Mimic,Part of extended track
+lab,4397,4397,,No,,0.2,21,Mimic,Part of extended track
+lab,4398,4398,,No,,0.2,11,Mimic,Part of extended track
+lab,4399,4399,,No,,0.2,11,Mimic,Part of extended track
+lab,4400,4400,,No,,0.2,11,Mimic,Part of extended track
+lab,4401,4401,,No,,0.2,21,Mimic,Part of extended track
 lab,4402,4402,,,,0.2,21,Mimic,
 lab,4403,4403,,,,0.2,21,Mimic,
 lab,4404,4404,,,,0.2,11,Jumper walking,
-lab,4405,4405,,,,0.3,21,Jumper walking,
+lab,4405,4405,,No,,0.3,21,Jumper walking,Part of extended track
 lab,4406,4406,,,,0.3,21,Mimic,
-lab,4407,4407,,,,0.3,11,Mimic,Crappy due to flouro light flicker
+lab,4407,4407,,No,,0.3,11,Mimic,Crappy due to flouro light flicker
 lab,4408,4408,,,,0.3,11,Mimic,
-lab,4409,4409,,,,0.3,21,Lamponid walking,
+lab,4409,4409,,No,,0.3,21,Lamponid walking,Duplicate
 lab,4410,4410,,,,0.3,21,Lamponid walking,
 lab,4450,4450,,,,1,11,Mimic,
 lab,4451,4451,,,,0.1,21,Mimic,
 lab,4452,4452,,,,0.5,21,Mimic,
 lab,4453,4453,,,,0.5,21,Mimic,
 lab,4454,4454,,,,0.5,21,Mimic,
-lab,4455,4455,,,,0.2,11,Mimic,
+lab,4455,4455,,No,,0.2,11,Duplicate. Mimic,
 lab,4456,4456,,,,0.2,11,Mimic,
 lab,4457,4457,,,,0.2,11,Mimic,
 lab,4458,4458,,,,0.2,11,Jumper walking,
-lab,4459,4459,,,,0.2,11,Ant,
+lab,4459,4459,,No,,0.2,11,Duplicate. Ant,
 lab,4460,4460,,,,0.2,21,Ant,
 lab,4461,4461,,,,0.2,11,Strobe ant,
 lab,4462,4462,,,,0.2,11,Jumper walking,
@@ -140,124 +139,124 @@ lab,4468,4468,,,,0.2,21,Ant,
 lab,4469,4469,,,,0.2,11,Strobe ant,Crappy due to flouro light flicker
 lab,4470,4470,,,,0.4,11,Mimic,
 lab,4471,4471,,,,0.4,11,Mimic,
-lab,4472,4472,,,,0.2,11,Mimic,
-lab,4473,4473,,,,0.1,11,Mimic,
-lab,4474,4474,,,,0.1,21,Mimic,
+lab,4472,4472,,No,,0.2,11,Mimic,"Duplicate, uncooperative"
+lab,4473,4473,,No,,0.1,11,Mimic,"Duplicate, uncooperative"
+lab,4474,4474,,No,,0.1,21, Mimic,Duplicate.
 lab,4613,4613,,,,0.5,21,Jumper walking,
-lab,4614,4614,,,,0.1,21,Mimic bug,
+lab,4614,4614,,No,,0.1,21,Mimic bug,Uncooperative
 lab,4615,4615,,No,,,,Mimic bug,Barely moved
-lab,4616,4616,,,,0.1,11,Mimic bug,
+lab,4616,4616,,No,,0.1,11,Mimic bug,Uncooperative
 lab,4617,4617,,,,0.1,11,Mimic bug,
-lab,4618,4618,,,,0.1,21,Mimic bug,
+lab,4618,4618,,No,,0.1,21,Mimic bug,Uncooperative
 lab,4621,4621,,,,0.1,11,Mimic,
-lab,4622,4622,,,,0.05,11,Mimic,
+lab,4622,4622,,No,,0.05,11,Mimic,"Uncooperative, multiple tracks"
 lab,4623,4623,,,,0.5,11,Mimic,
-lab,4624,4624,,,,0.1,11,Mimic,
-lab,4625,4625,,,,0.1,21,Mimic,
-lab,4627,4627,,,,0.1,11,Mimic,
+lab,4624,4624,,No,,0.1,11,Mimic,Duplicate
+lab,4625,4625,,No,,0.1,21,Mimic,Duplicate
+lab,4627,4627,,No,,0.1,11,Mimic,Part of extended track
 lab,4628,4628,,,,0.7,11,Mimic,
-lab,4629,4629,,,,0.1,11,Jumper walking,
-lab,4630,4630,,,,0.1,11,Jumper walking,
+lab,4629,4629,,No,,0.1,11,Jumper walking,Duplicate
+lab,4630,4630,,No,,0.1,11,Jumper walking,Duplicate
 lab,4631,4631,,,,0.08,11,Jumper walking,
 lab,4632,4632,,,,0.1,21,Mimic,
 lab,4633,4633,,No,,,,Mimic,Didn't move
 lab,4634,4634,,,,0.1,11,Mimic,
-lab,4635,4635,,,,0.4,21,Mimic,
-lab,4636,4636,,,,0.1,21,Mimic,
+lab,4635,4635,,No,,0.4,21,Mimic,Duplicate
+lab,4636,4636,,No,,0.1,21,Mimic,Duplicate
 lab,4637,4637,,,,0.1,21,Mimic,
-lab,4638,4638,,,,0.1,21,Mimic,
-lab,4639,4639,,,,0.4,21,Mimic,Only half of path is used
+lab,4638,4638,,No,,0.1,21,Mimic,Duplicate
+lab,4639,4639,,No,,0.4,21,Mimic,"Duplicate, only half of path is used"
 lab,4640,4640,,,,0.4,21,Mimic,
-lab,4641,4641,,,,0.1,11,Mimic,
+lab,4641,4641,,No,,0.1,11,Mimic,Duplicate
 lab,4642,4642,,,,0.1,21,Mimic,
-lab,4643,4643,,,,0.1,11,Mimic,
-lab,4644,4644,,,,0.1,21,Ant,
-lab,4645,4645,,,,0.1,21,Ant,
-lab,4646,4646,,,,0.1,21,Ant,
-lab,4647,4647,,,,0.5,21,Ant,
-lab,4648,4648,,,,0.5,21,Ant,
-lab,4649,4649,,,,0.7,21,Ant,
+lab,4643,4643,,No,,0.1,11,Mimic,Duplicate
+lab,4644,4644,,No,,0.1,21,Ant,"Duplicate, crappy light"
+lab,4645,4645,,No,,0.1,21,Ant,"Duplicate, crappy light"
+lab,4646,4646,,No,,0.1,21,Ant,"Duplicate, crappy light"
+lab,4647,4647,,No,,0.5,21,Ant,"Duplicate, crappy light"
+lab,4648,4648,,No,,0.5,21,Ant,"Duplicate, crappy light"
+lab,4649,4649,,No,,0.7,21,Ant,"Duplicate, crappy light"
 lab,4650,4650,,,,0.7,21,Ant,
 lab,4651,4651,,,,0.3,21,Mimic,
 lab,4652,4652,,,,0.3,21,Jumper walking,
 lab,4653,4653,,,,0.1,21,Jumper walking,
-lab,4654,4654,,,,0.1,21,Jumper walking,
-lab,4655,4655,,,,0.3,21,Mimic,
+lab,4654,4654,,No,,0.1,21,Jumper walking,Duplicate
+lab,4655,4655,,No,,0.3,21,Mimic,Duplicate
 lab,4656,4656,,,,0.3,21,Mimic,
-lab,4657,4657,,,,0.3,21,Mimic,
+lab,4657,4657,,No,,0.3,21,Mimic,Duplicate
 lab,4658,4658,,,,0.3,21,Mimic,
-lab,4659,4659,,,,0.3,21,Mimic,
-lab,4660,4660,,,,0.1,21,Ant,
+lab,4659,4659,,No,,0.3,21,Mimic,Duplicate
+lab,4660,4660,,No,,0.1,21,Ant,Duplicate
 lab,4661,4661,,,,0.1,21,Ant,
-lab,4662,4662,,,,0.1,21,Ant,
+lab,4662,4662,,No,,0.1,21,Ant,"Duplicate, uncooperative, multiple tracks"
 lab,4663,4663,,,,0.1,21,Jumper walking,
-lab,4664,4664,,,,0.1,21,Jumper walking,
+lab,4664,4664,,No,,0.1,21,Jumper walking,Duplicate
 lab,4665,4665,,,,0.1,21,Jumper walking,
 lab,4666,4666,,,,0.1,21,Mimic,
 lab,4667,4667,,,,0.1,21,Mimic,
-lab,4668,4668,,,,0.4,21,Mimic,
-lab,4669,4669,,,,0.1,21,Ant,
-lab,4670,4670,,,,0.1,21,Ant,
-lab,4671,4671,,,,0.1,21,Ant,
+lab,4668,4668,,No,,0.4,21,Mimic,Duplicate
+lab,4669,4669,,No,,0.1,21,Ant,Duplicate
+lab,4670,4670,,No,,0.1,21,Ant,Duplicate
+lab,4671,4671,,No,,0.1,21,Ant,Duplicate
 lab,4672,4672,,,,0.1,21,Ant,
 lab,4673,4673,,,,0.1,21,Mimic bug,
-lab,4674,4674,,,,0.1,21,Mimic bug,
+lab,4674,4674,,No,,0.1,21,Mimic bug,Duplicate
 lab,4675,4675,,No,,,,Mimic bug,Too short
 lab,4676,4676,,No,,,,Mimic bug,Didn't move
 lab,4677,4677,,No,,,,Mimic bug,Didn't move
 lab,4678,4678,,,,0.1,21,Mimic bug,
 lab,4679,4679,,,,0.1,21,Mimic bug,
 lab,4680,4680,,No,,,,Mimic bug,Didn't move
-lab,4681,4681,,,,0.1,101,Mimic bug,
+lab,4681,4681,,No,,0.1,101,Mimic bug,"Duplicate, uncooperative"
 lab,4682,4682,,,,0.1,21,Mimic bug,
-lab,4683,4683,,,,0.1,101,Mimic bug,
-lab,4684,4684,,,,0.05,101,Mimic bug,
-lab,4685,4685,,,,0.1,101,Mimic bug,
+lab,4683,4683,,No,,0.1,101,Mimic bug,Duplicate
+lab,4684,4684,,No,,0.05,101,Mimic bug,Duplicate
+lab,4685,4685,,No,,0.1,101,Mimic bug,Duplicate
 lab,4686,4686,,No,,0.1,101,Mimic bug,"Barely moved, trajectory is mostly noise"
 lab,4687,4687,,No,,0.1,101,Mimic bug,"Barely moved, trajectory is mostly noise"
 lab,4688,4688,,No,,,,Mimic bug,Disturbed part way through
 lab,4689,4689,,No,,,,Mimic bug,Flying!
 lab,4690,4690,,,,0.1,101,Mimic bug,
 lab,4691,4691,,No,,,,Mimic bug,Didn't move
-lab,4692,4692,,,,0.1,101,Mimic bug,
+lab,4692,4692,,No,,0.1,101,Mimic bug,Duplicate
 lab,4693,4693,,,,0.1,101,Mimic bug,
-lab,4694,4694,,,,0.1,101,Mimic bug,
-lab,4695,4695,,,,0.05,101,Mimic bug,
+lab,4694,4694,,No,,0.1,101,Mimic bug,Duplicate
+lab,4695,4695,,No,,0.05,101,Mimic bug,"Duplicate, uncooperative"
 lab,4696,4696,,,,0.1,101,Mimic bug,
 lab,4697,4697,,,,0.1,101,Mimic bug,
-lab,4698,4698,,,,0.1,101,Mimic bug,
-lab,4699,4699,,,,0.05,101,Mimic bug,
-lab,4700,4700,,,,0.1,101,Mimic bug,
+lab,4698,4698,,No,,0.1,101,Mimic bug,Duplicate
+lab,4699,4699,,No,,0.05,101,Mimic bug,"Duplicate, uncooperative"
+lab,4700,4700,,No,,0.1,101,Mimic bug,"Duplicate, uncooperative"
 lab,4701,4701,,,,0.1,101,Mimic bug,
-lab,4702,4702,,,,0.1,101,Mimic bug,
+lab,4702,4702,,No,,0.1,101,Mimic bug,Duplicate
 lab,4703,4703,,,,0.4,101,Mimic,
-lab,4704,4704,,,,0.3,101,Mimic,
+lab,4704,4704,,No,,0.3,101,Mimic,Duplicate
 lab,4705,4705,,,,0.3,101,Non-mimic,
-lab,4706,4706,,,,0.2,101,Non-mimic,
+lab,4706,4706,,No,,0.2,101,Non-mimic,Duplicate
 lab,4707,4707,,,,0.7,101,Ant,
 lab,4708,4708,,,,0.3,101,Possible mimic,
 lab,4709,4709,,,,0.3,101,Possible mimic,
 lab,4710,4710,,,,0.3,101,Ant,
 lab,4711,4711,,,,0.3,101,Mimic,
-lab,4712,4712,,,,0.1,101,Mimic,
-lab,4713,4713,,,,0.1,101,Mimic,
-lab,4714,4714,,,,0.1,101,Mimic,
-lab,4715,4715,,,,0.1,101,Mimic,
-lab,4716,4716,,,,0.1,101,Mimic,
+lab,4712,4712,,No,,0.1,101,Mimic,Duplicate
+lab,4713,4713,,No,,0.1,101,Mimic,Duplicate
+lab,4714,4714,,No,,0.1,101,Mimic,Duplicate
+lab,4715,4715,,No,,0.1,101,Mimic,Duplicate
+lab,4716,4716,,No,,0.1,101,Mimic,Duplicate
 lab,4717,4717,,,,0.1,21,Mimic,
-lab,4718,4718,,,,0.1,101,Mimic,
-lab,4719,4719,,,,0.1,101,Ant,
+lab,4718,4718,,No,,0.1,101,Mimic,Duplicate
+lab,4719,4719,,No,,0.1,101,Ant,"Duplicate, uncooperative"
 lab,4720,4720,,,,0.6,101,Ant,
 lab,4721,4721,,,,0.6,21,Mimic,
-lab,4722,4722,,,,0.1,21,Mimic,
+lab,4722,4722,,No,,0.1,21,Mimic,Duplicate
 lab,4723,4723,,,,0.1,101,Mimic,
-lab,4724,4724,,,,0.1,21,Mimic,
+lab,4724,4724,,No,,0.1,21,Mimic,Duplicate
 lab,4725,4725,,,,0.1,21,Jumper walking,
-lab,4726,4726,,,,0.1,101,Jumper walking,
+lab,4726,4726,,No,,0.1,101,Jumper walking,Duplicate
 lab,4728,4728,,,,0.6,21,Mimic,
 lab,4729,4729,,,,0.1,21,Mimic,
 lab,4730,4730,,,,0.01,101,Mimic,
-lab,4731,4731,,,,0.01,21,Mimic,
+lab,4731,4731,,No,,0.01,21,Mimic,Duplicate
 lab,4732,4732,,,,0.1,101,Mimic,
-lab,4733,4733,,,,0.05,21,Mimic,
+lab,4733,4733,,No,,0.05,21,Mimic,Duplicate
 lab,4734,4734,,,,0.1,21,Mimic,

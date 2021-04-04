@@ -4,15 +4,20 @@ source("logit.R")
 
 
 # Converts analysis performance to a single rowed table, with the same structure
-# as the table in the paper
-SummariseDAPerformance <- function(perf) {
+# as the table in the paper.
+# 
+# Either proportion correctly identified or proportion identified as prey to be attacked can be reported.
+SummariseDAPerformance <- function(perf, reportCorrect = FALSE) {
   # Combine insect mimics and spider mimics into 1 row, mimics
   perf <- rbind(perf, mimic = colSums(perf[MTP_MIMICS, ]))[c("mimic", "model", "non-mimic"), ]
   # Calculate row totals
   perf <- cbind(perf, total = rowSums(perf))
 
   .fmtCell <- function(r, corCol) sprintf("%d / %d (%d%%)", perf[r, corCol], perf[r, 3], round(perf[r,corCol] / perf[r,3] * 100))
-  data.frame(Mimics = .fmtCell(1, 2), Ants = .fmtCell(2, 1), "Non-mimics" = .fmtCell(3, 2), check.names = FALSE)
+  if (reportCorrect)
+    data.frame(Mimics = .fmtCell(1, 2), Ants = .fmtCell(2, 1), "Non-mimics" = .fmtCell(3, 2), check.names = FALSE)
+  else
+    data.frame(Mimics = .fmtCell(1, 2), Ants = .fmtCell(2, 2), "Non-mimics" = .fmtCell(3, 2), check.names = FALSE)
 }
 
 # Reports chi-sq test results for ant-discrimination based on limited or full information 
@@ -187,16 +192,16 @@ TestInformationLimitationForTrj <- function(trjList, crossValidateLI = TRUE, ana
   allLimited <- CalcMotionAccuracy(analysisType = analysisType, trjList, trainOnAll = FALSE)
 
   # Plot the two cases together
-  JPlotToPNG("../output/info-limitation-trj.png", {
-    par(mfrow = c(1, 2))
-    par(mar = c(2.2, 2, 2, 0))
-    LIPanelPlot("(a)", trjList$metaInfo$mimicType, allFull$accuracy, jitterAmount = 0)
-    LIPanelPlot("(b)", trjList$metaInfo$mimicType, allLimited$accuracy, jitterAmount = 0)
-  }, units = "px", width = 1200, height = 600, res = 120)
+  # JPlotToPNG("../output/info-limitation-trj.png", {
+  #   par(mfrow = c(1, 2))
+  #   par(mar = c(2.2, 2, 2, 0))
+  #   LIPanelPlot("(a)", trjList$metaInfo$mimicType, allFull$accuracy, jitterAmount = 0)
+  #   LIPanelPlot("(b)", trjList$metaInfo$mimicType, allLimited$accuracy, jitterAmount = 0)
+  # }, units = "px", width = 1200, height = 600, res = 120)
   
   # Report error performance
   cat("Trajectory analysis\n___________________\n")
-  cat(sprintf("%s performance\n", analTypeName(analysisType)))
+  cat(sprintf("%s proportion classified as prey\n", analTypeName(analysisType)))
   print(cbind(Trait = c("Trajectory", ""), 
               "Trained on" = c("Full", "Limited"),
               rbind(SummariseDAPerformance(allFull$performance),
@@ -240,7 +245,7 @@ TestInformationLimitationForMorpho <- function(angle = c("Dorsal", "Lateral"), r
   # Report error performance
   title <- sprintf("Limited info hypothesis: %s body shape analysis", angle)
   cat(sprintf("%s\n%s\n", title, gsub(".", "_", title)))
-  cat(sprintf("%s performance:\n", analTypeName(analysisType)))
+  cat(sprintf("%s proportion classified as prey:\n", analTypeName(analysisType)))
   print(cbind(Trait = c(paste(angle, "outline"), ""), 
               "Trained on" = c("Full", "Limited"),
               rbind(SummariseDAPerformance(allFull$performance),

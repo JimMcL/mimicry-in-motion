@@ -10,24 +10,27 @@ REDISCRETIZE_STEP_LENGTH <- .0002
 
 # List of info describing calculated parameters
 # Weird initialisation is so that values can be specified by row rather than column.
-# TODO what about stopping_freq?
 PARAMS_INFO <- rbind(
   speed_mean              = data.frame(in_discr = TRUE,  transform = "log",  label = "ln mean speed (m/s)", title = "Mean speed while moving"),
-  speed_CV                = data.frame(in_discr = TRUE,  transform = "log",  label = "ln coeff. of variation of speed (m/s)", title = "Coeff. of variation of speed"),
-  speed_min               = data.frame(in_discr = TRUE,  transform = "",     label = "Minimum speed (m/s)", title = "Minimum speed"),
+  speed_CV                = data.frame(in_discr = TRUE,  transform = "log",     label = "Coeff. of variation of speed (m/s)", title = "Coeff. of variation of speed"),
+  # Minimum speed doesn't mean much and largely depends on STOPPED_SPEED and how it is 
+  # sampled. We track whether the trajectory includes stops in variables stopped_duration_*
+  speed_min               = data.frame(in_discr = FALSE, transform = "",     label = "Minimum speed (m/s)", title = "Minimum speed"),
   speed_max               = data.frame(in_discr = TRUE,  transform = "log",  label = "ln maximum speed (m/s)", title = "Maximum speed"),
-  stopped_duration_mean   = data.frame(in_discr = TRUE,  transform = "",     label = "ln mean stopping durations (s)", title = "Mean stopped duration"),
-  stopped_duration_CV     = data.frame(in_discr = TRUE,  transform = "",     label = "ln coeff. of variation of stopping durations (s)", title = "Coeff. of variation of stopped duration"),
-  moving_duration_mean    = data.frame(in_discr = TRUE,  transform = "",     label = "ln mean moving durations (s)", title = "Mean moving duration"),
-  moving_duration_CV      = data.frame(in_discr = TRUE,  transform = "",     label = "ln coeff. of variation of moving durations (s)", title = "Coeff. of variation of moving duration"),
-  sinuosity               = data.frame(in_discr = TRUE,  transform = "log",  label = "ln sinuosity", title = "Sinuosity"),
+  stopped_duration_mean   = data.frame(in_discr = TRUE,  transform = "",     label = "Mean stopping durations (s)", title = "Mean stopped duration"),
+  stopped_duration_CV     = data.frame(in_discr = TRUE,  transform = "",     label = "Coeff. of variation of stopping durations (s)", title = "Coeff. of variation of stopped duration"),
+  moving_duration_mean    = data.frame(in_discr = TRUE,  transform = "",     label = "Mean moving durations (s)", title = "Mean moving duration"),
+  moving_duration_CV      = data.frame(in_discr = TRUE,  transform = "",     label = "Coeff. of variation of moving durations (s)", title = "Coeff. of variation of moving duration"),
+  sinuosity               = data.frame(in_discr = TRUE,  transform = "log",     label = "Sinuosity", title = "Sinuosity"),
   straightness            = data.frame(in_discr = TRUE,  transform = "",     label = "Straightness", title = "Straightness"),
-  first_min_deltaS        = data.frame(in_discr = TRUE,  transform = "",     label = "First min deltaS", title = "First min deltaS"),
-  first_min_C             = data.frame(in_discr = TRUE,  transform = "",     label = "First min C", title = "First min C"),
-  missing_min             = data.frame(in_discr = TRUE,  transform = "",     label = "No first min", title = "No first min"),
+  # first_min_deltaS        = data.frame(in_discr = FALSE, transform = "",     label = "First min deltaS", title = "First min deltaS"),
+  # first_min_C             = data.frame(in_discr = FALSE, transform = "",     label = "First min C", title = "First min C"),
+  # missing_min             = data.frame(in_discr = FALSE, transform = "",     label = "No first min", title = "No first min"),
   Emax                    = data.frame(in_discr = TRUE,  transform = "log",  label = "ln Emax", title = "Emax"),
-  directional_change_mean = data.frame(in_discr = TRUE,  transform = "log",  label = "ln mean directional change (°/s)", title = "Mean directional change"),
-  directional_change_sd   = data.frame(in_discr = TRUE,  transform = "log",  label = "ln standard deviation of directional change (°/s)", title = "Standard deviation of directional change"),
+  directional_change_mean = data.frame(in_discr = TRUE,  transform = "log",     label = "Mean directional change (°/s)", title = "Mean directional change"),
+  directional_change_sd   = data.frame(in_discr = TRUE,  transform = "log",     label = "Standard deviation of directional change (°/s)", title = "Standard deviation of directional change"),
+  stopping_freq           = data.frame(in_discr = TRUE,  transform = "",     label = "Stopping frequency (Hz)", title = "Frequency of stopping"),
+  moving_proportion       = data.frame(in_discr = TRUE,  transform = "",      label = "Proportion of time moving", title = "Proportion of time moving"),
   bodyLength              = data.frame(in_discr = FALSE, transform = "",     label = "Body length (m)", title = "Body length")
 )
 
@@ -48,7 +51,7 @@ PARAMS_INFO <- rbind(
 # # and the memoised version of the above
 GetDirnAutocorrelation <- function(trj, rediscretizeStepLength, deltaSMax = NULL) {
   # Try to come up with a file name which is unique for the trajectory and rediscretization parameters
-  dsm <- if(missing(deltaSMax) || is.null(deltaSMax)) "NULL" else as.character(deltaSMax)
+  dsm <- if (missing(deltaSMax) || is.null(deltaSMax)) "NULL" else as.character(deltaSMax)
   cachedFile <- sprintf("../data/.cache/dirnautocorr_trj%s_n%d_sl%g_dsm%s.csv", attr(trj, "trjID"), nrow(trj), rediscretizeStepLength, dsm)
   # Note we don't attempt to memoize trajectories without a trjId attribute, they are probably simulated trajectories
   if (length(cachedFile) > 0 && file.exists(cachedFile)) {
@@ -86,7 +89,7 @@ GetDirnAutocorrelation <- function(trj, rediscretizeStepLength, deltaSMax = NULL
     # Don't try to look past the ends of the data
     si <- max(1, i - window)
     ei <- min(length(v), i + window)
-    v[si : ei]
+    v[si:ei]
   }
   
   maxima <- numeric(length(v) / 2)
@@ -206,7 +209,7 @@ NnCStats <- function(trj) {
     # Determine which breaks are too short to interrupt a bout
     MIN_STOP_TIME <- .2
     i <- seq_len(nrow(movingInt) - 1)
-    shortBreaks <- (movingInt$startTime[i+1] - movingInt$stopTime[i]) < MIN_STOP_TIME
+    shortBreaks <- (movingInt$startTime[i + 1] - movingInt$stopTime[i]) < MIN_STOP_TIME
     # Now merge adjacent moving intervals if the break between them is too short
     .mergeIntervals(movingInt, which(shortBreaks))
   }
@@ -226,20 +229,20 @@ NnCStats <- function(trj) {
 # Transform the various variables so that they are approximately normally distributed.
 # The transforms to apply are defined in params_info
 TransformParams <- function(params, params_info) {
-  norm <- params
-  
   for (pn in rownames(params_info)) {
     pi <- params_info[pn, ]
-    if (pi$transform != "")
+    if (pi$transform != "") {
       # Call the function given its name
-      norm[, pn] <- do.call(get(pi$transform), list(norm[, pn]))
+      params[, pn] <- do.call(get(pi$transform), list(params[, pn]))
+    }
   }
-  norm
+  params
 }
 
 RemoveNAsFromStats <- function(stats) {
-  stats <- TrajsStatsReplaceNAs(stats, column = "first_min_deltaS", flagColumn = "missing_min")
-  stats <- TrajsStatsReplaceNAs(stats, column = "first_min_C")
+  # stats <- TrajsStatsReplaceNAs(stats, column = "first_min_deltaS", flagColumn = "missing_min")
+  # stats <- TrajsStatsReplaceNAs(stats, column = "first_min_C")
+  stats <- TrajsStatsReplaceNAs(stats, column = "stopping_freq", flagColumn = "no_stopping")
   stats
 }
 
@@ -253,21 +256,22 @@ RemoveNAsFromStats <- function(stats) {
 GetAnalysableStats <- function(trjList, removeNA = FALSE, forDiscrimination = TRUE, applyTransform = TRUE) {
   # Get names of params to use in discriminant analysis
   in_discr <- PARAMS_INFO$in_discr
-  param_names <- if (forDiscrimination)
+  param_names <- if (forDiscrimination) {
     rownames(PARAMS_INFO)[in_discr]
-  else
+  } else {
     rownames(PARAMS_INFO)
+  }
   stats <- trjList$stats
   
   if (removeNA) {
     stats <- RemoveNAsFromStats(stats)
     # Check and report if any other columns contain NAs
     sapply(param_names, function(col) if (any(is.na(stats[, col]))) stop(sprintf("Unexpected NAs in column %s", col)))
-  } else {
-    if (PARAMS_INFO["missing_min", "in_discr"]) {
-      # Create the mising_min column
-      stats[, "missing_min"] <- as.numeric(is.na(stats$first_min_C))
-    }
+  # } else {
+  #   if (PARAMS_INFO["missing_min", "in_discr"]) {
+  #     # Create the missing_min column
+  #     stats[, "missing_min"] <- as.numeric(is.na(stats$first_min_C))
+  #   }
   }
 
   if (applyTransform)
@@ -290,19 +294,12 @@ characteriseTrajectory <- function(rawTrj) {
   # Record fps so we can perform sanity checks - we hope it is independent of other values
   fps <- FpsFromPoints(rawTrj)
   
-  # Extract start/stop frequency from unsmoothed trajectory
-  strobing_freq <- GetStopStartFreq(rawTrj)
-  rawFreq <- DominantSpeedFreq(rawTrj) # EXP TODO
-  
   # Subsample to 50 FPS (i.e. the lowest frame rate for any videos) to reduce
   # the effects of recording at different frame rates (and also reduce noise)
   trj <- TrajResampleTime(rawTrj, 1 / 50, newFps = 1 / 50)
 
   # Now smooth trajectory for all other stats
   trj <- TrajSmoothSG(trj, 4, 101)
-  
-  post_smooth_strobing_freq <- GetStopStartFreq(trj)
-  smoothFreq <- DominantSpeedFreq(trj) # EXP TODO
   
   # Frequency of stopping
   stoppedInt <- TrajSpeedIntervals(trj, slowerThan = STOPPED_SPEED)
@@ -315,6 +312,8 @@ characteriseTrajectory <- function(rawTrj) {
   movingInt <- TrajSpeedIntervals(trj, fasterThan = STOPPED_SPEED)
   moving_duration_mean <- .mean(movingInt$duration)
   moving_duration_CV <- .CV(movingInt$duration)
+  # Calculate proportion of time moving, starting from time of first movement, ending at time of last movement
+  moving_proportion <- sum(movingInt$duration) / (movingInt$stopTime[nrow(movingInt)] - movingInt$startTime[1])
   
   # Measures of speed (reuse derivatives calculated by TrajSpeedIntervals, don't calculate them twice)
   derivs <- attr(stoppedInt, "derivs")
@@ -339,18 +338,14 @@ characteriseTrajectory <- function(rawTrj) {
   directional_change_sd <- sd(dc)
   
   # Directional periodicity (rediscretized inside GetDirnAutocorrelation)
-  corr <- GetDirnAutocorrelation(trj, REDISCRETIZE_STEP_LENGTH)
-  first_min <- TrajDAFindFirstMinimum(corr)
+  # This is VERY slow to calculate, and doesn't seem any more informative than sinuosity/straightness.
+  # This takes many hours to calculate for full dataset
+  # corr <- GetDirnAutocorrelation(trj, REDISCRETIZE_STEP_LENGTH)
+  # first_min <- TrajDAFindFirstMinimum(corr)
   
   # A few summary values for information purposes
   track_length <- TrajLength(trj)
   track_duration <- trj[nrow(trj), "time"] - trj[1, "time"]
-  
-  # Stats from Nelson & Card (2015)
-  # Resample and smooth for stop/start frequency calculations
-  subsampled <- TrajResampleTime(trj, 1 / 25, newFps = 1 / 25)
-  rst <- TrajSmoothSG(subsampled, 4, 21)
-  ncn <- NnCStats(rst)
   
   # Return a list with all of the statistics for this trajectory
   list(speed_mean = speed_mean,
@@ -361,27 +356,18 @@ characteriseTrajectory <- function(rawTrj) {
        stopped_duration_CV = stopped_duration_CV,
        moving_duration_mean = moving_duration_mean,
        moving_duration_CV = moving_duration_CV,
+       moving_proportion = moving_proportion,
        sinuosity = sinuosity,
        straightness = straightness,
        Emax = Emax,
        directional_change_mean = directional_change_mean, 
        directional_change_sd = directional_change_sd,
-       first_min_deltaS = first_min[1],
-       first_min_C = first_min[2],
+       # first_min_deltaS = first_min[1],
+       # first_min_C = first_min[2],
        stopping_freq = stopping_freq,
        track_length = track_length,
        track_duration = track_duration,
-       fps = fps,
-       bouts_per_10mm = ncn[1],
-       bouts_per_30s = ncn[2],
-       bout_distance_mean = ncn[3],
-       bout_duration_mean = ncn[4],
-       strobing_freq = strobing_freq[1],
-       strobing_freq_power = strobing_freq[2],
-       strobing_freq_smoothed = post_smooth_strobing_freq[1],
-       strobing_freq_power_smoothed = post_smooth_strobing_freq[2],
-       raw_freq = rawFreq,
-       smooth_freq = smoothFreq
+       fps = fps
   )
 }
 

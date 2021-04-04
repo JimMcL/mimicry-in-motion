@@ -55,6 +55,11 @@ Morphometrics
 
 
 ____________________________________________
+Analyses in appendix
+
+Appendix 1 describes two bootstrap analyses: to test whether ant trajectories are different from those of non mimics, and whether mimic trajectories are part way between ants and non-mimics. Code for these analyses is in test-conditions-of-mimicry.R.
+
+____________________________________________
 R version info
 
 - Session info -------------------------------------------------------------------

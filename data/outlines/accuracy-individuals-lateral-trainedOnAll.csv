@@ -1,185 +1,252 @@
-"angle","file","species","specimenId","mimicType","accuracy"
-"Lateral","../data/outlines/sampleIt\outline1cb03a04780f.jpg","Diptera3 sp1","18","non-mimic",5.48149035871066e-17
-"Lateral","../data/outlines/sampleIt\outline1cb0418b1887.jpg","Insecta1 sp1","19","non-mimic",1.69665789251158e-05
-"Lateral","../data/outlines/sampleIt\outline1cb025df6547.jpg","Rhytidoponera metallica","204","model",0.999999149551503
-"Lateral","../data/outlines/sampleIt\outline1cb0237d2ec4.jpg","Crematogaster sp1","23","model",1
-"Lateral","../data/outlines/sampleIt\outline1cb020a37594.jpg","Isopoda1 sp1","242","non-mimic",4.04110261031184e-14
-"Lateral","../data/outlines/sampleIt\outline1cb09b2ec2.jpg","Gryllid1 sp1","243","non-mimic",1.01296426362733e-17
-"Lateral","../data/outlines/sampleIt\outline1cb076b4f68.jpg","Tapinoma sp1","244","model",0.999993043160395
-"Lateral","../data/outlines/sampleIt\outline1cb051337de0.jpg","Froggattella sp1","248","model",1
-"Lateral","../data/outlines/sampleIt\outline1cb014d1bed.jpg","Polyrhachis ammon","256","model",1
-"Lateral","../data/outlines/sampleIt\outline1cb06c603552.jpg","Oxyopes elegans","260","non-mimic",2.20158453403573e-32
-"Lateral","../data/outlines/sampleIt\outline1cb04cdd3090.jpg","Camponotus nigriceps","267","model",0.999999997979901
-"Lateral","../data/outlines/sampleIt\outline1cb04e2b3aa0.jpg","Camponotus nigriceps","289","model",0.999999999999995
-"Lateral","../data/outlines/sampleIt\outline1cb05d367bb5.jpg","Stigmacros sp1","3","model",0.999999993844479
-"Lateral","../data/outlines/sampleIt\outline1cb04f333d85.jpg","Polyrhachis sp1","309","model",1
-"Lateral","../data/outlines/sampleIt\outline1cb05dd821e3.jpg","Camponotus sp2","310","model",0.999999999999511
-"Lateral","../data/outlines/sampleIt\outline1cb01e5b6c5c.jpg","Tapinoma sp1","319","model",0.999999999999978
-"Lateral","../data/outlines/sampleIt\outline1cb02b0e5f80.jpg","Myrmarachne erythrocephala","346","mimetic spider",3.05187673408332e-09
-"Lateral","../data/outlines/sampleIt\outline1cb040531d71.jpg","Notoncus sp1","370","model",0.999999513354868
-"Lateral","../data/outlines/sampleIt\outline1cb049a75944.jpg","Myrmarachne luctuosa","380","mimetic spider",3.01582740040723e-14
-"Lateral","../data/outlines/sampleIt\outline1cb061df49e0.jpg","Coleoptera2 sp1","381","mimetic insect",1.74315503668702e-11
-"Lateral","../data/outlines/sampleIt\outline1cb031592d51.jpg","Myrmarachne luctuosa","383","mimetic spider",6.56012788409883e-13
-"Lateral","../data/outlines/sampleIt\outline1cb05cbd1961.jpg","Polyrhachis sp2","384","model",0.999999999999993
-"Lateral","../data/outlines/sampleIt\outline1cb053171d8c.jpg","Myrmarachne erythrocephala","385","mimetic spider",2.89701457862547e-10
-"Lateral","../data/outlines/sampleIt\outline1cb0207a6bf0.JPG","Myrmarachne luctuosa","386","mimetic spider",1.86591707665085e-08
-"Lateral","../data/outlines/sampleIt\outline1cb067426fe8.JPG","Myrmarachne luctuosa","387","mimetic spider",1.86369240594895e-07
-"Lateral","../data/outlines/sampleIt\outline1cb0332e6383.jpg","Myrmarachne luctuosa","388","mimetic spider",1.98743962928315e-09
-"Lateral","../data/outlines/sampleIt\outline1cb07d47232b.JPG","Dolichoderus clarki","390","model",1
-"Lateral","../data/outlines/sampleIt\outline1cb024f17c0c.JPG","Eurymela rubrolimbata","393","mimetic insect",7.75428518576961e-24
-"Lateral","../data/outlines/sampleIt\outline1cb07bb83bf2.JPG","Eurymela rubrolimbata","394","non-mimic",6.66033164574814e-13
-"Lateral","../data/outlines/sampleIt\outline1cb07ce32c22.JPG","Cosmophasis bitaeniata","397","mimetic spider",4.57216422380263e-12
-"Lateral","../data/outlines/sampleIt\outline1cb026f77dc1.JPG","Amyciaea albomaculata","398","mimetic spider",1.93835404164922e-19
-"Lateral","../data/outlines/sampleIt\outline1cb056766dbd.JPG","Amyciaea albomaculata","399","mimetic spider",2.34445811300816e-30
-"Lateral","../data/outlines/sampleIt\outline1cb01e13a16.JPG","Cosmophasis bitaeniata","400","mimetic spider",2.74809409482867e-16
-"Lateral","../data/outlines/sampleIt\outline1cb07a5977de.JPG","Cosmophasis bitaeniata","401","mimetic spider",1.25072201229023e-17
-"Lateral","../data/outlines/Morphometrics B-W/4014_lateral_interpolated.jpg","Myrmarachne smaragdina","4014","mimetic spider",0.203404992547787
-"Lateral","../data/outlines/Morphometrics B-W/4015_lateral_angle_adjust.jpg","Myrmarachne smaragdina","4015","mimetic spider",0.0750508361326443
-"Lateral","../data/outlines/Morphometrics B-W/4030_lateral_interpolated.jpg","Myrmarachne smaragdina","4030","mimetic spider",0.00742080203507297
-"Lateral","../data/outlines/Morphometrics B-W/4034_dorsal_angle_adjust.jpg","Myrmarachne smaragdina","4034","mimetic spider",0.000219313960760237
-"Lateral","../data/outlines/Morphometrics B-W/4035_lateral.jpg","Myrmarachne smaragdina","4035","mimetic spider",0.00105330368251332
-"Lateral","../data/outlines/Morphometrics B-W/4036_lateral_interpolated.jpg","Myrmarachne smaragdina","4036","mimetic spider",0.001728249048895
-"Lateral","../data/outlines/sampleIt\outline1cb0517332e0.JPG","Coleoptera3 sp1","404","mimetic insect",1.26165590072875e-06
-"Lateral","../data/outlines/sampleIt\outline1cb04af92c22.JPG","Daerlac apicalis","405","mimetic insect",4.75000333151785e-12
-"Lateral","../data/outlines/sampleIt\outline1cb0612e1b42.JPG","Poecilipta contorqua","410","mimetic spider",1.72768265854077e-10
-"Lateral","../data/outlines/sampleIt\outline1cb05e0a6cbf.JPG","Dolichoderus clarki","412","model",1
-"Lateral","../data/outlines/sampleIt\outline1cb07d123a84.JPG","Vespoidea3 sp1","416","mimetic insect",0.00165356279988056
-"Lateral","../data/outlines/sampleIt\outline1cb063e019e8.JPG","Leptomyrmex sp1","419","model",0.999839469573089
-"Lateral","../data/outlines/sampleIt\outline1cb022da26f1.jpg","Eurymela rubrolimbata","423","mimetic insect",6.53367291461787e-22
-"Lateral","../data/outlines/sampleIt\outline1cb04f0372f8.jpg","Myrmarachne erythrocephala","424","mimetic spider",2.13074193854062e-08
-"Lateral","../data/outlines/sampleIt\outline1cb0189d3481.JPG","Apricia jovialis","426","mimetic spider",1.52185506036214e-23
-"Lateral","../data/outlines/sampleIt\outline1cb032f59b1.JPG","Vespoidea4 sp1","430","non-mimic",6.64016253203026e-07
-"Lateral","../data/outlines/sampleIt\outline1cb01ad95271.JPG","Polyrhachis sp4","431","model",1
-"Lateral","../data/outlines/Morphometrics B-W/4359_lateral_interpolated.jpg","Damoetas sp (?)","4359","mimetic spider",2.30131766279644e-08
-"Lateral","../data/outlines/sampleIt\outline1cb06b6c9d8.JPG","Mantid1 sp1","437","non-mimic",0.972297499101561
-"Lateral","../data/outlines/sampleIt\outline1cb03e805283.JPG","Formicid19 sp1","438","model",0.999999913148715
-"Lateral","../data/outlines/sampleIt\outline1cb03fe49a9.JPG","Alydid3 sp1","444","mimetic insect",0.0575353860105308
-"Lateral","../data/outlines/sampleIt\outline1cb064961976.JPG","Alydid2 sp1","446","non-mimic",0.000142842473580405
-"Lateral","../data/outlines/sampleIt\outline1cb06d24407e.JPG","Mantid2 sp1","454","non-mimic",0.138045169374655
-"Lateral","../data/outlines/sampleIt\outline1cb010246d12.JPG","Cosmophasis thalassina","457","non-mimic",3.88501700519171e-23
-"Lateral","../data/outlines/sampleIt\outline1cb058b51a1f.JPG","Ligonipes sp1","458","mimetic spider",3.92762205430758e-15
-"Lateral","../data/outlines/sampleIt\outline1cb038eb6d3a.JPG","Riptortus abdominalis","462","mimetic insect",6.92182884027393e-20
-"Lateral","../data/outlines/sampleIt\outline1cb01e163015.JPG","Corinnid1 sp1","469","mimetic spider",5.12754284926366e-18
-"Lateral","../data/outlines/sampleIt\outline1cb026a573a1.JPG","Cosmophasis bitaeniata","473","mimetic spider",2.18036912066133e-09
-"Lateral","../data/outlines/sampleIt\outline1cb01b4f6626.JPG","Myrmarachne macleayana","479","mimetic spider",1.14563223296809e-31
-"Lateral","../data/outlines/sampleIt\outline1cb039c64f95.JPG","Reduviid1 sp1","488","non-mimic",0.09888232824008
-"Lateral","../data/outlines/sampleIt\outline1cb046f748dc.JPG","Corinnid1 sp1","489","mimetic spider",1.28701819978791e-15
-"Lateral","../data/outlines/sampleIt\outline1cb02ac81e13.JPG","Reduviid1 sp1","490","mimetic insect",0.265000459540978
-"Lateral","../data/outlines/sampleIt\outline1cb05840785f.JPG","Cosmophasis bitaeniata","492","mimetic spider",2.74661604298595e-18
-"Lateral","../data/outlines/sampleIt\outline1cb06522b03.JPG","Riptortus abdominalis","494","non-mimic",8.59862044676948e-13
-"Lateral","../data/outlines/sampleIt\outline1cb035956cfe.JPG","Amyciaea albomaculata","499","mimetic spider",2.66720042987878e-05
-"Lateral","../data/outlines/sampleIt\outline1cb04ab037b6.JPG","Oecophylla smaragdina","500","model",0.985717483471782
-"Lateral","../data/outlines/sampleIt\outline1cb01ce644fb.JPG","Amyciaea albomaculata","503","mimetic spider",8.80377705127509e-10
-"Lateral","../data/outlines/sampleIt\outline1cb042c16d9e.JPG","Cicadellid2 sp1","506","non-mimic",1.33406814092775e-38
-"Lateral","../data/outlines/sampleIt\outline1cb050291445.jpg","Opisthopsis sp1","509","model",1
-"Lateral","../data/outlines/sampleIt\outline1cb041fe6cea.jpg","Myandra bicincta","512","mimetic spider",5.35294817906961e-18
-"Lateral","../data/outlines/sampleIt\outline1cb06b6b424d.JPG","Myandra bicincta","514","mimetic spider",9.86287660495822e-17
-"Lateral","../data/outlines/sampleIt\outline1cb04a636d61.JPG","Zodarid4 sp1","515","mimetic spider",5.72288319417155e-21
-"Lateral","../data/outlines/sampleIt\outline1cb0614d64bd.JPG","Holoplatys sp4","518","mimetic spider",7.47592924797074e-07
-"Lateral","../data/outlines/sampleIt\outline1cb020e32d00.JPG","Myrmarachne juvenile","523","mimetic spider",1.77868709568961e-28
-"Lateral","../data/outlines/sampleIt\outline1cb064b73dc8.JPG","Myrmarachne juvenile","524","mimetic spider",2.57442132457593e-14
-"Lateral","../data/outlines/sampleIt\outline1cb032ef32c0.JPG","Hemiptera1 sp1","531","mimetic insect",3.8960982066086e-15
-"Lateral","../data/outlines/sampleIt\outline1cb049dc6a03.JPG","Myrmarachne erythrocephala","535","mimetic spider",1.51652993778412e-11
-"Lateral","../data/outlines/sampleIt\outline1cb0179b6d90.JPG","Vespoidea5 sp1","536","mimetic insect",0.829220469049158
-"Lateral","../data/outlines/sampleIt\outline1cb033623fee.JPG","Formicid1 sp1","537","model",0.998684126416959
-"Lateral","../data/outlines/sampleIt\outline1cb07e9977d3.JPG","Vespoidea6 sp1","579","mimetic insect",1.78492723251768e-05
-"Lateral","../data/outlines/sampleIt\outline1cb012126335.JPG","Myrmarachne luctuosa","589","mimetic spider",4.24836001794909e-12
-"Lateral","../data/outlines/sampleIt\outline1cb02543cfa.JPG","Damoetas nitidus","591","mimetic spider",3.62652922026341e-15
-"Lateral","../data/outlines/sampleIt\outline1cb0484a41d1.JPG","Eilica sp1","593","mimetic spider",2.00489249076279e-13
-"Lateral","../data/outlines/sampleIt\outline1cb05883166a.JPG","Apricia jovialis","605","non-mimic",8.02919994681448e-18
-"Lateral","../data/outlines/sampleIt\outline1cb02161723.JPG","Rhombonotus gracilis","609","mimetic spider",4.30065113716764e-11
-"Lateral","../data/outlines/sampleIt\outline1cb07fa25b60.JPG","Eilica sp1","621","mimetic spider",5.35221229642141e-23
-"Lateral","../data/outlines/sampleIt\outline1cb02c5d2640.JPG","Eilica sp1","626","mimetic spider",1.24620407571574e-23
-"Lateral","../data/outlines/sampleIt\outline1cb0a117a15.JPG","Daerlac nigricans","642","mimetic insect",6.97562025579725e-06
-"Lateral","../data/outlines/sampleIt\outline1cb0bbfdc0.JPG","Vespoidea5 sp1","654","mimetic insect",0.000576141666911907
-"Lateral","../data/outlines/sampleIt\outline1cb023c33c3d.JPG","Vespoidea4 sp1","657","non-mimic",0.000435421740414734
-"Lateral","../data/outlines/sampleIt\outline1cb038d1bf4.JPG","Myrmarachne erythrocephala","661","mimetic spider",4.36170032125498e-14
-"Lateral","../data/outlines/sampleIt\outline1cb058e479b9.JPG","Daerlac nigricans","662","mimetic insect",3.79027578301483e-07
-"Lateral","../data/outlines/sampleIt\outline1cb06c3a7efa.JPG","Coleoptera2 sp1","663","mimetic insect",3.22371834445258e-14
-"Lateral","../data/outlines/sampleIt\outline1cb043d66235.JPG","Vespoidea4 sp1","664","non-mimic",9.13501088560223e-06
-"Lateral","../data/outlines/sampleIt\outline1cb071427e26.JPG","Daerlac nigricans","665","mimetic insect",1.60026142513421e-07
-"Lateral","../data/outlines/sampleIt\outline1cb056bf70f8.JPG","Holoplatys sp2","666","non-mimic",5.13968184981211e-17
-"Lateral","../data/outlines/sampleIt\outline1cb022655f64.JPG","Formicid10 sp1","667","model",1
-"Lateral","../data/outlines/sampleIt\outline1cb076ae594b.JPG","Lamponid2 sp1","682","non-mimic",1.38709932006706e-12
-"Lateral","../data/outlines/sampleIt\outline1cb042dc7ad2.JPG","Nyssus coloripes","687","non-mimic",4.27273538691417e-31
-"Lateral","../data/outlines/sampleIt\outline1cb054e64e5e.JPG","Eilica sp1","696","mimetic spider",1.10572044600188e-32
-"Lateral","../data/outlines/sampleIt\outline1cb022b2505e.JPG","Astia hariola","704","non-mimic",9.52031310664161e-30
-"Lateral","../data/outlines/sampleIt\outline1cb07de41220.JPG","Coleoptera2 sp1","717","mimetic insect",4.19556724030806e-12
-"Lateral","../data/outlines/sampleIt\outline1cb01d735b57.JPG","Coleoptera2 sp1","722","mimetic insect",4.96971201685551e-09
-"Lateral","../data/outlines/sampleIt\outline1cb06a045a0f.JPG","Daerlac nigricans","728","mimetic insect",3.41087284742372e-09
-"Lateral","../data/outlines/sampleIt\outline1cb023f521d7.JPG","Myrmarachne erythrocephala","732","mimetic spider",5.83004725042952e-09
-"Lateral","../data/outlines/sampleIt\outline1cb07a9a4a90.JPG","Myrmarachne luctuosa","733","mimetic spider",3.40652838415455e-13
-"Lateral","../data/outlines/sampleIt\outline1cb0214e214d.jpg","Notoncus sp1","75","model",1
-"Lateral","../data/outlines/sampleIt\outline1cb01abc2b3.JPG","Daerlac apicalis","766","mimetic insect",1.02970295931099e-08
-"Lateral","../data/outlines/sampleIt\outline1cb02ff41cb6.JPG","Daerlac apicalis","769","mimetic insect",7.69403191866764e-08
-"Lateral","../data/outlines/sampleIt\outline1cb0588e4fff.JPG","Daerlac apicalis","770","mimetic insect",1.75107213393879e-08
-"Lateral","../data/outlines/sampleIt\outline1cb0f187a89.JPG","Vespoidea5 sp1","783","mimetic insect",0.210887412163477
-"Lateral","../data/outlines/sampleIt\outline1cb078e43163.JPG","Daerlac apicalis","804","mimetic insect",2.64476727108264e-05
-"Lateral","../data/outlines/sampleIt\outline1cb044892132.JPG","Myrmarachne bicolor","810","mimetic spider",3.97313941343026e-13
-"Lateral","../data/outlines/sampleIt\outline1cb018623eab.JPG","Rhombonotus sp2","813","mimetic spider",7.30391198999707e-12
-"Lateral","../data/outlines/sampleIt\outline1cb0110e471a.JPG","Rhombonotus sp2","815","mimetic spider",1.70387603138607e-08
-"Lateral","../data/outlines/sampleIt\outline1cb04fee10de.JPG","Judalana lutea","817","mimetic spider",1.93646436802141e-09
-"Lateral","../data/outlines/sampleIt\outline1cb014fc2194.JPG","Myrmarachne juvenile","818","mimetic spider",1.14223793699133e-09
-"Lateral","../data/outlines/sampleIt\outline1cb0363164d0.JPG","Myrmarachne juvenile","822","mimetic spider",2.0041138985687e-17
-"Lateral","../data/outlines/sampleIt\outline1cb037a4288a.JPG","Myrmarachne erythrocephala","824","mimetic spider",6.03175387631336e-20
-"Lateral","../data/outlines/sampleIt\outline1cb079be4e1f.JPG","Myrmarachne macleayana","826","mimetic spider",2.90653412453376e-18
-"Lateral","../data/outlines/sampleIt\outline1cb04ef5726f.JPG","Myrmarachne macleayana","827","mimetic spider",3.04461495473724e-15
-"Lateral","../data/outlines/sampleIt\outline1cb038a14d11.JPG","Polyrhachis monteithi","829","model",0.999080685190438
-"Lateral","../data/outlines/sampleIt\outline1cb0b5560aa.JPG","Rhombonotus gracilis","832","mimetic spider",7.12608047740365e-10
-"Lateral","../data/outlines/sampleIt\outline1cb05a636deb.JPG","Rhombonotus sp2","833","mimetic spider",4.06618636369436e-07
-"Lateral","../data/outlines/sampleIt\outline1cb0574c7ccf.jpg","Rhombonotus gracilis","841","mimetic spider",4.61143220690026e-11
-"Lateral","../data/outlines/sampleIt\outline1cb0fe15a4b.JPG","Crematogaster sp1","842","model",0.252672673309976
-"Lateral","../data/outlines/sampleIt\outline1cb01bec60c7.JPG","Formicid13 sp1","843","model",0.999999921258061
-"Lateral","../data/outlines/sampleIt\outline1cb023536f2b.JPG","Rhombonotus sp2","844","mimetic spider",1.3006891061201e-09
-"Lateral","../data/outlines/sampleIt\outline1cb066760cf.JPG","Rhombonotus sp2","845","mimetic spider",1.56096174819595e-10
-"Lateral","../data/outlines/sampleIt\outline1cb065875ccf.JPG","Rhombonotus sp2","846","mimetic spider",1.82961341605497e-13
-"Lateral","../data/outlines/sampleIt\outline1cb04073e6c.JPG","Rhombonotus sp2","847","mimetic spider",1.14750725741044e-12
-"Lateral","../data/outlines/sampleIt\outline1cb02abc28eb.JPG","Cosmophasis thalassina","849","non-mimic",1.40864310233148e-23
-"Lateral","../data/outlines/sampleIt\outline1cb044122c48.JPG","Heteroptera2 sp1","851","mimetic insect",9.51946379526841e-05
-"Lateral","../data/outlines/sampleIt\outline1cb066cd6ebe.JPG","Rhombonotus sp3","857","mimetic spider",3.52755994022547e-10
-"Lateral","../data/outlines/sampleIt\outline1cb0799af97.JPG","Colobathristid1 sp1","884","mimetic insect",4.89074564772339e-09
-"Lateral","../data/outlines/sampleIt\outline1cb05b6520ab.JPG","Heteroptera2 sp1","892","mimetic insect",7.87486101195374e-07
-"Lateral","../data/outlines/sampleIt\outline1cb0795833ec.JPG","Cosmophasis thalassina","897","mimetic spider",4.12716679808234e-21
-"Lateral","../data/outlines/sampleIt\outline1cb04ba65ee4.JPG","Cosmophasis thalassina","900","mimetic spider",1.67693163397059e-36
-"Lateral","../data/outlines/sampleIt\outline1cb076d214c1.JPG","Cosmophasis thalassina","901","non-mimic",4.35004760987866e-23
-"Lateral","../data/outlines/sampleIt\outline1cb061e66c1f.jpg","Myrmarachne macleayana","902","mimetic spider",5.19220256934775e-08
-"Lateral","../data/outlines/sampleIt\outline1cb0407632b3.JPG","Heteroptera2 sp1","910","mimetic insect",0.777919402543103
-"Lateral","../data/outlines/sampleIt\outline1cb02ffa1d28.JPG","Myrmarachne juvenile","911","mimetic spider",1.45474377981876e-08
-"Lateral","../data/outlines/sampleIt\outline1cb05b5556e1.JPG","Cosmophasis micarioides","913","mimetic spider",2.89879617783366e-16
-"Lateral","../data/outlines/sampleIt\outline1cb025c22a41.JPG","Myrmarachne macleayana","914","mimetic spider",1.37522725212218e-09
-"Lateral","../data/outlines/sampleIt\outline1cb019ea7b49.JPG","Heteroptera2 sp1","915","mimetic insect",3.37507923333882e-18
-"Lateral","../data/outlines/sampleIt\outline1cb046d3533d.JPG","Cosmophasis baehrae","919","non-mimic",2.03200174621106e-29
-"Lateral","../data/outlines/sampleIt\outline1cb080f2313.JPG","Judalana lutea","920","mimetic spider",3.89181674364799e-17
-"Lateral","../data/outlines/sampleIt\outline1cb046492a05.JPG","Judalana lutea","921","mimetic spider",4.12723729347378e-13
-"Lateral","../data/outlines/sampleIt\outline1cb010314604.JPG","Salticid17 sp1","925","mimetic spider",2.04445421000867e-14
-"Lateral","../data/outlines/sampleIt\outline1cb0408315.JPG","Salticid18 sp1","926","non-mimic",1.52607371535965e-24
-"Lateral","../data/outlines/sampleIt\outline1cb06af14444.JPG","Cosmophasis thalassina","927","mimetic spider",3.51233872494192e-22
-"Lateral","../data/outlines/sampleIt\outline1cb0147f3c38.JPG","Judalana lutea","931","mimetic spider",5.58054457347884e-12
-"Lateral","../data/outlines/sampleIt\outline1cb012ee73b2.JPG","Cosmophasis baehrae","939","non-mimic",1.92146935285987e-19
-"Lateral","../data/outlines/sampleIt\outline1cb02dff7c48.JPG","Cosmophasis thalassina","940","mimetic spider",3.0060221877797e-27
-"Lateral","../data/outlines/sampleIt\outline1cb0397628e2.JPG","Myrmarachne macleayana","942","mimetic spider",1.32772509477981e-07
-"Lateral","../data/outlines/sampleIt\outline1cb07b9c163e.JPG","Iridonyssus kohouti","951","mimetic spider",2.68288767895159e-23
-"Lateral","../data/outlines/sampleIt\outline1cb047ed29e4.jpg","Poecilipta kohouti","977","mimetic spider",1.59342107613162e-15
-"Lateral","../data/outlines/Morphometrics B-W/CRS101_lateral_interpolated_angle_adjust.jpg","Myrmarachne formicaria","CRS101","mimetic spider",3.09014574267765e-23
-"Lateral","../data/outlines/Morphometrics B-W/JMS116_e_lateral_interpolated.jpg","Myrmarachne erythrocephala","JMS116","mimetic spider",3.1584422922478e-11
-"Lateral","../data/outlines/Morphometrics B-W/JMS117_g_lateral.jpg","Myrmarachne erythrocephala","JMS117","mimetic spider",3.29802782938033e-11
-"Lateral","../data/outlines/Morphometrics B-W/JMS120_f_lateral_interpolated.jpg","Myrmarachne macleayana","JMS120","mimetic spider",1.24939746236817e-10
-"Lateral","../data/outlines/Morphometrics B-W/MCZ108610_lateral_interpolated.jpg","Myrmapana parallela","MCZ108610","mimetic spider",4.89836849945352e-09
-"Lateral","../data/outlines/Morphometrics B-W/MCZ125078_lateral_interpolated.jpg","Myrmapeni chickeringi","MCZ125078","mimetic spider",1.86627785311404e-09
-"Lateral","../data/outlines/Morphometrics B-W/MCZ126911_lateral_interpolated_angle_adjust.jpg","Neon nellii*","MCZ126911","mimetic spider",3.52049171640349e-41
-"Lateral","../data/outlines/Morphometrics B-W/MCZ126957_lateral_interpolated.jpg","Castianeira longipalpa","MCZ126957","mimetic spider",2.88350725668661e-51
-"Lateral","../data/outlines/Morphometrics B-W/MCZ128934_lateral_angle_adjust.jpg","Myrmaplata plataleoides","MCZ128934","mimetic spider",0.0170494539824114
-"Lateral","../data/outlines/Morphometrics B-W/MCZ137106_lateral.jpg","Castianeira gertschi","MCZ137106","mimetic spider",9.02687044855571e-13
-"Lateral","../data/outlines/Morphometrics B-W/MCZ142573_lateral_interpolated.jpg","Castianeira trilineata","MCZ142573","mimetic spider",5.88065025717926e-29
-"Lateral","../data/outlines/Morphometrics B-W/MCZ16734_lateral_angle_adjust.jpg","Aetius nocturnus","MCZ16734","mimetic spider",2.04908803801625e-08
-"Lateral","../data/outlines/Morphometrics B-W/MCZ28119_lateral_angle_adjust.jpg","Sphecotypus niger","MCZ28119","mimetic spider",5.82981869731857e-05
-"Lateral","../data/outlines/Morphometrics B-W/MCZ28153_lateral.jpg","Mazax spinosa","MCZ28153","mimetic spider",2.72987841929098e-30
-"Lateral","../data/outlines/Morphometrics B-W/MCZ44162_lateral_angle_adjust_deformed.jpg","Serendib volans","MCZ44162","mimetic spider",1.56252198331188e-17
-"Lateral","../data/outlines/Morphometrics B-W/MCZ67875_lateral.jpg","Myrmecotypus rettenmeyeri","MCZ67875","mimetic spider",1.0556420339265e-07
-"Lateral","../data/outlines/Morphometrics B-W/MCZ79128_lateral_interpolated.jpg","Mazax pax","MCZ79128","mimetic spider",9.59592139112106e-17
-"Lateral","../data/outlines/Morphometrics B-W/MCZ93522_lateral_angle_adjust_deformed.jpg","Myrmapana centralis","MCZ93522","mimetic spider",1.03549770483537e-07
-"Lateral","../data/outlines/Morphometrics B-W/MCZ95991_lateral_angle_adjust.jpg","Corinnomma sp.","MCZ95991","mimetic spider",0.000866631653443787
-"Lateral","../data/outlines/Morphometrics B-W/MCZ96085_lateral_interpolated_angle_adjust.jpg","Serendib suthepica","MCZ96085","mimetic spider",6.60642755997651e-19
-"Lateral","../data/outlines/Morphometrics B-W/MUS401_b_lateral_interpolated.jpg","Myrmarachne luctuosa","MUS401","mimetic spider",8.27284967419218e-09
-"Lateral","../data/outlines/Morphometrics B-W/TPS103_b_lateral_interpolated.jpg","Myrmarachne helensmithae","TPS103","mimetic spider",2.21162187230161e-05
-"Lateral","../data/outlines/Morphometrics B-W/TPS104_b_lateral_angle_adjust.jpg","Myrmarachne macaulayi","TPS104","mimetic spider",3.43802631627547e-08
+"angle","species","sex","notes","other","specimenId","mimicType","sampleSize","accuracy"
+"Lateral","Diptera3 sp1","","","","18","non-mimic",1,1.16823924828833e-65
+"Lateral","Insecta1 sp1","","","","19","non-mimic",1,1.13991798031795e-18
+"Lateral","Rhytidoponera metallica","","","","204","model",3,0.999999999999997
+"Lateral","Crematogaster sp1","","","","23","model",1,1
+"Lateral","Isopoda1 sp1","","","","242","non-mimic",1,1.14631378988811e-55
+"Lateral","Gryllid1 sp1","","","","243","non-mimic",1,1.77496978956904e-34
+"Lateral","Tapinoma sp1","","","","244","model",1,1
+"Lateral","Froggattella sp1","","","","248","model",1,1
+"Lateral","Polyrhachis ammon","","","","256","model",1,1
+"Lateral","Oxyopes elegans","","","","260","non-mimic",1,2.87031882005886e-172
+"Lateral","Camponotus nigriceps","","","","267","model",1,1
+"Lateral","Camponotus nigriceps","","","","289","model",1,1
+"Lateral","Stigmacros sp1","","","","3","model",1,0.999999999987369
+"Lateral","Polyrhachis sp1","","","","309","model",1,1
+"Lateral","Camponotus sp2","","","","310","model",1,1
+"Lateral","Tapinoma sp1","","","","319","model",1,1
+"Lateral","Myrmarachne erythrocephala","","Found on sheet while sampling leaf litter, escaped from care","Ant mimic","346","mimetic spider",1,7.95517154663739e-14
+"Lateral","Notoncus sp1","","","","370","model",1,1
+"Lateral","Myrmarachne luctuosa","","On trunk of tree","Ant mimic","380","mimetic spider",1,2.00302698067703e-48
+"Lateral","Coleoptera2 sp1","","On trunk of tree","Ant mimic","381","mimetic insect",1,9.58180689290726e-45
+"Lateral","Myrmarachne luctuosa","","On trunk at base of tree, no ants within sight of spider.
+Id uncertain, seems to have black transverse stripes of erythrocephala, but white stripe is wide like luctuosa.","Ant mimic","383","mimetic spider",1,2.69040416946215e-41
+"Lateral","Polyrhachis sp2","","","","384","model",1,1
+"Lateral","Myrmarachne erythrocephala","","On trunk of tree near pitfall 8","Ant mimic","385","mimetic spider",1,8.12487500646011e-18
+"Lateral","Myrmarachne luctuosa","Male","On trunk. Killed by freezing. Its opisthosoma ruptured after manipulation for photos on a hot day.
+Pickled on 31-Jan-2017 in 96% ethanol","Ant mimic","386","mimetic spider",5,1.12371443800513e-19
+"Lateral","Myrmarachne luctuosa","","Pickled 31-Jan-2017 in 96% ethanol.
+Seems to have lateral white stripe on abdomen like erythrocephala but gold looks like luctuosa.","Ant mimic","387","mimetic spider",2,1.08955145509994e-11
+"Lateral","Myrmarachne luctuosa","Male","Found in location with lots of Dolichoderus clarki, although they weren't on the same tree. 
+Died 30-Jan-2017. 
+Pickled in 96% ethanol","Ant mimic","388","mimetic spider",2,2.42558676683596e-20
+"Lateral","Dolichoderus clarki","","Frozen 19-Feb-2017
+Pickled in 96% ethanol 1-Mar-2017","","390","model",2,1
+"Lateral","Eurymela rubrolimbata (juvenile)","","23-1-17 10:30am Died under spectroscope. Asphyxiated by glad-wrap? Squashed?
+Pickled on 31-Jan-2017 in 96% ethanol","Ant mimic bug","393","mimetic insect",2,4.54258598173667e-47
+"Lateral","Eurymela rubrolimbata","","Frozen 19-Feb-2017
+Pickled in 96% ethanol 1-Mar-2017","","394","non-mimic",1,1.24372376649518e-36
+"Lateral","Cosmophasis bitaeniata","","Purchased spider","Ant-mimic spider","397","mimetic spider",1,1.56153660456623e-45
+"Lateral","Amyciaea albomaculata","","Purchased spider","Ant-mimic spider","398","mimetic spider",1,2.41456500145232e-25
+"Lateral","Amyciaea albomaculata","","Purchased spider. 
+Died 20-Jan-2017. 
+Pickled in 96% ethanol","Ant mimic","399","mimetic spider",1,4.75128954687001e-44
+"Lateral","Cosmophasis bitaeniata","","Purchased spider","Ant-mimic spider","400","mimetic spider",2,1.65809795474639e-77
+"Lateral","Cosmophasis bitaeniata","","Purchased spider","Ant-mimic spider","401","mimetic spider",2,1.10404217466222e-34
+"Lateral","Myrmarachne smaragdina","Male","","Photo; Interpolated","4014","mimetic spider",1,4.56150077284178e-07
+"Lateral","Myrmarachne smaragdina","Male","","Photo; Angle adjusted","4015","mimetic spider",1,1.5479957625518e-05
+"Lateral","Myrmarachne smaragdina","Female","","Photo; Interpolated","4030","mimetic spider",1,1.14518281227824e-06
+"Lateral","Myrmarachne smaragdina","Female","","Photo; Angle adjusted","4034","mimetic spider",1,3.13201553506791e-05
+"Lateral","Myrmarachne smaragdina","Female","","Photo","4035","mimetic spider",1,3.14848325069394e-09
+"Lateral","Myrmarachne smaragdina","Female","","Photo; Interpolated","4036","mimetic spider",1,4.66301603488058e-11
+"Lateral","Coleoptera3 sp1","","Found by Alex.
+Frozen 19-Feb-2017
+Pickled in 96% ethanol 1-Mar-2017","Ant-mimic beetle","404","mimetic insect",1,1.28877806661099e-45
+"Lateral","Daerlac apicalis","","It was walking around on the ground. Never attempted to fly.","Ant mimic bug","405","mimetic insect",1,9.41878493187493e-44
+"Lateral","Poecilipta contorqua","Male","Stano Pekar says it may be Nyssus. sp
+Poecilipta lugubris or similar.
+Id'ed by Aus Mus (Helen Smith or Graham Milledge) as Poecilipta contorqua.
+Noticed running around _fast_ on the ground. Dolichoderus scabridus a possible model - similar body and legs colours,
+14 Feb 2017 - knocked out with CO2, then pickled in 96% ethanol.","Ant mimic spider","410","mimetic spider",2,7.21595848869957e-21
+"Lateral","Dolichoderus clarki","","","","412","model",2,1
+"Lateral","Vespoidea3 sp1","","Collected thinking it was an ant
+Pickled in 96% ethanol 1-Mar-2017","Ant-mimic wasp","416","mimetic insect",1,4.15264185762739e-11
+"Lateral","Leptomyrmex sp1","","Frozen 19-Feb-2017
+Pickled in 96% ethanol 1-Mar-2017","","419","model",1,0.99999973046625
+"Lateral","Eurymela rubrolimbata (juvenile)","","Early instar without gold colouration. 
+Died in captivity,11 Feb 2017.
+Frozen 19-Feb-2017
+Pickled in 96% ethanol 20-Feb-2017","Ant mimic hopper","423","mimetic insect",1,4.75101554781491e-31
+"Lateral","Myrmarachne erythrocephala","","On a tree with lots of Dolichoderus clarki and Eurymela hoppers.
+14 Feb 2017 knocked out with CO2, pickled in 96% ethanol.
+ID uncertain, looks different than all others.
+","Ant-mimic spider","424","mimetic spider",1,1.5313558699759e-15
+"Lateral","Apricia jovialis","","Colouration is similar to Dolichoderus scabridus.
+14 Feb 2017 knocked out with CO2, pickled in 96% ethanol.","","426","non-mimic",2,2.22382879832443e-37
+"Lateral","Vespoidea4 sp1","","Walking on tree trunk, looked like an ant except it moved slightly differently
+Pickled in 96% ethanol 1-Mar-2017","","430","non-mimic",1,5.2718097884978e-13
+"Lateral","Polyrhachis sp4","","Gaster almost looked red in sunlight.
+Frozen 22-Feb-2017
+Pickled in 96% ethanol 1-Mar-2017","","431","model",3,1
+"Lateral","Damoetas sp (?)","Male","","Photo; Interpolated","4359","mimetic spider",1,4.00830441358592e-15
+"Lateral","Mantid1 sp1","","Pickled in 96% ethanol 29-Mar-2017.","","437","non-mimic",2,0.00145521716228277
+"Lateral","Formicid19 sp1","","Pickled in 96% ethanol 29-Mar-2017.
+Probably in Ectaheteromorph group (Ectatomma,Heteroponera,Rhytidoponera, Gnaptogenys,etc.)","","438","model",1,1
+"Lateral","Alydid3 sp1","","","Ant mimic bug","444","mimetic insect",2,5.59797556483721e-15
+"Lateral","Alydid2 sp1","","","","446","non-mimic",2,1.71226034984332e-41
+"Lateral","Mantid2 sp1","","Mimic of large red Rhytidoponera (according to Chris Burnell, ant taxonomist)","","454","non-mimic",2,6.35719681037847e-09
+"Lateral","Cosmophasis thalassina","","Pickled in 96% ethanol 29-Mar-2017.","","457","non-mimic",2,1.18432984102464e-38
+"Lateral","Ligonipes sp1","","Collected by Barbara Baehr.
+Pickled in 96% ethanol 29-Mar-2017.","Ant-mimic spider","458","mimetic spider",1,1.90244423222087e-18
+"Lateral","Riptortus abdominalis (juvenile)","","Multiple photos in different environments to compare morphometric precision. Later instar possibly mimicking queen.
+Pickled in 96% ethanol 29-Mar-2017.","Ant mimic bug","462","mimetic insect",1,8.68106175701387e-48
+"Lateral","Corinnid1 sp1","","Looks like a strobe ant (Opisthopsis sp).
+Found by sweeping.","Possible ant-mimic spider","469","mimetic spider",2,4.89272505612509e-22
+"Lateral","Cosmophasis bitaeniata","","","Ant-mimic spider","473","mimetic spider",2,9.46719726416057e-39
+"Lateral","Myrmarachne macleayana","","Id uncertain, golden bum + no abdominal constriction.","Ant-mimic spider","479","mimetic spider",1,4.22938451902021e-104
+"Lateral","Reduviid1 sp1","","Pickled in 96% ethanol 29-Mar-2017.","Ant mimic bug","488","mimetic insect",2,1.55860639503316e-06
+"Lateral","Corinnid1 sp1","","Pickled in 96% ethanol 29-Mar-2017.","Ant-mimic spider","489","mimetic spider",2,3.77686414636442e-36
+"Lateral","Reduviid1 sp1","","Pickled in 96% ethanol 29-Mar-2017.","Ant mimic bug","490","mimetic insect",2,0.0649514151644226
+"Lateral","Cosmophasis bitaeniata","","In 80% ethanol to match specimens in RNAlater","Ant-mimic spider","492","mimetic spider",2,8.34990007359014e-63
+"Lateral","Riptortus abdominalis","","Pickled in 96% ethanol 29-Mar-2017.","","494","non-mimic",2,6.50501744706149e-40
+"Lateral","Amyciaea albomaculata","","","Ant-mimic spider","499","mimetic spider",1,1.91333380709459e-10
+"Lateral","Oecophylla smaragdina","","Legs removed from 1 specimen.
+Pickled in 96% ethanol 29-Mar-2017.","","500","model",2,0.999999998831063
+"Lateral","Amyciaea albomaculata","","","Ant-mimic spider","503","mimetic spider",2,2.74788796023651e-21
+"Lateral","Cicadellid2 sp1","","I assumed it was an ant when I collected it.Same colour as attendant ants.
+Pickled in 96% ethanol 29-Mar-2017.","","506","non-mimic",2,1.82686788468266e-79
+"Lateral","Opisthopsis sp1","","Pickled in 96% ethanol 29-Mar-2017.","","509","model",1,1
+"Lateral","Myandra bicincta","","Collected by Jonas under bark. Died because I froze it for too long.
+Specimen broke apart.
+Pickled in 96% ethanol 29-Mar-2017.","Ant-mimic spider","512","mimetic spider",1,2.47007404195013e-28
+"Lateral","Myandra bicincta","Male","Collected by Jonas under bark.
+Pickled, 21-Apr-2017.","Ant-mimic spider","514","mimetic spider",2,1.34711391305857e-32
+"Lateral","Zodarid4 sp1","","Collected by Jonas under bark. Died.
+Pickled in 96% ethanol, 27-Apr-2017","Ant-mimic spider","515","mimetic spider",2,4.06396323789709e-30
+"Lateral","Holoplatys sp4","","Juvenile? Pickled in 96% ethanol, 9-May-2017.","Ant-mimic spider","518","mimetic spider",2,2.39890959536451e-18
+"Lateral","Myrmarachne juvenile","","Squashed while being captured.
+Pickled in 96% ethanol, 9-May-2017.","Ant-mimic spider","523","mimetic spider",2,4.72830300920047e-32
+"Lateral","Myrmarachne juvenile","","Possibly M. erythrocephala.
+Died.
+Pickled, 96% ethanol 27-Apr-2017","Ant-mimic spider","524","mimetic spider",2,6.49670187825913e-39
+"Lateral","Hemiptera1 sp1","","Pickled, 21-Apr-2017.","Ant mimic bug","531","mimetic insect",1,1.72568856809619e-28
+"Lateral","Myrmarachne erythrocephala","","Pickled in 96% ethanol, 9-May-2017.","Ant-mimic spider","535","mimetic spider",2,3.16696547168703e-17
+"Lateral","Vespoidea5 sp1","","Pickled, 21-Apr-2017.
+Looks very similar to Polyrhachis hookeri.","Posssible wasp ant-mimic","536","mimetic insect",2,0.00123886354592586
+"Lateral","Formicid1 sp1","","Pickled, 21-Apr-2017.","","537","model",2,0.99999975477403
+"Lateral","Vespoidea6 sp1","","Pickled, 21-Apr-2017.","Ant-mimic wasp","579","mimetic insect",1,1.1529394256219e-24
+"Lateral","Myrmarachne luctuosa","","Pickled in 70% ethanol, 13-June-2017.","Ant-mimic spider","589","mimetic spider",2,3.10132019399673e-26
+"Lateral","Damoetas nitidus","","Pickled in 96% ethanol, 17-May-2017.","Ant-mimic spider","591","mimetic spider",2,4.49320617227162e-40
+"Lateral","Eilica sp1","Male","Identified as unnamed Eilica by Aus Mus.
+Pickled in 96% ethanol, 24-May-2017.","Ant-mimic spider","593","mimetic spider",1,8.42178634152458e-21
+"Lateral","Apricia jovialis","","Pickled in 96% ethanol, 15-May-2017.","","605","non-mimic",2,1.20336548565713e-38
+"Lateral","Rhombonotus gracilis","","Pickled in 96% ethanol, 15-May-2017.","Ant-mimic spider","609","mimetic spider",4,4.48294911532574e-18
+"Lateral","Eilica sp1","","Pickled in 96% ethanol, 29-May-2017.","Ant-mimic spider","621","mimetic spider",2,1.25781175147805e-78
+"Lateral","Eilica sp1","","Pickled in 70% ethanol, date unknown.","Ant-mimic spider","626","mimetic spider",2,5.11050193523375e-38
+"Lateral","Daerlac nigricans","","Pickled in 96% ethanol, 22-May-2017.","Ant mimic bug","642","mimetic insect",1,3.82159866803488e-21
+"Lateral","Vespoidea5 sp1","","Pickled in 96% ethanol, 22-May-2017.","Posssible wasp ant-mimic","654","mimetic insect",2,1.58874888208876e-05
+"Lateral","Vespoidea4 sp1","","Pickled in 96% ethanol, 29-May-2017.","","657","non-mimic",2,1.34932942891801e-17
+"Lateral","Myrmarachne erythrocephala","","Pickled in 70% ethanol, 11-Juk-2017.","Ant-mimic spider","661","mimetic spider",2,7.83517027526237e-33
+"Lateral","Daerlac nigricans","","Pickled in 96% ethanol, 22-May-2017.","Ant mimic bug","662","mimetic insect",2,1.09652918809432e-23
+"Lateral","Coleoptera2 sp1","","Pickled in 96% ethanol, 29-May-2017.","Ant-mimic beetle","663","mimetic insect",2,1.733198851762e-65
+"Lateral","Vespoidea4 sp1","","Pickled in 96% ethanol, 22-May-2017.","","664","non-mimic",2,2.68402478534275e-13
+"Lateral","Daerlac nigricans","","Pickled in 70% ethanol, 13-June-2017.","Ant mimic bug","665","mimetic insect",2,1.82614064214323e-20
+"Lateral","Holoplatys sp2","","Pickled in 96% ethanol, 29-May-2017.","","666","non-mimic",2,1.79596506064289e-53
+"Lateral","Formicid10 sp1","","Pickled in 96% ethanol, 22-May-2017.","","667","model",2,1
+"Lateral","Lamponid2 sp1","","Pickled in 70% ethanol, 12-Jul-2017.","Predator","682","non-mimic",2,2.93590317879537e-34
+"Lateral","Nyssus coloripes","","White-spotted form.
+Pickled in 96% ethanol, 29-May-2017.","","687","non-mimic",1,1.36763357257862e-39
+"Lateral","Eilica sp1","","
+Pickled in 70% ethanol, 6-June-2017.","Ant-mimic spider","696","mimetic spider",2,6.10212887251379e-138
+"Lateral","Astia hariola","","Appears to have died during a moult.
+Pickled in 96% ethanol, 29-May-2017.","","704","non-mimic",1,3.23464196581712e-30
+"Lateral","Coleoptera2 sp1","","Pickled in 96% ethanol, 29-May-2017.","Ant-mimic beetle","717","mimetic insect",2,4.68859739728898e-53
+"Lateral","Coleoptera2 sp1","","Pickled in 70% ethanol, 6-June-2017.","Ant-mimic beetle","722","mimetic insect",2,1.51776590910389e-39
+"Lateral","Daerlac nigricans","","Pickled in 70% ethanol, 13-June-2017.","Ant mimic bug","728","mimetic insect",2,1.36694020328698e-32
+"Lateral","Myrmarachne erythrocephala","Male","Pickled in 70% ethanol, 13-June-2017.","Ant-mimic spider","732","mimetic spider",3,6.67827172519043e-11
+"Lateral","Myrmarachne luctuosa","Female","Pickled in 70% ethanol, 6-June-2017.","Ant-mimic spider","733","mimetic spider",2,3.86117992753663e-37
+"Lateral","Notoncus sp1","","","","75","model",1,1
+"Lateral","Daerlac apicalis","","Pickled in 70% ethanol, 13-June-2017.","Ant mimic bug","766","mimetic insect",2,7.01403735046845e-28
+"Lateral","Daerlac apicalis","","Pickled in 70% ethanol, 26 June 2017.","Ant mimic bug","769","mimetic insect",2,4.15094439762616e-25
+"Lateral","Daerlac apicalis","","Pickled in 70% ethanol, 03-June-2017.","Ant mimic bug","770","mimetic insect",2,1.10925334538768e-29
+"Lateral","Vespoidea5 sp1","","Pickled in 70% ethanol 16-June-2017.","Posssible wasp ant-mimic","783","mimetic insect",2,0.000128771369148772
+"Lateral","Daerlac apicalis","","Pickled in 70% ethanol, 12-Jul-2017.","Ant mimic bug","804","mimetic insect",2,1.01392338259061e-15
+"Lateral","Myrmarachne bicolor","","Pickled in 70% ethanol, 12-Jul-2017.","Ant-mimic spider","810","mimetic spider",2,3.39728940898004e-21
+"Lateral","Rhombonotus sp2","","Possible model is sympatric specimen 814.
+Pickled in 70% ethanol, 12-Jul-2017.","Ant-mimic spider","813","mimetic spider",2,2.84363529069402e-36
+"Lateral","Rhombonotus sp2","","Possible model is sympatric specimen 814.
+Pickled in 70% ethanol, date unknown.","Ant-mimic spider","815","mimetic spider",2,7.60433097754966e-16
+"Lateral","Judalana lutea","Male","Pickled in 70% ethanol, 12-Jul-2017.","Ant-mimic spider","817","mimetic spider",2,1.27337119305013e-22
+"Lateral","Myrmarachne juvenile","","Body disintegrated after death","Ant-mimic spider","818","mimetic spider",2,2.14310514551057e-13
+"Lateral","Myrmarachne juvenile","","Pickled in 70% ethanol, 12-Jul-2017.","Ant-mimic spider","822","mimetic spider",2,2.02525239675747e-49
+"Lateral","Myrmarachne erythrocephala","Male","Juvenile? Pickled in 70% ethanol, 12-Jul-2017.","Ant-mimic spider","824","mimetic spider",2,1.82723479578637e-40
+"Lateral","Myrmarachne macleayana","","Pickled in 70% ethanol, 12-Jul-2017.","Ant-mimic spider","826","mimetic spider",1,1.50100408339643e-54
+"Lateral","Myrmarachne macleayana","","Injured and died during collecting.
+Pickled in 70% ethanol, 12-Jul-2017.","Ant-mimic spider","827","mimetic spider",1,1.05526143860792e-25
+"Lateral","Polyrhachis monteithi","","Pickled in 70% ethanol, date unknown.","","829","model",2,0.999999654938457
+"Lateral","Rhombonotus gracilis","","Pickled in 70% ethanol, 12-Jul-2017.","Ant-mimic spider","832","mimetic spider",2,5.99052966289093e-23
+"Lateral","Rhombonotus sp2","Female","Pickled in 70% ethanol, 12-Jul-2017.","Ant-mimic spider","833","mimetic spider",2,5.19506282101548e-15
+"Lateral","Rhombonotus gracilis","","Needed encouragement for motion video","Ant-mimic spider","841","mimetic spider",2,1.91128211292881e-16
+"Lateral","Crematogaster sp1","","Pickled in 70% ethanol, 12-Jul-2017.","","842","model",2,0.99999999999995
+"Lateral","Formicid13 sp1","","Pickled in 70% ethanol, 12-Jul-2017.","","843","model",1,0.999999999999999
+"Lateral","Rhombonotus sp2","","Pickled in 70% ethanol, 20-Jul-2017.","Ant-mimic spider","844","mimetic spider",2,2.0030275015447e-15
+"Lateral","Rhombonotus sp2","Male","Pickled in 70% ethanol, 12-Jul-2017.","Ant-mimic spider","845","mimetic spider",2,6.17086256267421e-14
+"Lateral","Rhombonotus sp2","Female","Pickled in 70% ethanol, 14-Jul-2017.","Ant-mimic spider","846","mimetic spider",1,2.0923972248557e-35
+"Lateral","Rhombonotus sp2","","Refused to walk for motion video.
+Pickled in 70% ethanol, 20-Jul-2017.","Ant-mimic spider","847","mimetic spider",1,1.92722286301323e-14
+"Lateral","Cosmophasis thalassina","","Pickled in 100% ethanol, 28-Aug-2017.
+Ravi thought C. baehrae but not known from this area; need adult","","849","non-mimic",2,5.35837145877226e-76
+"Lateral","Heteroptera2 sp1","","Its wings aren't sitting in place correctly.
+Pickled in 70% ethanol, 12-Jul-2017.","Ant mimic bug","851","mimetic insect",2,1.81179473273566e-21
+"Lateral","Rhombonotus sp3","","Aus Mus ID notes: Ravi's ID, HS says too young to identify 
+
+Pickled in 70% ethanol, 12-Jul-2017.","Ant-mimic spider","857","mimetic spider",2,3.47577852749804e-15
+"Lateral","Colobathristid1 sp1","","Colour has faded a bit. Pickled in 70% ethanol, 03-June-2017.
+Presumably a mimic of Oecophylla smaragdina.","Ant mimic bug","884","mimetic insect",2,9.68500383490314e-20
+"Lateral","Heteroptera2 sp1","","Pickled in 70% ethanol, 03-June-2017.","Ant mimic bug","892","mimetic insect",2,2.65537232202827e-21
+"Lateral","Cosmophasis thalassina","","ID unknown.
+Pickled in 70% ethanol, 20-Jul-2017.","","897","non-mimic",2,1.67926011373406e-51
+"Lateral","Cosmophasis thalassina","","Euthanised CO2, pickled in 100% ethanol, 28-Aug-2017.","","900","non-mimic",1,1.14254924171445e-102
+"Lateral","Cosmophasis thalassina","","","","901","non-mimic",1,6.94603074254749e-48
+"Lateral","Myrmarachne macleayana","","Pickled in 70% ethanol, 14-Aug-2017.","Ant-mimic spider","902","mimetic spider",2,2.2271404241519e-11
+"Lateral","Heteroptera2 sp1","","Possibly a mimic. Pickled in 70% ethanol, 03-June-2017.","Ant mimic bug","910","mimetic insect",1,8.33908722528591e-05
+"Lateral","Myrmarachne juvenile","","Aus mus notes: Ravi's ID, HS says too young to identify.
+Pickled in 70% ethanol, 11-Jul-2017.","Ant-mimic spider","911","mimetic spider",2,9.24678497677912e-11
+"Lateral","Cosmophasis micarioides","","First photos are juvenile, later adult. Juvenile body length was 4.8.","Ant-mimic spider","913","mimetic spider",2,8.52192243696761e-78
+"Lateral","Myrmarachne macleayana","","Very ant-like in life.
+Pickled in 70% ethanol, 21-Aug-2017.","Ant-mimic spider","914","mimetic spider",2,2.60762399757937e-11
+"Lateral","Heteroptera2 sp1","","Pickled in 70% ethanol, 03-June-2017.","Ant mimic bug","915","mimetic insect",1,2.94336906037094e-63
+"Lateral","Cosmophasis baehrae","","Euthanised CO2, pickled in 100% ethanol, 28-Aug-2017.
+Juveniles look like small black ants","","919","non-mimic",2,1.11827288668294e-94
+"Lateral","Judalana lutea","Female","Aus mus notes: probably Judalan sp. - colour pattern matches; but adult male needed to be sure.
+Pickled in 70% ethanol, 20-Jul-2017.
+","Ant-mimic spider","920","mimetic spider",2,1.99743608629325e-48
+"Lateral","Judalana lutea","Female","Aus mus notes: probably Judalana or Rhombonotus.
+Pickled in 70% ethanol, 05-July-2017. Sue thinks this looks like a bee - Dorsal - color & shape; Lateral - body bands/segments","Ant-mimic spider","921","mimetic spider",2,9.19854097724301e-30
+"Lateral","Salticid17 sp1","","Aus mus notes: Fissident juvenile, cannot go further.
+Constantly on the move, like an ant. Possibly a juvenile Ligonipes?
+Pickled in 70% ethanol, 11-Jul-2017.","Ant-mimic spider","925","mimetic spider",3,3.29955722407211e-22
+"Lateral","Salticid18 sp1","","Pickled in 70% ethanol, 12-Jul-2017.","","926","non-mimic",2,3.17446675694703e-35
+"Lateral","Cosmophasis thalassina","","Euthanised CO2, pickled in 100% ethanol, 28-Aug-2017.","","927","non-mimic",2,4.58144326853956e-81
+"Lateral","Judalana lutea","","Aus mus notes: Judalana or Rhombonotus.
+Pickled in 70% ethanol, 20-Jul-2017.","Ant-mimic spider","931","mimetic spider",2,2.67101650184545e-21
+"Lateral","Cosmophasis baehrae","","Pickled in 70% ethanol, 20-Jul-2017.
+Juveniles look like small black ants.","","939","non-mimic",2,7.62814476092945e-40
+"Lateral","Cosmophasis thalassina","","Euthanised CO2, pickled in 100% ethanol, 28-Aug-2017.","","940","non-mimic",3,4.66867163506474e-91
+"Lateral","Myrmarachne macleayana","","Very ant-like in life","Ant-mimic spider","942","mimetic spider",2,5.61375071616401e-15
+"Lateral","Iridonyssus kohouti","","Probable mimic. Found sheltering with ants (specimen 950). Observed by Chris to behave like the ants it was with, including antennal illusion. 
+Pickled in 100% ethanol, 28-Aug-2017.","Ant mimic spider","951","mimetic spider",2,1.14845708881664e-28
+"Lateral","Poecilipta kohouti","","","Ant-mimic spider","977","mimetic spider",1,6.39348031539021e-25
+"Lateral","Myrmarachne formicaria","Male","","Photo; Angle adjusted, interpolated","CRS101","mimetic spider",1,1.23941136172777e-70
+"Lateral","Myrmarachne erythrocephala","Male","Forma erato","Photo; interpolated","JMS116","mimetic spider",1,7.09075430831588e-14
+"Lateral","Myrmarachne erythrocephala","Female","Forma erato","Photo","JMS117","mimetic spider",1,9.0795061198242e-16
+"Lateral","Myrmarachne macleayana","Male","Forma robsoni","Photo; Interpolated","JMS120","mimetic spider",2,1.39569691575468e-09
+"Lateral","Myrmapana parallela","Male","","Photo; Interpolated","MCZ108610","mimetic spider",1,1.79901855076481e-23
+"Lateral","Myrmapeni chickeringi","Male","","Photo; Interpolated","MCZ125078","mimetic spider",1,4.47653020189005e-16
+"Lateral","Neon nellii*","Female","","Photo; Angle adjusted, interpolated","MCZ126911","mimetic spider",1,1.52088481829666e-114
+"Lateral","Castianeira longipalpa","Female","","Photo; Interpolated","MCZ126957","mimetic spider",1,1.79400610514751e-58
+"Lateral","Myrmaplata plataleoides","Male","","Photo; Angle adjusted","MCZ128934","mimetic spider",1,7.47991613292123e-09
+"Lateral","Castianeira gertschi","Male","","Photo","MCZ137106","mimetic spider",1,1.04725573993247e-38
+"Lateral","Castianeira trilineata","Female","","Photo; Interpolated","MCZ142573","mimetic spider",1,1.68196300713856e-30
+"Lateral","Aetius nocturnus","Male","Specimen stored in ethanol; some deformation of opisthosoma","Photo; Angle adjusted","MCZ16734","mimetic spider",1,2.07760513824306e-15
+"Lateral","Sphecotypus niger","Female","","Photo; Angle adjusted","MCZ28119","mimetic spider",1,2.36044605085368e-10
+"Lateral","Mazax spinosa","Female","","Photo","MCZ28153","mimetic spider",1,7.08577744336431e-85
+"Lateral","Serendib volans","Female","Specimen deformed","Photo; Angle adjusted","MCZ44162","mimetic spider",1,1.49061028106522e-15
+"Lateral","Myrmecotypus rettenmeyeri","Female","","Photo","MCZ67875","mimetic spider",1,5.80905448030251e-13
+"Lateral","Mazax pax","Female","","Photo; Interpolated","MCZ79128","mimetic spider",1,5.8575213983229e-23
+"Lateral","Myrmapana centralis","Female","Specimen deformed","Photo; Angle adjusted","MCZ93522","mimetic spider",1,2.64179433567056e-13
+"Lateral","Corinnomma sp.","Male","Specimen deformed","Photo; Angle adjusted","MCZ95991","mimetic spider",1,0.000180984677031952
+"Lateral","Serendib suthepica","Male","","Photo; Interpolated, angle adjusted","MCZ96085","mimetic spider",1,1.9803430862397e-34
+"Lateral","Myrmarachne luctuosa","Male","Forma aenopilosa","Photo; Interpolated","MUS401","mimetic spider",2,3.90622338996591e-15
+"Lateral","Myrmarachne helensmithae","Male","","Photo; Interpolated","TPS103","mimetic spider",2,6.02784812459477e-08
+"Lateral","Myrmarachne macaulayi","Male","","Photo; Angle adjusted","TPS104","mimetic spider",2,6.20536635159156e-11

@@ -4,7 +4,7 @@ library(trajr)
 # contrib is matrix of relative contributions of each variable to the first 2
 # components
 # 
-plotMotionPCA <- function(trjs, cex = 1, pt.cex = 1, fill = FALSE, classifier = ThreeWayTypes, ellipses = TRUE, points = TRUE, legend = TRUE, labels = FALSE, ...) {
+plotMotionPCA <- function(trjs, cex = 1, pt.cex = 1, fill = FALSE, classifier = ThreeWayTypes, components = 1:2, ellipses = TRUE, ellipse.conf = .5, points = TRUE, legend = TRUE, labels = FALSE, contours = FALSE, ...) {
   .cHull <- function(pts, lineColour, fillColour) {
     ch <- chull(pts)
     # Close the polygon
@@ -33,7 +33,7 @@ plotMotionPCA <- function(trjs, cex = 1, pt.cex = 1, fill = FALSE, classifier = 
       pts <- pts[idx, ]
       # From https://www.researchgate.net/post/How_to_draw_a_95_confidence_ellipse_to_an_XY_scatter_plot2
       centroid <- colMeans(pts)
-      car::ellipse(center = centroid, shape = cov(pts), radius = sqrt(qchisq(.95, df=2)), col = col)
+      car::ellipse(center = centroid, shape = cov(pts), radius = sqrt(qchisq(conf, df=2)), col = col)
       points(centroid[1], centroid[2], pch = 3, cex = 0.3, col = col)
     }
   }
@@ -46,7 +46,7 @@ plotMotionPCA <- function(trjs, cex = 1, pt.cex = 1, fill = FALSE, classifier = 
   
   # Plot
   pcaTypes <- classifier$classify(trjs)
-  pts <- pca$x[,1:2]
+  pts <- pca$x[, components]
   typeList <- unique(pcaTypes)
   xlim <- extendrange(pts[,1])
   ylim <- extendrange(pts[,2])
@@ -55,14 +55,18 @@ plotMotionPCA <- function(trjs, cex = 1, pt.cex = 1, fill = FALSE, classifier = 
   
   
   plot(NULL, xlim = xlim, ylim = ylim, xaxt = 'n', yaxt = 'n', xlab = '', ylab = '', ...)
-  title(xlab = sprintf('PC1 (%g%%)', var[1]), ylab = sprintf('PC2 (%g%%)', var[2]), line = 0.5 * cex, cex.lab = cex)
+  title(xlab = sprintf('PC%d (%g%%)', components[1], var[components[1]]), 
+        ylab = sprintf('PC%d (%g%%)', components[2], var[components[2]]), 
+        line = 0.5 * cex, cex.lab = cex)
 
-    # for(tp in typeList)
+  # for(tp in typeList)
   #   .typeHeatmap(pts, tp)
   # for(tp in typeList)
   #   .typeCHull(pts, tp)
-  # for(tp in typeList)
-  #   .typeContour(pts, tp, xlim = xlim, ylim = ylim)
+  if (contours) {
+    for(tp in typeList)
+      .typeContour(pts, tp, xlim = xlim, ylim = ylim)
+  }
   bg <- NULL
   if (fill) {
     bg <- classifier$toCol(pcaTypes)
@@ -76,7 +80,7 @@ plotMotionPCA <- function(trjs, cex = 1, pt.cex = 1, fill = FALSE, classifier = 
   
   if (ellipses) {
     for(tp in typeList)
-      .confidenceEllipse(pts, tp)
+      .confidenceEllipse(pts, tp, ellipse.conf)
     #car::dataEllipse(pts[,1], pts[,2], pcaTypes)
   }
   
@@ -90,7 +94,7 @@ plotMotionPCA <- function(trjs, cex = 1, pt.cex = 1, fill = FALSE, classifier = 
   
   # Relative contributions of each variable to PC1 and PC2
   absRot <- abs(pca$rotation)
-  contrib <- sweep(absRot, 2, colSums(absRot), "/")[,c(1,2)]
+  contrib <- sweep(absRot, 2, colSums(absRot), "/")[, components]
   
   # Return variance explained by first 2 components
   pcai <- summary(pca)$importance
@@ -98,14 +102,6 @@ plotMotionPCA <- function(trjs, cex = 1, pt.cex = 1, fill = FALSE, classifier = 
 }
 
 ################################################################################################
-
-.MPconfidenceEllipse <- function(pts, col, conf = .95) {
-  # From https://www.researchgate.net/post/How_to_draw_a_95_confidence_ellipse_to_an_XY_scatter_plot2
-  centroid <- colMeans(pts)
-  car::ellipse(center = centroid, shape = cov(pts), radius = sqrt(qchisq(.95, df=2)), col = col)
-  # Big centroid dot
-  points(centroid[1], centroid[2], pch = 3, cex = 1, col = "black")
-}
 
 
 # Constructs a motion PCA object
@@ -172,7 +168,7 @@ MPPrepare <- function(trjs) {
       if (length(idx) > 2) {
         tpCol <- classifier$toCol(tp)
         tpPts <- pts[idx, ]
-        .MPconfidenceEllipse(tpPts, tpCol)
+        ConfidenceEllipse(tpPts, tpCol)
       }
     }
     #car::dataEllipse(pts[,1], pts[,2], classes)

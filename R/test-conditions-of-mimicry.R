@@ -220,9 +220,13 @@ TestConditionsForMimicry <- function(trjList, analysisType, repetitions, plotFil
 }
 
 # If not interactive, and command line says "run", run it
-if (!interactive() && length(commandArgs(TRUE)) == 1 && commandArgs(TRUE)[1] == "run")  {
-  trjInfo <- LoadCachedTrajectories()
-  analysisType <- "quadratic"
-  TestConditionsForMimicry(trjInfo, analysisType, 99999, "../output/test-locomotor-ant-mimicry.png", units = "px", aspect = 0.8, width = 800)
+runFile <- basename(sub("^--file=", "", grep("^--file=", commandArgs(), value = TRUE)))
+if (!interactive() && runFile == "test-conditions-of-mimicry.R") {
+  JReportToFile("../output/test-locomotor-ant-mimicry.txt", {
+    trjInfo <- LoadCachedTrajectories()
+    analysisType <- "quadratic"
+    TestConditionsForMimicry(trjInfo, analysisType, 99999, "../output/test-locomotor-ant-mimicry.png", units = "px", aspect = 0.8, width = 800)
+  })
 }
+
 

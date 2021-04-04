@@ -370,10 +370,11 @@ SummariseMorphometrics <- function(trjList, label, analysisType = "quadratic", r
               length(indIds), 
               sum(mimicSpecimens), length(unique(specimens[mimicSpecimens, "species"])),
               sum(specimens$mimicType == MTP_MODEL), sum(specimens$mimicType == MTP_NON_MIMIC)))
-  cat(sprintf("%d specimens have only dorsal outlines, %d have only lateral, and %d have both\n",
-              sum(specimens$hasDorsal & !specimens$hasLateral),
-              sum(!specimens$hasDorsal & specimens$hasLateral),
-              sum(specimens$hasDorsal & specimens$hasLateral)))
+  cat(sprintf("Specimens with dorsal outlines %d; with lateral outlines %d\n", sum(specimens$hasDorsal), sum(specimens$hasLateral)))
+  # cat(sprintf("%d specimens have only dorsal outlines, %d have only lateral, and %d have both\n",
+  #             sum(specimens$hasDorsal & !specimens$hasLateral),
+  #             sum(!specimens$hasDorsal & specimens$hasLateral),
+  #             sum(specimens$hasDorsal & specimens$hasLateral)))
   cat(sprintf("Mimic species with both trajectories and outlines: %d dorsal, %d lateral\n", 
               length(unique(msd$metaInfo$species)), length(unique(msl$metaInfo$species))))
   

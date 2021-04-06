@@ -292,7 +292,7 @@ CreateLearningSimulationFigure <- function(trjList, quickDbg = FALSE,
   # Same plot as a PDF file  
   if (!is.null(pdfFile)) {
     JPlotToPDF(pdfFile, {
-      par(mar = c(4.5, 4, 0, 0) + .1)
+      par(mar = c(4.5, 4, 0.5, 0) + .1)
       PlotLearningSimulation(trjList, totalPrey, reps, analysisType)
     },
     pointsize = 10, aspectRatio = 1200 / 500)

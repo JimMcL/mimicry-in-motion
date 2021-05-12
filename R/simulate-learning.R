@@ -212,8 +212,9 @@ SimulatePredatorLearning <- function(trjList, numMimics = 2, numModels = 49, num
     }
   }
   
-  plot(NULL, xlim = c(0, numMimics + numModels + numNonMimics), ylim = c(0, 1), 
-       xlab = "Encounter", ylab = ifelse(reportNumAttacked, "Proportion attacked", "Proportion correct"))
+  plot(NULL, xlim = c(0, numMimics + numModels + numNonMimics), ylim = c(0, 1),
+       xlab = "", ylab = "")
+       #, xlab = "Encounter", ylab = ifelse(reportNumAttacked, "Proportion attacked", "Proportion correct"))
   .maybeDrawCI(drawMimicCI, mimicResults, length(mimics), MTP_SPIDER)
   .maybeDrawCI(drawModelCI, modelResults, length(models), MTP_MODEL)
   .maybeDrawCI(drawNonMimicCI, nonMimicResults, length(nonMimics), MTP_NON_MIMIC)
@@ -248,7 +249,7 @@ PlotLearningSimulation <- function(trjList, totalPrey, repetitions, analysisType
     SimulatePredatorLearning(trjList, numMimics, numModels, numNonMimics, report = "numAttacked", repetitions = repetitions, analysisType = analysisType, ...)
   }
   
-  par(mfrow = c(1, 2))
+  par(mfrow = c(1, 2), oma = c(2, 2, 0, 0))
   # Common mimics scenario
   s <- .simulateProportions(percentMimicsAbundant)
   cat(sprintf("Mimics common, %s\n", s))
@@ -258,6 +259,9 @@ PlotLearningSimulation <- function(trjList, totalPrey, repetitions, analysisType
   s <- .simulateProportions(percentMimicsRare)
   cat(sprintf("Mimics rare, %s\n", s))
   mtext("B)", line = -1.5, adj = .05)
+  
+  mtext("Encounter", 1, outer = TRUE)
+  mtext("Proportion attacked", 2, outer = TRUE)
 }
 
 #################################################################################
@@ -266,7 +270,7 @@ PlotLearningSimulation <- function(trjList, totalPrey, repetitions, analysisType
 # The simulation is plotted and textual results are written to a file.
 CreateLearningSimulationFigure <- function(trjList, quickDbg = FALSE, 
                                    pngFile = ifelse(quickDbg, "../output/learning-quick-and-dirty.png", "../output/learning.png"),
-                                   pdfFile = ifelse(quickDbg, NULL, "../output/learning.pdf"),
+                                   pdfFile = ifelse(quickDbg, FALSE, "../output/learning.pdf"),
                                    txtFile = ifelse(quickDbg, "../output/learning-quick-and-dirty.txt", "../output/learning.txt"),
                                    analysisType = "quadratic") {
   # Define simulation parameters
@@ -284,18 +288,18 @@ CreateLearningSimulationFigure <- function(trjList, quickDbg = FALSE,
   
   # PNG file
   JPlotToPNG(pngFile, {
-    par(mar = c(4.5, 4, 0, 0) + .1)
+    par(mar = c(2.5, 2.5, 0, 0) + .1)
     JReportToFile(txtFile, PlotLearningSimulation(trjList, totalPrey, reps, analysisType))
   },
   units = "px", width = 1200, height = 500, res = 120)
   
   # Same plot as a PDF file  
-  if (!is.null(pdfFile)) {
+  if (!isFALSE(pdfFile)) {
     JPlotToPDF(pdfFile, {
-      par(mar = c(4.5, 4, 0.5, 0) + .1)
+      par(mar = c(2.5, 2.5, 0.5, 0) + .1)
       PlotLearningSimulation(trjList, totalPrey, reps, analysisType)
     },
-    pointsize = 10, aspectRatio = 1200 / 500)
+    pointsize = 10, aspectRatio = 1200 / 500, embedFonts = TRUE)
   }
   
   ShowTime("Learning simulation:", startTime)

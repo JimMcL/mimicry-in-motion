@@ -56,6 +56,7 @@ trjInfo <- LoadCachedTrajectories()
 
 labTrjs <- trjInfo
 SummariseTrajectories(labTrjs, "Lab")
+SummariseTrajectorieSpecies(labTrjs)
 
 analysisType <- "quadratic"
 retain <- 0.95
@@ -65,16 +66,17 @@ retain <- 0.95
 # hypothesis testing, i.e. full information, accuracy calculated using logistic
 # regression
 specimens <- TrjSpecimenInfo(labTrjs, "logistic")
-write.csv(specimens, "../output/trajectory-specimens.csv", row.names = FALSE)
+write.csv(specimens, "../output/trajectory-specimen-list.csv", row.names = FALSE)
 specimens <- MorphoSpecimenInfo("logistic", retain)
-write.csv(specimens, "../output/morpho-specimens.csv", row.names = FALSE, na = "")
+write.csv(specimens, "../output/morpho-specimen-list.csv", row.names = FALSE, na = "")
 
 # SummariseMorphometrics(trjInfo, label = "lab or wild", analysisType = analysisType)
 SummariseMorphometrics(labTrjs, label = "lab", analysisType = analysisType)
+SummariseMorphometricSpecies(labTrjs)
 
 #### Data figure
 JPlotToPNG("../output/data.png", PlotAllData(labTrjs, "individual"), units = "px", width = 900, res = 110)
-JPlotToPDF("../output/data.pdf", PlotAllData(labTrjs, "individual"), pointsize = 11)
+JPlotToPDF("../output/data.pdf", PlotAllData(labTrjs, "individual"), pointsize = 11, embedFonts = TRUE)
 
 
 # Evidence supporting the idea of locomotor ant mimicry?
@@ -96,7 +98,7 @@ cat("\n==== Multicomponent hypothesis ==========================================
 # Must retain fewer principal components when using quadratic analysis on
 # morphology because the no. of components must be < no. of data points, and
 # there are fewer ant species than PCs if retain == 0.99
-TestMultiComponentHypos(labTrjs, analysisType = "logistic", retain = retain, summaryFileName = "../output/multi-component-data.csv")
+TestMultiComponentHypos(labTrjs, analysisType = "logistic", retain = retain, summaryFileName = "../output/multi-component-species-list.csv")
 
 
 cat("\n==== Motion-limited discrimination hypothesis ========================================\n")

@@ -249,6 +249,28 @@ SummariseTrajectories <- function(trjList, typeLabel) {
   PlotLocations(trjList, typeLabel)
 }
 
+SummariseSpeciesList <- function(speciesList, label = NULL) {
+  # Drop levels from factors
+  speciesList <- as.character(speciesList)
+  tt <- table(speciesList)
+  r <- c(Samples = length(speciesList), Species = length(unique(speciesList)), Mean = mean(tt), Min = min(tt), Max = max(tt), SD = sd(tt))
+  if (!is.null(label))
+    names(r)[1] <- label
+  r
+}
+
+SummariseTrajectorieSpecies <- function(trjList) {
+  cat("Trajectories per species:\n")
+  mi <- trjList$metaInfo
+  mi$mimicType3 <- ThreeWayTypeFromMimicType(mi$mimicType)
+  types <- c(TWT_MIMIC, TWT_ANT, TWT_NON_ANT)
+  l <- t(sapply(types, function(tp) {
+    trjs <- trjList$metaInfo$species[mi$mimicType3 == tp]
+    SummariseSpeciesList(trjs, "Trajectories")
+  }))
+  print(round(l, 1))
+}
+
 # Tidies up column names from my sampleIt database. Changes names to make them
 # more understandable, and removes columns with no meaning in this context
 TidySIData <- function(df) {

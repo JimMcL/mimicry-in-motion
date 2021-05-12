@@ -388,3 +388,40 @@ SummariseMorphometrics <- function(trjList, label, analysisType = "quadratic", r
   ReportStatTest(bt, " for lateral individuals")
   cat(sprintf("which indicates variances %s homogenous, so should %suse linear DA\n",ifelse(homogenous, "are", "are not"), ifelse(homogenous, "", "not ")))
 }
+
+SummariseMorphometricSpecies <- function(trjList) {
+  
+  .morphoSummary <- function(morpho) {
+    indTypes <- ThreeWayTypeFromMimicType(morpho$individual$Coe$fac$mimicType)
+    l <- t(sapply(c(TWT_MIMIC, TWT_ANT, TWT_NON_ANT), function(tp) {
+      sp <- morpho$individual$Coe$fac$species[indTypes == tp]
+      SummariseSpeciesList(sp, "Outlines")
+    }))
+    round(l, 1)
+  }
+  
+  cat("Dorsal outlines per species:\n")
+  print(.morphoSummary(GetMorphoForPhotos(NULL, "Dorsal")))
+  cat("Lateral outlines per species:\n")
+  print(.morphoSummary(GetMorphoForPhotos(NULL, "Lateral")))
+}
+
+SummariseCommonSpecies <- function(trjList) {
+  # All morpho
+  dm <- GetMorphoForPhotos(NULL, "Dorsal")
+  lm <- GetMorphoForPhotos(NULL, "Lateral")
+  
+  # Mimic trajectories
+  mimics <- SubsetTrjInfo(trjList, trjList$metaInfo$mimicType %in% MTP_MIMICS)
+  # Mimic trajectories with morpho data
+  msd <- SubsetTrjInfo(ms, !is.na(ms$stats$accuracyMorphoDorsal))
+  msl <- SubsetTrjInfo(ms, !is.na(ms$stats$accuracyMorphoLateral))
+
+  cat("Sample sizes for species with trajectories and outlines:\n")  
+  species <- sort(unique(c(msd$metaInfo$species, msl$metaInfo$species)))
+  t(sapply(species, function(sp) {
+    c(Trajectories = sum(trjList$metaInfo$species == sp),
+      `Dorsal outlines` = sum(dm$individual$Coe$fac$species == sp),
+      `Lateral outlines` = sum(lm$individual$Coe$fac$species == sp))
+  }))
+}

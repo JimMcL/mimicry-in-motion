@@ -73,6 +73,7 @@ write.csv(specimens, "../output/morpho-specimen-list.csv", row.names = FALSE, na
 # SummariseMorphometrics(trjInfo, label = "lab or wild", analysisType = analysisType)
 SummariseMorphometrics(labTrjs, label = "lab", analysisType = analysisType)
 SummariseMorphometricSpecies(labTrjs)
+SummariseCommonSpecies(labTrjs)
 
 #### Data figure
 JPlotToPNG("../output/data.png", PlotAllData(labTrjs, "individual"), units = "px", width = 900, res = 110)

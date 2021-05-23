@@ -22,10 +22,10 @@ PlotTrjsSubset <- function(trjList, subset, title, ...) {
 AddMorphoSpace <- function(pca, xy, axes = c(1, 2)) {
   
   # Hack together the list needed by layer_morphospace_PCA
-  x <- list(xy = xy, method =pca$method, mshape = pca$mshape, rotation = pca$rotation[, axes])
+  x <- list(xy = xy, method = pca$method, mshape = pca$mshape, rotation = pca$rotation[, axes])
 
   par(xpd = FALSE)
-  layer_morphospace_PCA(x)
+  layer_morphospace_PCA(x, col = "#b0b0b0")
 }
 
 # Plot a morphospace PCA. This duplicates plotting functionality in Momocs,
@@ -75,8 +75,8 @@ PlotMorphoPCA <- function(morpho, title, legPos = "topleft", ...) {
   # Label axes
   var <- pca$sdev^2
   var <- signif(100 * var/sum(var), 3)
-  mtext(sprintf("PC1 (%g%%)", var[1]), side = 1, line = -5.1, adj = 0.95, padj = 5, cex = 0.8)
-  mtext(sprintf("PC2 (%g%%)", var[2]), side = 2, line = -4.6, adj = 0.1, padj = -4, cex = 0.8)
+  mtext(sprintf("PC1 (%g%%)", var[1]), side = 1, line = -5.1, adj = 0.95, padj = 5, cex = 0.8, font = 2)
+  mtext(sprintf("PC2 (%g%%)", var[2]), side = 2, line = -4.6, adj = 0.1, padj = -4, cex = 0.8, font = 2)
   
   # Title
   mtext(sprintf(title, nrow(xy)), line = 1, adj = 0.01)
